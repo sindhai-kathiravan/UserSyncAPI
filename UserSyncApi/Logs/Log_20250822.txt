@@ -1,0 +1,282 @@
+20:54:31 - ===== Incoming Request =====
+20:54:31 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/create
+20:54:31 - Method: POST
+20:54:31 - URL: http://localhost:56548/api/users/create
+20:54:31 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: d1f8eacd-2812-43cb-9b1b-9aad5d1dca93
+20:54:31 - Body: {
+  "userId": 0,
+  "userName": "jdoe",
+  "userLoginName": "jdoe_login",
+  "userLoggedOnAt": "Terminal01",
+  "userFullName": "John Doe",
+  "userEmail": "jdoe@example@com",
+  "userInitials": "JD",
+  "userPassword": "SecurePass123!",
+  "userDepartment": "101",
+  "userLoggedIn": true,
+  "userInModule": 3,
+  "g2Version": "v1.0",
+  "lastLogin": "2025-108-20T10:30:00",
+  "os": "Windows 10",
+  "clr": ".NET Framework 4.8",
+  "userMenus": "Dashboard,Orders,Reports",
+  "loginCount": 1,
+  "librariesReadonly": false,
+  "groupCompany": 5,
+  "screen1Res": "1920x1080",
+  "screen2Res": "1920x1080",
+  "screen3Res": "1280x720",
+  "screen4Res": "1280x720",
+  "poAuthId": 10,
+  "poAuthAll": false,
+  "orderAlerts": true,
+  "poAuthTempUserId": 0,
+  "maxOrderValue": 5000,
+  "outOfOffice": false,
+  "defaultOrderDepartment": 101,
+  "poRoleId": 7,
+  "deleted": false,
+  "aliasUserName1": "JDALT",
+  "invoiceBarcodePrinter": "Printer01",
+  "smtpServer": "smtp.example.com",
+  "factoryId": 2,
+  "pieceMonitoringAccessLevel": 3,
+  "exClassEdit": 1,
+  "timesheetsAccessLevel": 2,
+  "initialWindows": "MainWin",
+  "fabScheduleAccessLevel": 3,
+  "fabLineScheduleAccessLevel": 2,
+  "paintLineScheduleAccessLevel": 1,
+  "contractsAccessLevel": 2,
+  "g2UpdaterVersion": "1.2.3",
+  "updateLocationId": 12,
+  "allocationAdmin": true,
+  "userPasswordLastChanged": "2025-08-10",
+  "dateCreated": "2025-08-01",
+  "createdByUserId": 99,
+  "dateModified": "2025-08-15",
+  "modifiedByUserId": 100,
+  "loggedInOnComputer": "COMP001",
+  "yLoc": "Warehouse A",
+  "yLocDsc": "Main Storage Area",
+  "locked": 0,
+  "fAttempt": 1,
+  "remarks": "New user created",
+  "releaseDt": "2025-08-21T14:00:00",
+  "releaseBy": "admin",
+  "inactive": 0,
+  "inactiveRemarks": null,
+  "inactiveReleaseDt": null,
+  "inactiveReleaseBy": null,
+  "passwordAttempts": "0",
+  "passwordUpdatedFlag": "Y",
+  "unlockDate": "2025-08-25T09:00:00"
+}
+
+20:54:31 - Authentication succeeded.
+20:54:32 - Validation failed.
+20:54:32 - {
+  "Message": "The request is invalid.",
+  "ModelState": {
+    "request.lastLogin": [
+      "Could not convert string to DateTime: 2025-108-20T10:30:00. Path 'lastLogin', line 14, position 38."
+    ],
+    "request.UserEmail": [
+      "The UserEmail field is not a valid e-mail address."
+    ]
+  }
+}
+21:26:04 - ===== Incoming Request =====
+21:26:04 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/create
+21:26:04 - Method: POST
+21:26:04 - URL: http://localhost:56548/api/users/create
+21:26:04 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 6736e2a4-fdbb-4b8a-aff5-b63c1fcf67f9
+21:26:04 - Body: {
+  "userId": 0,
+  "userName": "jdoe",
+  "userLoginName": "jdoe_login",
+  "userLoggedOnAt": "Terminal01",
+  "userFullName": "John Doe",
+  "userEmail": "jdoe@example@com",
+  "userInitials": "JD",
+  "userPassword": "SecurePass123!",
+  "userDepartment": "101",
+  "userLoggedIn": true,
+  "userInModule": 3,
+  "g2Version": "v1.0",
+  "lastLogin": "2025-108-20T10:30:00",
+  "os": "Windows 10",
+  "clr": ".NET Framework 4.8",
+  "userMenus": "Dashboard,Orders,Reports",
+  "loginCount": 1,
+  "librariesReadonly": false,
+  "groupCompany": 5,
+  "screen1Res": "1920x1080",
+  "screen2Res": "1920x1080",
+  "screen3Res": "1280x720",
+  "screen4Res": "1280x720",
+  "poAuthId": 10,
+  "poAuthAll": false,
+  "orderAlerts": true,
+  "poAuthTempUserId": 0,
+  "maxOrderValue": 5000,
+  "outOfOffice": false,
+  "defaultOrderDepartment": 101,
+  "poRoleId": 7,
+  "deleted": false,
+  "aliasUserName1": "JDALT",
+  "invoiceBarcodePrinter": "Printer01",
+  "smtpServer": "smtp.example.com",
+  "factoryId": 2,
+  "pieceMonitoringAccessLevel": 3,
+  "exClassEdit": 1,
+  "timesheetsAccessLevel": 2,
+  "initialWindows": "MainWin",
+  "fabScheduleAccessLevel": 3,
+  "fabLineScheduleAccessLevel": 2,
+  "paintLineScheduleAccessLevel": 1,
+  "contractsAccessLevel": 2,
+  "g2UpdaterVersion": "1.2.3",
+  "updateLocationId": 12,
+  "allocationAdmin": true,
+  "userPasswordLastChanged": "2025-08-10",
+  "dateCreated": "2025-08-01",
+  "createdByUserId": 99,
+  "dateModified": "2025-08-15",
+  "modifiedByUserId": 100,
+  "loggedInOnComputer": "COMP001",
+  "yLoc": "Warehouse A",
+  "yLocDsc": "Main Storage Area",
+  "locked": 0,
+  "fAttempt": 1,
+  "remarks": "New user created",
+  "releaseDt": "2025-08-21T14:00:00",
+  "releaseBy": "admin",
+  "inactive": 0,
+  "inactiveRemarks": null,
+  "inactiveReleaseDt": null,
+  "inactiveReleaseBy": null,
+  "passwordAttempts": "0",
+  "passwordUpdatedFlag": "Y",
+  "unlockDate": "2025-08-25T09:00:00"
+}
+
+21:26:04 - Authentication succeeded.
+21:26:05 - Validation failed.
+21:26:05 - {
+  "Message": "The request is invalid.",
+  "ModelState": {
+    "request.lastLogin": [
+      "Could not convert string to DateTime: 2025-108-20T10:30:00. Path 'lastLogin', line 14, position 38."
+    ],
+    "request.UserEmail": [
+      "The UserEmail field is not a valid e-mail address."
+    ]
+  }
+}
+21:43:12 - ===== Incoming Request =====
+21:43:12 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/create
+21:43:12 - Method: POST
+21:43:12 - URL: http://localhost:56548/api/users/create
+21:43:12 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: ab36e1b6-5175-46f3-9411-b5aeeffc45da
+21:43:12 - Body: {
+  "userId": 0,
+  "userName": "jdoe",
+  "userLoginName": "jdoe_login",
+  "userLoggedOnAt": "Terminal01",
+  "userFullName": "John Doe",
+  "userEmail": "jdoe@example@com",
+  "userInitials": "JD",
+  "userPassword": "SecurePass123!",
+  "userDepartment": "101",
+  "userLoggedIn": true,
+  "userInModule": 3,
+  "g2Version": "v1.0",
+  "lastLogin": "2025-108-20T10:30:00",
+  "os": "Windows 10",
+  "clr": ".NET Framework 4.8",
+  "userMenus": "Dashboard,Orders,Reports",
+  "loginCount": 1,
+  "librariesReadonly": false,
+  "groupCompany": 5,
+  "screen1Res": "1920x1080",
+  "screen2Res": "1920x1080",
+  "screen3Res": "1280x720",
+  "screen4Res": "1280x720",
+  "poAuthId": 10,
+  "poAuthAll": false,
+  "orderAlerts": true,
+  "poAuthTempUserId": 0,
+  "maxOrderValue": 5000,
+  "outOfOffice": false,
+  "defaultOrderDepartment": 101,
+  "poRoleId": 7,
+  "deleted": false,
+  "aliasUserName1": "JDALT",
+  "invoiceBarcodePrinter": "Printer01",
+  "smtpServer": "smtp.example.com",
+  "factoryId": 2,
+  "pieceMonitoringAccessLevel": 3,
+  "exClassEdit": 1,
+  "timesheetsAccessLevel": 2,
+  "initialWindows": "MainWin",
+  "fabScheduleAccessLevel": 3,
+  "fabLineScheduleAccessLevel": 2,
+  "paintLineScheduleAccessLevel": 1,
+  "contractsAccessLevel": 2,
+  "g2UpdaterVersion": "1.2.3",
+  "updateLocationId": 12,
+  "allocationAdmin": true,
+  "userPasswordLastChanged": "2025-08-10",
+  "dateCreated": "2025-08-01",
+  "createdByUserId": 99,
+  "dateModified": "2025-08-15",
+  "modifiedByUserId": 100,
+  "loggedInOnComputer": "COMP001",
+  "yLoc": "Warehouse A",
+  "yLocDsc": "Main Storage Area",
+  "locked": 0,
+  "fAttempt": 1,
+  "remarks": "New user created",
+  "releaseDt": "2025-08-21T14:00:00",
+  "releaseBy": "admin",
+  "inactive": 0,
+  "inactiveRemarks": null,
+  "inactiveReleaseDt": null,
+  "inactiveReleaseBy": null,
+  "passwordAttempts": "0",
+  "passwordUpdatedFlag": "Y",
+  "unlockDate": "2025-08-25T09:00:00"
+}
+
+21:43:12 - Authentication succeeded.
+21:43:13 - Validation failed.
+21:43:13 - {
+  "Message": "The request is invalid.",
+  "ModelState": {
+    "request.lastLogin": [
+      "Could not convert string to DateTime: 2025-108-20T10:30:00. Path 'lastLogin', line 14, position 38."
+    ],
+    "request.UserEmail": [
+      "The UserEmail field is not a valid e-mail address."
+    ]
+  }
+}

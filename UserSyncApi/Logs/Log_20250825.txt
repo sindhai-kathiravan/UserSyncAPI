@@ -1,0 +1,470 @@
+00:14:28 - ===== Incoming Request =====
+00:14:28 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+00:14:29 - Method: GET
+00:14:29 - URL: http://localhost:56548/api/users/get?UserId=1
+00:14:29 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 76523fb0-3215-4b03-8a3e-53c507d390c7
+X-Correlation-Id: 1d400a09-b131-41ef-a31a-e640824db0d9
+00:14:29 - Query Parameters:
+00:14:29 - UserId = 1
+00:14:30 - Body: 
+  "UserId": 0
+
+
+00:14:31 - Authentication succeeded.
+00:14:33 - Validation succeeded.
+00:14:34 - Response: {"Success":true,"StatusCode":200,"Status":"OK","Message":"Request completed successfully","Data":{"Id":1,"Name":"John Doe","Email":"john@example.com","Age":30},"CorrelationId":"1d400a09-b131-41ef-a31a-e640824db0d9","Error":null}
+00:15:14 - ===== Incoming Request =====
+00:15:14 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=-1
+00:15:14 - Method: GET
+00:15:14 - URL: http://localhost:56548/api/users/get?UserId=-1
+00:15:14 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: c5857f45-fe08-4c81-aa96-1db204de7d6b
+X-Correlation-Id: 9e52f08a-750d-451c-9619-e3e984bbb997
+00:15:14 - Query Parameters:
+00:15:14 - UserId = -1
+00:15:14 - Body: 
+  "UserId": 0
+
+
+00:15:14 - Authentication succeeded.
+00:15:14 - Validation succeeded.
+00:15:14 - Response: {"Success":false,"StatusCode":400,"Status":"BadRequest","Message":"BadRequest","Data":{"Message":"Invalid user Id"},"CorrelationId":"9e52f08a-750d-451c-9619-e3e984bbb997","Error":null}
+00:16:22 - ===== Incoming Request =====
+00:16:22 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=-1
+00:16:22 - Method: GET
+00:16:22 - URL: http://localhost:56548/api/users/get?UserId=-1
+00:16:22 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: d21c8652-f0fe-4b85-8da6-1ef6591f0615
+X-Correlation-Id: 87358d31-2cad-4bfe-ab92-23116130c364
+00:16:22 - Query Parameters:
+00:16:22 - UserId = -1
+00:16:22 - Body: 
+  "UserId": 0
+
+
+00:16:22 - Authentication succeeded.
+00:16:22 - Validation succeeded.
+00:22:04 - ===== Incoming Request =====
+00:22:04 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=-1
+00:22:04 - Method: GET
+00:22:04 - URL: http://localhost:56548/api/users/get?UserId=-1
+00:22:04 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 000d8bf7-c0d0-4a97-accc-aabf285afe01
+X-Correlation-Id: c3bacb76-629e-478c-8a75-185388deea40
+00:22:04 - Query Parameters:
+00:22:04 - UserId = -1
+00:22:04 - Body: 
+  "UserId": 0
+
+
+00:22:04 - Authentication succeeded.
+00:22:04 - Validation succeeded.
+00:22:08 - Response: {"Success":false,"StatusCode":400,"Status":"BadRequest","Message":"BadRequest","Data":{"Message":"-1 Invalid user Id"},"CorrelationId":"c3bacb76-629e-478c-8a75-185388deea40","Error":null}
+00:23:09 - ===== Incoming Request =====
+00:23:09 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=123
+00:23:09 - Method: GET
+00:23:09 - URL: http://localhost:56548/api/users/get?UserId=123
+00:23:09 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: c3ddf8ca-802e-466a-8553-af0cfee97a65
+X-Correlation-Id: 3f1124c0-94ea-441b-84c9-d9b153554477
+00:23:09 - Query Parameters:
+00:23:09 - UserId = 123
+00:23:09 - Body: 
+  "UserId": 0
+
+
+00:23:09 - Authentication succeeded.
+00:23:09 - Validation succeeded.
+00:23:12 - Response: {"Success":false,"StatusCode":0,"Status":null,"Message":null,"Data":null,"CorrelationId":"00000000-0000-0000-0000-000000000000","Error":null}
+00:23:30 - ===== Incoming Request =====
+00:23:30 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=123
+00:23:30 - Method: GET
+00:23:30 - URL: http://localhost:56548/api/users/get?UserId=123
+00:23:30 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 84264ea6-ce24-4997-861a-8bf422d3b32f
+X-Correlation-Id: dbff2d39-1364-42fa-a75c-2c02c68d028c
+00:23:30 - Query Parameters:
+00:23:30 - UserId = 123
+00:23:30 - Body: 
+  "UserId": 0
+
+
+00:23:30 - Authentication succeeded.
+00:23:30 - Validation succeeded.
+00:23:39 - Response: {"Success":false,"StatusCode":0,"Status":null,"Message":null,"Data":null,"CorrelationId":"00000000-0000-0000-0000-000000000000","Error":null}
+00:23:44 - ===== Incoming Request =====
+00:23:44 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=123
+00:23:44 - Method: GET
+00:23:44 - URL: http://localhost:56548/api/users/get?UserId=123
+00:23:44 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 5639f1f1-dc38-4e06-b3f4-9d1844459823
+X-Correlation-Id: 51510f13-7604-4523-b200-a20d6c90e14d
+00:23:44 - Query Parameters:
+00:23:44 - UserId = 123
+00:23:44 - Body: 
+  "UserId": 0
+
+
+00:23:44 - Authentication succeeded.
+00:23:44 - Validation succeeded.
+00:32:39 - ===== Incoming Request =====
+00:32:39 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=123
+00:32:39 - Method: GET
+00:32:39 - URL: http://localhost:56548/api/users/get?UserId=123
+00:32:39 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 0ca9ff9c-ab94-46fc-8f61-40345951b1d4
+X-Correlation-Id: 23a98c66-5eca-4ed0-8ed0-3679688bdacb
+00:32:39 - Query Parameters:
+00:32:39 - UserId = 123
+00:32:39 - Body: 
+  "UserId": 0
+
+
+00:32:39 - Authentication succeeded.
+00:32:39 - Validation succeeded.
+00:32:44 - Response: {"Success":false,"StatusCode":404,"Status":"NotFound","Message":"The requested resource was not found","Data":null,"CorrelationId":"23a98c66-5eca-4ed0-8ed0-3679688bdacb","Error":"ERR_NOT_FOUND"}
+00:33:07 - ===== Incoming Request =====
+00:33:07 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+00:33:07 - Method: GET
+00:33:07 - URL: http://localhost:56548/api/users/get?UserId=1
+00:33:07 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: ca65a5b2-41ef-4deb-a9a4-529ccee4889e
+X-Correlation-Id: 58c56e09-29ca-4056-b274-a4231e57bb9d
+00:33:07 - Query Parameters:
+00:33:07 - UserId = 1
+00:33:07 - Body: 
+  "UserId": 0
+
+
+00:33:07 - Authentication succeeded.
+00:33:07 - Validation succeeded.
+00:33:10 - Response: {"Success":true,"StatusCode":200,"Status":"OK","Message":"Request completed successfully","Data":{"Id":1,"Name":"John Doe","Email":"john@example.com","Age":30},"CorrelationId":"58c56e09-29ca-4056-b274-a4231e57bb9d","Error":null}
+00:33:30 - ===== Incoming Request =====
+00:33:30 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=-1
+00:33:30 - Method: GET
+00:33:30 - URL: http://localhost:56548/api/users/get?UserId=-1
+00:33:30 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 2fcdf87c-69cd-4ffc-8981-25c574104ce3
+X-Correlation-Id: dead209e-da2a-4b01-b9ca-0a95edf19ade
+00:33:30 - Query Parameters:
+00:33:30 - UserId = -1
+00:33:30 - Body: 
+  "UserId": 0
+
+
+00:33:30 - Authentication succeeded.
+00:33:30 - Validation succeeded.
+00:33:32 - Response: {"Success":false,"StatusCode":400,"Status":"BadRequest","Message":"BadRequest","Data":{"Message":"-1 is Invalid user Id"},"CorrelationId":"dead209e-da2a-4b01-b9ca-0a95edf19ade","Error":null}
+00:37:12 - ===== Incoming Request =====
+00:37:12 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=-1
+00:37:12 - Method: GET
+00:37:12 - URL: http://localhost:56548/api/users/get?UserId=-1
+00:37:12 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM5
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 066c5731-3e46-4bd6-81f8-5f2b16211525
+X-Correlation-Id: 07b7af5a-0135-4bd9-9327-96c93380ebff
+00:37:12 - Query Parameters:
+00:37:12 - UserId = -1
+00:37:12 - Body: 
+  "UserId": 0
+
+
+00:37:12 - Authorization has been denied.
+00:50:32 - ===== Incoming Request =====
+00:50:32 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=-1
+00:50:32 - Method: GET
+00:50:32 - URL: http://localhost:56548/api/users/get?UserId=-1
+00:50:32 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 0743401a-67ae-48c6-a8ce-9d6da76d107f
+X-Correlation-Id: 0fe3fa76-d3e4-4bc1-9b9f-0645109dddb0
+00:50:32 - Query Parameters:
+00:50:32 - UserId = -1
+00:50:32 - Body: 
+  "UserId": 0
+
+
+00:50:32 - Authentication succeeded.
+00:50:32 - Validation succeeded.
+00:50:44 - Response: {"Success":false,"StatusCode":400,"Status":"BadRequest","Message":"-1 is Invalid user Id","Data":{"Message":"-1 is Invalid user Id"},"CorrelationId":"0fe3fa76-d3e4-4bc1-9b9f-0645109dddb0","Error":"ERR_BAD_REQUEST"}
+00:51:27 - ===== Incoming Request =====
+00:51:27 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+00:51:27 - Method: GET
+00:51:27 - URL: http://localhost:56548/api/users/get?UserId=1
+00:51:27 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: ce2510e8-fa08-4ae8-a894-37ed6bdf40d4
+X-Correlation-Id: 775a2912-1d5c-4215-b7f7-d7718ecdfe7a
+00:51:27 - Query Parameters:
+00:51:27 - UserId = 1
+00:51:27 - Body: 
+  "UserId": 0
+
+
+00:51:27 - Authentication succeeded.
+00:51:27 - Validation succeeded.
+00:51:29 - Response: {"Success":true,"StatusCode":200,"Status":"OK","Message":"The requested resource was not found","Data":{"Id":1,"Name":"John Doe","Email":"john@example.com","Age":30},"CorrelationId":"775a2912-1d5c-4215-b7f7-d7718ecdfe7a","Error":null}
+00:51:42 - ===== Incoming Request =====
+00:51:42 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=189
+00:51:42 - Method: GET
+00:51:42 - URL: http://localhost:56548/api/users/get?UserId=189
+00:51:42 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 071a7f3e-4cc9-4aab-80be-26d4887ff8f9
+X-Correlation-Id: bbd8b684-9808-454d-a703-896022648eb6
+00:51:42 - Query Parameters:
+00:51:42 - UserId = 189
+00:51:42 - Body: 
+  "UserId": 0
+
+
+00:51:42 - Authentication succeeded.
+00:51:42 - Validation succeeded.
+00:51:44 - Response: {"Success":false,"StatusCode":404,"Status":"NotFound","Message":"The requested resource was not found","Data":null,"CorrelationId":"bbd8b684-9808-454d-a703-896022648eb6","Error":"ERR_NOT_FOUND"}
+00:54:10 - ===== Incoming Request =====
+00:54:10 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=189
+00:54:10 - Method: GET
+00:54:10 - URL: http://localhost:56548/api/users/get?UserId=189
+00:54:10 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: f358ae16-8de1-42eb-a20a-9c6ea945e577
+X-Correlation-Id: 7c34e3a2-cc30-4238-800c-2f5d3a4e5406
+00:54:10 - Query Parameters:
+00:54:10 - UserId = 189
+00:54:10 - Body: 
+  "UserId": 0
+
+
+00:54:11 - Authentication succeeded.
+00:54:11 - Validation succeeded.
+00:54:22 - Response: {"Success":false,"StatusCode":404,"Status":"NotFound","Message":"The requested user was not found","Data":null,"CorrelationId":"7c34e3a2-cc30-4238-800c-2f5d3a4e5406","Error":"ERR_NOT_FOUND"}
+00:54:43 - ===== Incoming Request =====
+00:54:43 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=-1
+00:54:43 - Method: GET
+00:54:43 - URL: http://localhost:56548/api/users/get?UserId=-1
+00:54:43 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: e74ab55f-3b9d-47e1-9b86-4bc5258562f0
+X-Correlation-Id: b4a585dd-0487-4e53-8b45-73a20e6046d4
+00:54:43 - Query Parameters:
+00:54:43 - UserId = -1
+00:54:43 - Body: 
+  "UserId": 0
+
+
+00:54:43 - Authentication succeeded.
+00:54:43 - Validation succeeded.
+00:54:45 - Response: {"Success":false,"StatusCode":400,"Status":"BadRequest","Message":"-1 is Invalid user Id","Data":{"Message":"-1 is Invalid user Id"},"CorrelationId":"b4a585dd-0487-4e53-8b45-73a20e6046d4","Error":"ERR_BAD_REQUEST"}
+01:16:27 - ===== Incoming Request =====
+01:16:27 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=-1
+01:16:27 - Method: GET
+01:16:27 - URL: http://localhost:56548/api/users/get?UserId=-1
+01:16:27 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: c487e486-7f72-46e7-b96f-2f8edd92880e
+X-Correlation-Id: 294a3409-3142-44ac-bbe9-597c6048315b
+01:16:27 - Query Parameters:
+01:16:27 - UserId = -1
+01:16:27 - Body: 
+  "UserId": 0
+
+
+01:16:27 - Authentication succeeded.
+01:16:27 - Validation succeeded.
+01:16:32 - Response: {"Success":false,"StatusCode":400,"Status":"BadRequest","Message":"-1 is Invalid user Id","Data":{"Message":"-1 is Invalid user Id"},"CorrelationId":"294a3409-3142-44ac-bbe9-597c6048315b","Error":"ERR_BAD_REQUEST"}
+01:16:42 - ===== Incoming Request =====
+01:16:42 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=12
+01:16:42 - Method: GET
+01:16:42 - URL: http://localhost:56548/api/users/get?UserId=12
+01:16:42 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: e082eb4a-d387-48c9-9a0d-7d0f9283f755
+X-Correlation-Id: a787baa2-3e29-42f5-a875-e51c49f58313
+01:16:42 - Query Parameters:
+01:16:42 - UserId = 12
+01:16:42 - Body: 
+  "UserId": 0
+
+
+01:16:42 - Authentication succeeded.
+01:16:43 - Validation succeeded.
+01:16:46 - Response: {"Success":false,"StatusCode":404,"Status":"NotFound","Message":"User with Id 12 was not found.","Data":{"Message":"User with Id 12 was not found."},"CorrelationId":"a787baa2-3e29-42f5-a875-e51c49f58313","Error":"ERR_NOT_FOUND"}
+01:17:10 - ===== Incoming Request =====
+01:17:10 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+01:17:10 - Method: GET
+01:17:10 - URL: http://localhost:56548/api/users/get?UserId=1
+01:17:10 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 26fe7b53-a188-48fd-b7e6-55f3a3843be9
+X-Correlation-Id: ecef5429-8353-416a-a4ed-87882e0aa035
+01:17:10 - Query Parameters:
+01:17:10 - UserId = 1
+01:17:10 - Body: 
+  "UserId": 0
+
+
+01:17:10 - Authentication succeeded.
+01:17:10 - Validation succeeded.
+01:17:15 - Response: {"Success":true,"StatusCode":200,"Status":"OK","Message":"Request completed successfully","Data":{"Id":1,"Name":"John Doe","Email":"john@example.com","Age":30},"CorrelationId":"ecef5429-8353-416a-a4ed-87882e0aa035","Error":null}
+01:17:23 - ===== Incoming Request =====
+01:17:23 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?Us9erId=1
+01:17:23 - Method: GET
+01:17:23 - URL: http://localhost:56548/api/users/get?Us9erId=1
+01:17:23 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: f9319334-0624-4df5-a02f-892aa47075d3
+X-Correlation-Id: 598a922b-06f4-449c-820e-4dd8b8003ceb
+01:17:23 - Query Parameters:
+01:17:23 - Us9erId = 1
+01:17:23 - Body: 
+  "UserId": 0
+
+
+01:34:37 - ===== Incoming Request =====
+01:34:37 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+01:34:37 - Method: GET
+01:34:37 - URL: http://localhost:56548/api/users/get?UserId=1
+01:34:37 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjMx
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: f99ce267-25ef-4f09-8ef3-aa64bf748889
+X-Correlation-Id: f4e2c748-ee2e-4970-b174-f83074c700a0
+01:34:37 - Query Parameters:
+01:34:37 - UserId = 1
+01:34:37 - Body: 
+  "UserId": 0
+
+
+01:34:37 - Authorization has been denied.
+01:48:00 - ===== Incoming Request =====
+01:48:00 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+01:48:00 - Method: GET
+01:48:00 - URL: http://localhost:56548/api/users/get?UserId=1
+01:48:00 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjMx
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 2824e8e3-cb0f-46de-82d2-6bdd925c8b76
+X-Correlation-Id: b983ae0a-117d-4fe3-ae03-0004329f957a
+01:48:00 - Query Parameters:
+01:48:00 - UserId = 1
+01:48:00 - Body: 
+  "UserId": 0
+
+
+01:48:01 - Authorization has been denied.
+01:50:24 - ===== Incoming Request =====
+01:50:24 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+01:50:24 - Method: GET
+01:50:24 - URL: http://localhost:56548/api/users/get?UserId=1
+01:50:24 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjMx
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 02e244ea-a916-4888-8865-16de82c03760
+X-Correlation-Id: 41e9a175-8aeb-4951-a190-57ed0c13e078
+01:50:24 - Query Parameters:
+01:50:24 - UserId = 1
+01:50:24 - Body: 
+  "UserId": 0
+
+
+01:50:24 - Authorization has been denied.
