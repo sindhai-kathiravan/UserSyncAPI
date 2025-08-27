@@ -1,4 +1,5 @@
 ﻿{
+  "TargetDatabases": [ "UserDB", "AuditDB" ],
   "userId": 0,
   "userName": "jdoe",
   "userLoginName": "jdoe_login",

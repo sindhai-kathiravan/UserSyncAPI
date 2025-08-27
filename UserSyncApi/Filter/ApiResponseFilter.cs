@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -28,7 +29,6 @@ namespace UserSyncApi.Filter
                 string message = null;
                 string error = null;
 
-                // ✅ Smart message mapping
                 if (statusCode == HttpStatusCode.BadRequest)
                 {
                     var httpError = content as HttpError;
@@ -58,7 +58,7 @@ namespace UserSyncApi.Filter
                         }
                     }
 
-                    message = !string.IsNullOrEmpty(notFoundMessage) ? notFoundMessage : "The requested resource was not found."; //Common.Common.Messages.THE_REQUESTED_USER_WAS_NOT_FOUND;
+                    message = !string.IsNullOrEmpty(notFoundMessage) ? notFoundMessage : Common.Common.Messages.THE_REQUESTED_USER_WAS_NOT_FOUND;
                     error = Common.Common.Errors.ERR_NOT_FOUND;
                 }
                 else if (statusCode == HttpStatusCode.Unauthorized)
@@ -74,40 +74,13 @@ namespace UserSyncApi.Filter
                 apiResponse = new ApiResponse<object>
                 {
                     StatusCode = (int)statusCode,
-                    Status = statusCode.ToString(),   // always raw HTTP status
-                    Message = message,                // ✅ more meaningful message
+                    Status = statusCode.ToString(),   
+                    Message = message,                     
                     Error = error,
                     Data = content,
                     Success = statusCode == HttpStatusCode.OK,
                     CorrelationId = correlationId
                 };
-
-                //if (statusCode == HttpStatusCode.NotFound)
-                //{
-                //    apiResponse = new ApiResponse<object>
-                //    {
-                //        StatusCode = (int)HttpStatusCode.NotFound,
-                //        Status = HttpStatusCode.NotFound.ToString(),
-                //        Message = Common.Common.Messages.THE_REQUESTED_RESOURCE_WAS_NOT_FOUND,
-                //        Error = Common.Common.Errors.ERR_NOT_FOUND,
-                //        Data = null,
-                //        Success = false,
-                //        CorrelationId = correlationId
-                //    };
-                //}
-                //else
-                //{
-                //    apiResponse = new ApiResponse<object>
-                //    {
-                //        StatusCode = (int)statusCode,
-                //        Status = statusCode.ToString(),
-                //        Message = statusCode == HttpStatusCode.OK ? Common.Common.Messages.REQUEST_COMPLETED_SUCCESSFULLY : statusCode.ToString(),
-                //        Error = null,
-                //        Data = content,
-                //        Success = statusCode == HttpStatusCode.OK,
-                //        CorrelationId = correlationId
-                //    };
-                //}
                 context.Response = context.Request.CreateResponse(statusCode, apiResponse);
             }
             else if (context.Exception != null)
@@ -125,7 +98,7 @@ namespace UserSyncApi.Filter
 
                 context.Response = context.Request.CreateResponse(HttpStatusCode.InternalServerError, apiResponse);
             }
-            Logger.Log($"Response: {Newtonsoft.Json.JsonConvert.SerializeObject(apiResponse)}");
+            Logger.Log($"Response: {JToken.Parse(Newtonsoft.Json.JsonConvert.SerializeObject(apiResponse))}");
             base.OnActionExecuted(context);
         }
     }

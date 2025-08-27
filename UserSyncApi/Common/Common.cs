@@ -21,6 +21,11 @@ namespace UserSyncApi.Common
             public const string THE_REQUEST_IS_INVALID = "The request is invalid";
             public const string AUTHORIZATION_HAS_BEEN_DENIED_FOR_THIS_REQUEST = "Authorization has been denied for this request";
             public const string MISSING_AUTHORIZATION_HEADER = "Missing Authorization header";
+            public const string USER_CREATED_SUCCESSFULLY = "User Created successfully";
+            public const string AN_UNEXPECTED_ERROR_OCCURRED = "An unexpected error occurred";
+            public const string AT_LEAST_ONE_TARGET_DATABASE_MUST_BE_SPECIFIED = "At least one target database must be specified";
+            public const string INVALID_DATABASE_KEY_FOUND = "Invalid database key found";
+
         }
         public static class Errors
         {
@@ -29,6 +34,7 @@ namespace UserSyncApi.Common
             public const string ERR_NOT_FOUND = "ERR_NOT_FOUND";
             public const string ERR_BAD_REQUEST = "ERR_BAD_REQUEST";
             public const string ERR_UNAUTHORIZED = "ERR_UNAUTHORIZED";
+            public const string ERR_VALIDATION_FAILUED = "ERR_VALIDATION_FAILUER";
         }
     }
 }

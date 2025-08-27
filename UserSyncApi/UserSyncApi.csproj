@@ -49,6 +49,7 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -85,6 +86,10 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\Database2.mdf" />
+    <Content Include="App_Data\Database2_log.ldf">
+      <DependentUpon>Database2.mdf</DependentUpon>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Others\Table.sql" />
     <Content Include="Web.config" />
@@ -103,6 +108,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Handler\LoggingHandler.cs" />
+    <Compile Include="Helpers\DbConnectionFactory.cs" />
     <Compile Include="Models\LoginRequest.cs" />
     <Compile Include="Models\CreateUserRequest.cs" />
     <Compile Include="Helpers\ValidatorHelper.cs" />

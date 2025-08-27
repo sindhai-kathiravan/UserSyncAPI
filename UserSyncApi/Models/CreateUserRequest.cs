@@ -1,10 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace UserSyncApi.Models
 {
     public class CreateUserRequest
     {
+        /// <summary>
+        /// List of DB keys from Web.config appSettings
+        /// </summary>
+        [Required]
+        public List<string> TargetDatabases { get; set; }
+
         [Key]
         public int UserId { get; set; } // [int] IDENTITY
 
@@ -56,7 +63,7 @@ namespace UserSyncApi.Models
         public int LoginCount { get; set; } // int
 
         [Required]
-        public bool LibrariesReadonly { get; set; } // bit
+        public bool LibrariesReadOnly { get; set; } // bit
 
         [Required]
         public int GroupCompany { get; set; } // int
@@ -74,16 +81,16 @@ namespace UserSyncApi.Models
         public string Screen4Res { get; set; }
 
         [Required]
-        public int PoAuthId { get; set; }
+        public int POAuthId { get; set; }
 
         [Required]
-        public bool PoAuthAll { get; set; }
+        public bool POAuthAll { get; set; }
 
         [Required]
         public bool OrderAlerts { get; set; }
 
         [Required]
-        public int PoAuthTempUserId { get; set; }
+        public int POAuthTempUserId { get; set; }
 
         [Required]
         public int MaxOrderValue { get; set; }
@@ -95,7 +102,7 @@ namespace UserSyncApi.Models
         public int DefaultOrderDepartment { get; set; }
 
         [Required]
-        public int PoRoleId { get; set; }
+        public int PORoleId { get; set; }
 
         [Required]
         public bool Deleted { get; set; }
