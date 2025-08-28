@@ -146,7 +146,6 @@ namespace UserSyncApi.Controllers
                 Logger.Log($"Error in CreateUser: {ex.Message}");
                 Logger.Log($"StackTrace in CreateUser: { ex.StackTrace.ToString()}");
                 return Content(HttpStatusCode.InternalServerError, Common.Common.Messages.AN_UNEXPECTED_ERROR_OCCURRED);
-
             }
         }
 
@@ -195,10 +194,176 @@ namespace UserSyncApi.Controllers
 
         [HttpPut]
         [Route("api/users/update")]
-        public IHttpActionResult UpdateUser()
+        public IHttpActionResult UpdateUser([FromBody] UpdateUserRequest request)
         {
-            // sync logic here
-            return Ok("Users updated successfully");
+            try
+            {
+                using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+                {
+                    foreach (var dbKey in request.TargetDatabases)
+                    {
+                        using (SqlConnection conn = DbConnectionFactory.GetConnection(dbKey))
+                        {
+                            conn.Open();
+                            string sql = @"
+                                        UPDATE Users SET
+                                            user_name=@UserName,
+                                            user_loginname=@UserLoginName,
+                                            user_loggedonat=@UserLoggedOnAt,
+                                            user_fullname=@UserFullName,
+                                            user_email=@UserEmail,
+                                            user_initials=@UserInitials,
+                                            user_password=@UserPassword,
+                                            user_department=@UserDepartment,
+                                            user_loggedin=@UserLoggedIn,
+                                            user_inmodule=@UserInModule,
+                                            g2version=@G2Version,
+                                            lastlogin=@LastLogin,
+                                            os=@OS,
+                                            clr=@CLR,
+                                            user_menus=@UserMenus,
+                                            logincount=@LoginCount,
+                                            libraries_readonly=@LibrariesReadonly,
+                                            group_company=@GroupCompany,
+                                            screen1_res=@Screen1Res,
+                                            screen2_res=@Screen2Res,
+                                            screen3_res=@Screen3Res,
+                                            screen4_res=@Screen4Res,
+                                            po_auth_id=@PoAuthId,
+                                            po_auth_all=@PoAuthAll,
+                                            order_alerts=@OrderAlerts,
+                                            po_auth_temp_user_id=@PoAuthTempUserId,
+                                            maxordervalue=@MaxOrderValue,
+                                            outofoffice=@OutOfOffice,
+                                            default_order_department=@DefaultOrderDepartment,
+                                            porole_id=@PoRoleId,
+                                            deleted=@Deleted,
+                                            alias_username_1=@AliasUserName1,
+                                            invoicebarcodeprinter=@InvoiceBarcodePrinter,
+                                            smtpserver=@SmtpServer,
+                                            factory_id=@FactoryId,
+                                            piecemonitoringaccesslevel=@PieceMonitoringAccessLevel,
+                                            exclassedit=@ExClassEdit,
+                                            timesheetsaccesslevel=@TimesheetsAccessLevel,
+                                            initial_windows=@InitialWindows,
+                                            fabscheduleaccesslevel=@FabScheduleAccessLevel,
+                                            fablinescheduleaccesslevel=@FabLineScheduleAccessLevel,
+                                            paintlinescheduleaccesslevel=@PaintLineScheduleAccessLevel,
+                                            contractsaccesslevel=@ContractsAccessLevel,
+                                            g2updaterversion=@G2UpdaterVersion,
+                                            updatelocation_id=@UpdateLocationId,
+                                            allocationadmin=@AllocationAdmin,
+                                            user_password_last_changed=@UserPasswordLastChanged,
+                                            date_created=@DateCreated,
+                                            createdbyuser_id=@CreatedByUserId,
+                                            date_modified=@DateModified,
+                                            modifiedbyuser_id=@ModifiedByUserId,
+                                            loggedinoncomputer=@LoggedInOnComputer,
+                                            yloc=@YLoc,
+                                            ylocdsc=@YLocDsc,
+                                            locked=@Locked,
+                                            fattempt=@FAttempt,
+                                            remarks=@Remarks,
+                                            releasedt=@ReleaseDt,
+                                            releaseby=@ReleaseBy,
+                                            inactive=@Inactive,
+                                            inactiveremarks=@InactiveRemarks,
+                                            inactivereleasedt=@InactiveReleaseDt,
+                                            inactivereleaseby=@InactiveReleaseBy,
+                                            password_attempts=@PasswordAttempts,
+                                            password_updated_flag=@PasswordUpdatedFlag,
+                                            unlock_date=@UnlockDate
+                                        WHERE user_id=@UserId";
+
+                            using (SqlCommand cmd = new SqlCommand(sql, conn))
+                            {
+                                // Parameters (mapping request properties)
+                                cmd.Parameters.AddWithValue("@UserId", request.UserId);
+                                cmd.Parameters.AddWithValue("@UserName", request.UserName);
+                                cmd.Parameters.AddWithValue("@UserLoginName", request.UserLoginName);
+                                cmd.Parameters.AddWithValue("@UserLoggedOnAt", request.UserLoggedOnAt);
+                                cmd.Parameters.AddWithValue("@UserFullName", request.UserFullName);
+                                cmd.Parameters.AddWithValue("@UserEmail", request.UserEmail);
+                                cmd.Parameters.AddWithValue("@UserInitials", request.UserInitials);
+                                cmd.Parameters.AddWithValue("@UserPassword", request.UserPassword);
+                                cmd.Parameters.AddWithValue("@UserDepartment", request.UserDepartment);
+                                cmd.Parameters.AddWithValue("@UserLoggedIn", request.UserLoggedIn);
+                                cmd.Parameters.AddWithValue("@UserInModule", request.UserInModule);
+                                cmd.Parameters.AddWithValue("@G2Version", (object)request.G2Version ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@LastLogin", (object)request.LastLogin ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@OS", request.OS);
+                                cmd.Parameters.AddWithValue("@CLR", request.CLR);
+                                cmd.Parameters.AddWithValue("@UserMenus", request.UserMenus);
+                                cmd.Parameters.AddWithValue("@LoginCount", request.LoginCount);
+                                cmd.Parameters.AddWithValue("@LibrariesReadonly", request.LibrariesReadOnly);
+                                cmd.Parameters.AddWithValue("@GroupCompany", request.GroupCompany);
+                                cmd.Parameters.AddWithValue("@Screen1Res", request.Screen1Res);
+                                cmd.Parameters.AddWithValue("@Screen2Res", request.Screen2Res);
+                                cmd.Parameters.AddWithValue("@Screen3Res", request.Screen3Res);
+                                cmd.Parameters.AddWithValue("@Screen4Res", request.Screen4Res);
+                                cmd.Parameters.AddWithValue("@PoAuthId", request.POAuthId);
+                                cmd.Parameters.AddWithValue("@PoAuthAll", request.POAuthAll);
+                                cmd.Parameters.AddWithValue("@OrderAlerts", request.OrderAlerts);
+                                cmd.Parameters.AddWithValue("@PoAuthTempUserId", request.POAuthTempUserId);
+                                cmd.Parameters.AddWithValue("@MaxOrderValue", request.MaxOrderValue);
+                                cmd.Parameters.AddWithValue("@OutOfOffice", request.OutOfOffice);
+                                cmd.Parameters.AddWithValue("@DefaultOrderDepartment", request.DefaultOrderDepartment);
+                                cmd.Parameters.AddWithValue("@PoRoleId", request.PORoleId);
+                                cmd.Parameters.AddWithValue("@Deleted", request.Deleted);
+                                cmd.Parameters.AddWithValue("@AliasUserName1", (object)request.AliasUserName1 ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@InvoiceBarcodePrinter", request.InvoiceBarcodePrinter);
+                                cmd.Parameters.AddWithValue("@SmtpServer", request.SmtpServer);
+                                cmd.Parameters.AddWithValue("@FactoryId", request.FactoryId);
+                                cmd.Parameters.AddWithValue("@PieceMonitoringAccessLevel", request.PieceMonitoringAccessLevel);
+                                cmd.Parameters.AddWithValue("@ExClassEdit", request.ExClassEdit);
+                                cmd.Parameters.AddWithValue("@TimesheetsAccessLevel", request.TimesheetsAccessLevel);
+                                cmd.Parameters.AddWithValue("@InitialWindows", request.InitialWindows);
+                                cmd.Parameters.AddWithValue("@FabScheduleAccessLevel", request.FabScheduleAccessLevel);
+                                cmd.Parameters.AddWithValue("@FabLineScheduleAccessLevel", request.FabLineScheduleAccessLevel);
+                                cmd.Parameters.AddWithValue("@PaintLineScheduleAccessLevel", request.PaintLineScheduleAccessLevel);
+                                cmd.Parameters.AddWithValue("@ContractsAccessLevel", request.ContractsAccessLevel);
+                                cmd.Parameters.AddWithValue("@G2UpdaterVersion", (object)request.G2UpdaterVersion ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@UpdateLocationId", request.UpdateLocationId);
+                                cmd.Parameters.AddWithValue("@AllocationAdmin", request.AllocationAdmin);
+                                cmd.Parameters.AddWithValue("@UserPasswordLastChanged", (object)request.UserPasswordLastChanged ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@DateCreated", (object)request.DateCreated ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@CreatedByUserId", (object)request.CreatedByUserId ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@DateModified", (object)request.DateModified ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@ModifiedByUserId", (object)request.ModifiedByUserId ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@LoggedInOnComputer", request.LoggedInOnComputer);
+                                cmd.Parameters.AddWithValue("@YLoc", (object)request.YLoc ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@YLocDsc", (object)request.YLocDsc ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@Locked", (object)request.Locked ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@FAttempt", (object)request.FAttempt ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@Remarks", (object)request.Remarks ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@ReleaseDt", (object)request.ReleaseDt ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@ReleaseBy", (object)request.ReleaseBy ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@Inactive", (object)request.Inactive ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@InactiveRemarks", (object)request.InactiveRemarks ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@InactiveReleaseDt", (object)request.InactiveReleaseDt ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@InactiveReleaseBy", (object)request.InactiveReleaseBy ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@PasswordAttempts", (object)request.PasswordAttempts ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@PasswordUpdatedFlag", (object)request.PasswordUpdatedFlag ?? DBNull.Value);
+                                cmd.Parameters.AddWithValue("@UnlockDate", (object)request.UnlockDate ?? DBNull.Value);
+
+                                int rowsAffected = cmd.ExecuteNonQuery();
+                              
+                            }
+                        }
+                    }
+
+                    scope.Complete();
+                }
+                return Content(HttpStatusCode.OK, Common.Common.Messages.USER_UPDATED_SUCCESSFULLY);
+
+            }
+            catch (Exception ex)
+            {
+                Logger.Log($"Error in UpdateUser: {ex.Message}");
+                Logger.Log($"StackTrace in UpdateUser: { ex.StackTrace.ToString()}");
+                return Content(HttpStatusCode.InternalServerError, Common.Common.Messages.AN_UNEXPECTED_ERROR_OCCURRED);
+            }
+            //return Ok("Users updated successfully");
         }
 
         [HttpDelete]

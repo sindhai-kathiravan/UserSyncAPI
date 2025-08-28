@@ -6,6 +6,8 @@ namespace UserSyncApi.Models
 {
     public class CreateUserRequest
     {
+        [Required, StringLength(100)]
+        public string SourceSystem { get; set; } // nvarchar(100)
         /// <summary>
         /// List of DB keys from Web.config appSettings
         /// </summary>

@@ -112,6 +112,7 @@
     <Compile Include="Models\LoginRequest.cs" />
     <Compile Include="Models\CreateUserRequest.cs" />
     <Compile Include="Helpers\ValidatorHelper.cs" />
+    <Compile Include="Models\UpdateUserRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -13,19 +13,23 @@ namespace UserSyncApi.Common
         }
         public static class Messages
         {
-            public const string REQUEST_BODY_IS_NULL = "Request body is null";
-            public const string USER_RETRIEVED_SUCCESSFULLY = "User retrieved successfully";
-            public const string REQUEST_COMPLETED_SUCCESSFULLY = "Request completed successfully";
-            public const string INVALID_USER_ID = "Invalid user Id";
-            public const string THE_REQUESTED_USER_WAS_NOT_FOUND = "The requested user was not found";
-            public const string THE_REQUEST_IS_INVALID = "The request is invalid";
-            public const string AUTHORIZATION_HAS_BEEN_DENIED_FOR_THIS_REQUEST = "Authorization has been denied for this request";
-            public const string MISSING_AUTHORIZATION_HEADER = "Missing Authorization header";
-            public const string USER_CREATED_SUCCESSFULLY = "User Created successfully";
-            public const string AN_UNEXPECTED_ERROR_OCCURRED = "An unexpected error occurred";
-            public const string AT_LEAST_ONE_TARGET_DATABASE_MUST_BE_SPECIFIED = "At least one target database must be specified";
-            public const string INVALID_DATABASE_KEY_FOUND = "Invalid database key found";
-
+            public const string REQUEST_BODY_IS_NULL = "Request body is null.";
+            public const string USER_RETRIEVED_SUCCESSFULLY = "User retrieved successfully.";
+            public const string REQUEST_COMPLETED_SUCCESSFULLY = "Request completed successfully.";
+            public const string INVALID_USER_ID = "Invalid user Id.";
+            public const string THE_REQUESTED_USER_WAS_NOT_FOUND = "The requested user was not found.";
+            public const string THE_REQUEST_IS_INVALID = "The request is invalid.";
+            public const string AUTHORIZATION_HAS_BEEN_DENIED_FOR_THIS_REQUEST = "Authorization has been denied for this request.";
+            public const string MISSING_AUTHORIZATION_HEADER = "Missing Authorization header.";
+            public const string USER_CREATED_SUCCESSFULLY = "User created successfully.";
+            public const string AN_UNEXPECTED_ERROR_OCCURRED = "An unexpected error occurred.";
+            public const string AT_LEAST_ONE_TARGET_DATABASE_MUST_BE_SPECIFIED = "At least one target database must be specified.";
+            public const string INVALID_DATABASE_KEY_FOUND = "Invalid database key found.";
+            public const string USER_UPDATED_SUCCESSFULLY = "User updated successfully.";
+            public const string USER_ID_DOES_NOT_EXIST = "UserId does not exist.";
+            public const string INVALID_SOURCE_SYSTEM = "Invalid Source System.";
+            public const string THE_SOURCE_SYSTEM_XXXX_DOES_NOT_EXIST_IN_THE_SYSTEM_LIST = "The source system '{0}' does not exist in the system list.";
+            public const string THE_USER_ID_XX_IS_INVALID = "The user id '{0}' is invalid.";
         }
         public static class Errors
         {

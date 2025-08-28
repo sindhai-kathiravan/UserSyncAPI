@@ -3,6 +3,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -23,9 +24,7 @@ namespace UserSyncApi.Authentication
 
             if (actionContext.Request.Headers.Contains(Common.Common.Headers.CORRELATION_ID))
             {
-                correlationId = actionContext.Request.Headers
-                               .GetValues(Common.Common.Headers.CORRELATION_ID)
-                               .FirstOrDefault();
+                correlationId = actionContext.Request.Headers.GetValues(Common.Common.Headers.CORRELATION_ID).FirstOrDefault();
             }
 
             if (model == null)
@@ -65,11 +64,13 @@ namespace UserSyncApi.Authentication
             }
             else
             {
-                var createUserRequest = model as CreateUserRequest;  // 👈 safe cast
+                var createUserRequest = model as CreateUserRequest;
+                var updateUserRequest = model as UpdateUserRequest;
 
-                if (createUserRequest != null) 
+               
+                if (createUserRequest != null || updateUserRequest != null)
                 {
-                    if (createUserRequest.TargetDatabases == null || !createUserRequest.TargetDatabases.Any())
+                    if (((createUserRequest != null ) && ((createUserRequest.TargetDatabases == null) || (!createUserRequest.TargetDatabases.Any()))) || ((updateUserRequest!=null) &&((updateUserRequest.TargetDatabases == null || !updateUserRequest.TargetDatabases.Any()))))
                     {
                         var response = new ApiResponse<object>
                         {
@@ -81,15 +82,33 @@ namespace UserSyncApi.Authentication
                             Success = false,
                             CorrelationId = string.IsNullOrEmpty(correlationId) ? Guid.NewGuid() : Guid.Parse(correlationId),
                         };
-
                         actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.BadRequest, response);
+                        PrintResponse(actionContext.Response);
+                        return;
+                    }
+                    string sourceSystem = createUserRequest?.SourceSystem ?? updateUserRequest?.SourceSystem;
+                    var sourceSystemKey = ConfigurationManager.AppSettings[sourceSystem];
+                    if (sourceSystemKey == null)
+                    {
+                        var response = new ApiResponse<object>
+                        {
+                            StatusCode = (int)HttpStatusCode.BadRequest,
+                            Status = HttpStatusCode.BadRequest.ToString(),
+                            Message = Common.Common.Messages.INVALID_SOURCE_SYSTEM,
+                            Error = Common.Common.Errors.ERR_VALIDATION_FAILUED,
+                            Data = string.Format(Common.Common.Messages.THE_SOURCE_SYSTEM_XXXX_DOES_NOT_EXIST_IN_THE_SYSTEM_LIST, sourceSystem),
+                            Success = false,
+                            CorrelationId = string.IsNullOrEmpty(correlationId) ? Guid.NewGuid() : Guid.Parse(correlationId),
+                        };
+                        actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.BadRequest, response);
+                        PrintResponse(actionContext.Response);
                         return;
                     }
 
-                    var validKeys = ConfigurationManager.AppSettings.AllKeys; 
-                    var invalidKeys = createUserRequest.TargetDatabases
-                                            .Where(k => !validKeys.Contains(k))
-                                            .ToList();
+                    List<string> targetDatabases = createUserRequest?.TargetDatabases ?? updateUserRequest?.TargetDatabases;
+
+                    string[] validKeys = ConfigurationManager.AppSettings.AllKeys;
+                    var invalidKeys = targetDatabases.Where(k => !validKeys.Contains(k)).ToList();
 
                     if (invalidKeys.Any())
                     {
@@ -97,7 +116,7 @@ namespace UserSyncApi.Authentication
                         {
                             Errors = invalidKeys.Select(k => $"Invalid database key: {k}").ToList()
                         };
-                        string json = JsonConvert.SerializeObject(errorObj);  
+                        string json = JsonConvert.SerializeObject(errorObj);
 
                         var response = new ApiResponse<object>
                         {
@@ -109,20 +128,89 @@ namespace UserSyncApi.Authentication
                             Success = false,
                             CorrelationId = string.IsNullOrEmpty(correlationId) ? Guid.NewGuid() : Guid.Parse(correlationId),
                         };
-
                         actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.BadRequest, response);
+                        PrintResponse(actionContext.Response);
                         return;
                     }
+
+                    if (updateUserRequest != null)
+                    {
+                        if (updateUserRequest.UserId <= 0)
+                        {
+                            var response = new ApiResponse<object>
+                            {
+                                StatusCode = (int)HttpStatusCode.BadRequest,
+                                Status = HttpStatusCode.BadRequest.ToString(),
+                                Message = Common.Common.Messages.INVALID_USER_ID,
+                                Error = Common.Common.Errors.ERR_VALIDATION_FAILUED,
+                                Data = string.Format(Common.Common.Messages.THE_USER_ID_XX_IS_INVALID, updateUserRequest.UserId),
+                                Success = false,
+                                CorrelationId = string.IsNullOrEmpty(correlationId) ? Guid.NewGuid() : Guid.Parse(correlationId),
+                            };
+                            actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.BadRequest, response);
+                            PrintResponse(actionContext.Response);
+                            return;
+                        }
+
+                        // Validate if UserId exists in the DB
+                        var missingDbs = CheckUserExistsInAllDatabases(updateUserRequest.UserId, updateUserRequest.TargetDatabases);
+                        if (missingDbs.Any())
+                        {
+                            var errorObj = new
+                            {
+                                Errors = missingDbs.Select(db => $"The user id {updateUserRequest.UserId} does not exist in the database '{db}'.")
+                            };
+                            string json = JsonConvert.SerializeObject(errorObj);
+
+                            var response = new ApiResponse<object>
+                            {
+                                StatusCode = (int)HttpStatusCode.BadRequest,
+                                Status = HttpStatusCode.BadRequest.ToString(),
+                                Message = Common.Common.Messages.USER_ID_DOES_NOT_EXIST,
+                                Error = Common.Common.Errors.ERR_VALIDATION_FAILUED,
+                                Data = JToken.Parse(json),
+                                Success = false,
+                                CorrelationId = string.IsNullOrEmpty(correlationId) ? Guid.NewGuid() : Guid.Parse(correlationId),
+                            };
+                            actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.BadRequest, response);
+                            PrintResponse(actionContext.Response);
+                            return;
+                        }
+                    }
                 }
-                //if (model.TargetDatabases == null || !model.TargetDatabases.Any())
-                //{
-                //    errors.Add("At least one target database must be specified.");
-                //}
                 Logger.Log("Validation succeeded.");
                 return;
             }
         }
+        private List<string> CheckUserExistsInAllDatabases(int userId, List<string> targetDatabases)
+        {
+            var missingDbKeys = new List<string>();
 
+            foreach (var dbKey in targetDatabases)
+            {
+                string connString = ConfigurationManager.AppSettings[dbKey];
+                if (string.IsNullOrEmpty(connString))
+                {
+                    missingDbKeys.Add(dbKey); // invalid config itself
+                    continue;
+                }
+
+                using (var conn = new SqlConnection(connString))
+                using (var cmd = new SqlCommand("SELECT COUNT(1) FROM Users WHERE user_id = @UserId", conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserId", userId);
+                    conn.Open();
+                    int count = (int)cmd.ExecuteScalar();
+
+                    if (count == 0)
+                    {
+                        missingDbKeys.Add(dbKey); // User not found in this DB
+                    }
+                }
+            }
+
+            return missingDbKeys; // Empty list => User exists in all DBs
+        }
         private void PrintResponse(HttpResponseMessage response)
         {
             var responseContent = response.Content.ReadAsStringAsync().Result;
