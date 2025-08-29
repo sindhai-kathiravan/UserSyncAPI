@@ -35,8 +35,8 @@ namespace UserSyncApi.Authentication
             {
                 StatusCode = (int)HttpStatusCode.Unauthorized,
                 Status = HttpStatusCode.Unauthorized.ToString(),
-                Message = Common.Common.Messages.MISSING_AUTHORIZATION_HEADER,
-                Error = Common.Common.Errors.ERR_UNAUTHORIZED,
+                Message = Common.Constants.Messages.AUTHENTICATION_FAILED,
+                Error = Common.Constants.Errors.ERR_UNAUTHORIZED,
                 Data = null,
                 Success = false,
                 CorrelationId = Guid.NewGuid()

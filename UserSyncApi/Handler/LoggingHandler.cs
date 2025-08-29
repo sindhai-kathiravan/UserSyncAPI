@@ -55,7 +55,7 @@ namespace UserSyncApi.Handler
             Logger.Log($"Method: {method}");
             Logger.Log($"URL: {url}");
             Logger.Log($"Headers: { headers}");
-            if (method == "GET")
+            if ((method == Common.Constants.Methods.GET) || (method == Common.Constants.Methods.DELETE))
             {
                 // Log query string parameters (for GET requests)
                 var queryParams = request.GetQueryNameValuePairs();
@@ -74,31 +74,9 @@ namespace UserSyncApi.Handler
             var response = await base.SendAsync(request, cancellationToken);
 
 
-            var responseObj = new ApiResponse<object>
-            {
-                StatusCode = (int)HttpStatusCode.BadRequest,
-                Message = "Validation failed.",
-                Data = response.Content.ReadAsStringAsync().Result
-            };
-
             // Add the same correlation ID to response headers
             response.Headers.Add(CorrelationIdHeader, request.Headers.GetValues(CorrelationIdHeader));
 
-            // Log response
-            //string responseInfo = await response.Content.ReadAsStringAsync();
-            //Logger.Log("Response:");
-            //var responseContent = response.Content.ReadAsStringAsync().Result;
-            //string prettyJson;
-            //try
-            //{
-            //    var parsed = JToken.Parse(responseContent);
-            //    prettyJson = parsed.ToString(Formatting.Indented);
-            //}
-            //catch
-            //{
-            //    prettyJson = responseContent;
-            //}
-            //Logger.Log(prettyJson);
             return response;
         }
     }

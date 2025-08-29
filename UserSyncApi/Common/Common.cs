@@ -5,7 +5,7 @@ using System.Web;
 
 namespace UserSyncApi.Common
 {
-    public static class Common
+    public static class Constants
     {
         public static class Headers
         {
@@ -20,7 +20,7 @@ namespace UserSyncApi.Common
             public const string THE_REQUESTED_USER_WAS_NOT_FOUND = "The requested user was not found.";
             public const string THE_REQUEST_IS_INVALID = "The request is invalid.";
             public const string AUTHORIZATION_HAS_BEEN_DENIED_FOR_THIS_REQUEST = "Authorization has been denied for this request.";
-            public const string MISSING_AUTHORIZATION_HEADER = "Missing Authorization header.";
+            public const string AUTHENTICATION_FAILED = "Authentication failed.";
             public const string USER_CREATED_SUCCESSFULLY = "User created successfully.";
             public const string AN_UNEXPECTED_ERROR_OCCURRED = "An unexpected error occurred.";
             public const string AT_LEAST_ONE_TARGET_DATABASE_MUST_BE_SPECIFIED = "At least one target database must be specified.";
@@ -30,6 +30,27 @@ namespace UserSyncApi.Common
             public const string INVALID_SOURCE_SYSTEM = "Invalid Source System.";
             public const string THE_SOURCE_SYSTEM_XXXX_DOES_NOT_EXIST_IN_THE_SYSTEM_LIST = "The source system '{0}' does not exist in the system list.";
             public const string THE_USER_ID_XX_IS_INVALID = "The user id '{0}' is invalid.";
+            public const string USERID_QUERY_PARAMETER_IS_REQUIRED = "UserId query parameter is required.";
+        }
+        public static class ActionNames {
+            public const string CreateUser = "CreateUser";
+            public const string GetUser = "GetUser";
+            public const string GetAllUser = "GetAllUser";
+            public const string UpdateUser = "UpdateUser";
+            public const string DeleteUser = "DeleteUser";
+
+        }
+        public static class Methods
+        {
+            public const string GET = "GET";
+            public const string POST = "POST";
+            public const string PUT = "PUT";
+            public const string PATCH = "PATCH";
+            public const string DELETE = "DELETE";
+        }
+        public static class QueryStrings
+        {
+            public const string UserId = "UserId";
         }
         public static class Errors
         {

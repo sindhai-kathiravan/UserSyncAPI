@@ -1896,3 +1896,61 @@ X-Correlation-Id: a26abc10-fad9-4f2e-a4e5-de40dd4d9b5f
   "CorrelationId": "a26abc10-fad9-4f2e-a4e5-de40dd4d9b5f",
   "Error": null
 }
+22:14:02 - ===== Incoming Request =====
+22:14:02 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=123
+22:14:02 - Method: GET
+22:14:02 - URL: http://localhost:56548/api/users/get?UserId=123
+22:14:02 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: b0c18e67-5b5f-48de-a07e-a8c9f7600283
+X-Correlation-Id: 202b0a37-40c8-4880-8223-f40eaf1f2a44
+22:14:02 - Query Parameters:
+22:14:02 - UserId = 123
+22:14:02 - Body: 
+22:14:03 - Authentication succeeded.
+22:27:01 - ===== Incoming Request =====
+22:27:01 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=123
+22:27:01 - Method: GET
+22:27:01 - URL: http://localhost:56548/api/users/get?UserId=123
+22:27:01 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 5b3079aa-3392-4979-8902-aaf30cca66d7
+X-Correlation-Id: 617b6ad8-ea32-4d54-8e6a-1e6277cd0175
+22:27:01 - Query Parameters:
+22:27:01 - UserId = 123
+22:27:01 - Body: 
+22:27:01 - Authentication succeeded.
+22:44:01 - ===== Incoming Request =====
+22:44:01 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId
+22:44:01 - Method: GET
+22:44:01 - URL: http://localhost:56548/api/users/get?UserId
+22:44:01 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: bca36c19-10f3-49f9-af62-101c979ec889
+X-Correlation-Id: bda52630-ec82-4652-872c-df6e32278cfa
+22:44:01 - Query Parameters:
+22:44:01 - UserId = 
+22:44:01 - Body: 
+22:44:02 - Authentication succeeded.
+22:44:16 - Validation failed.
+22:44:16 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "Request body is null.",
+  "Data": null,
+  "CorrelationId": "bda52630-ec82-4652-872c-df6e32278cfa",
+  "Error": "ERR_NULL_BODY"
+}

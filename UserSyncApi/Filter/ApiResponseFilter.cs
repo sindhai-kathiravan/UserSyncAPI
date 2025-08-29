@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Filters;
 using UserSyncApi.Common;
+using UserSyncApi.Models;
 
 namespace UserSyncApi.Filter
 {
@@ -13,7 +14,7 @@ namespace UserSyncApi.Filter
     {
         public override void OnActionExecuted(HttpActionExecutedContext context)
         {
-            var correlationId = context.Request.Headers.Contains(Common.Common.Headers.CORRELATION_ID) ? Guid.Parse(context.Request.Headers.GetValues(Common.Common.Headers.CORRELATION_ID).FirstOrDefault()) : Guid.NewGuid();
+            var correlationId = context.Request.Headers.Contains(Common.Constants.Headers.CORRELATION_ID) ? Guid.Parse(context.Request.Headers.GetValues(Common.Constants.Headers.CORRELATION_ID).FirstOrDefault()) : Guid.NewGuid();
             ApiResponse<object> apiResponse = new ApiResponse<object>();
 
             if (context.Response != null)
@@ -32,8 +33,8 @@ namespace UserSyncApi.Filter
                 if (statusCode == HttpStatusCode.BadRequest)
                 {
                     var httpError = content as HttpError;
-                    message = httpError != null ? httpError.Message : Common.Common.Messages.THE_REQUEST_IS_INVALID;
-                    error = Common.Common.Errors.ERR_BAD_REQUEST;
+                    message = httpError != null ? httpError.Message : Common.Constants.Messages.THE_REQUEST_IS_INVALID;
+                    error = Common.Constants.Errors.ERR_BAD_REQUEST;
                 }
                 else if (statusCode == HttpStatusCode.NotFound)
                 {
@@ -58,17 +59,38 @@ namespace UserSyncApi.Filter
                         }
                     }
 
-                    message = !string.IsNullOrEmpty(notFoundMessage) ? notFoundMessage : Common.Common.Messages.THE_REQUESTED_USER_WAS_NOT_FOUND;
-                    error = Common.Common.Errors.ERR_NOT_FOUND;
+                    message = !string.IsNullOrEmpty(notFoundMessage) ? notFoundMessage : Common.Constants.Messages.THE_REQUESTED_USER_WAS_NOT_FOUND;
+                    error = Common.Constants.Errors.ERR_NOT_FOUND;
                 }
                 else if (statusCode == HttpStatusCode.Unauthorized)
                 {
-                    message =Common.Common.Messages.AUTHORIZATION_HAS_BEEN_DENIED_FOR_THIS_REQUEST;
-                    error = Common.Common.Errors.ERR_UNAUTHORIZED;
+                    message =Common.Constants.Messages.AUTHORIZATION_HAS_BEEN_DENIED_FOR_THIS_REQUEST;
+                    error = Common.Constants.Errors.ERR_UNAUTHORIZED;
                 }
                 else
                 {
-                    message = statusCode == HttpStatusCode.OK ? Common.Common.Messages.REQUEST_COMPLETED_SUCCESSFULLY : statusCode.ToString();
+                    var msgProp = content.GetType().GetProperty("Message");
+                    if (msgProp != null)
+                    {
+                        var val = msgProp.GetValue(content, null);
+                        if (val != null)
+                        {
+                            message = val.ToString();
+                        }
+                    }
+                    var dataProp = content.GetType().GetProperty("Data");
+                    if (dataProp != null)
+                    {
+                        var val = dataProp.GetValue(content, null);
+                        if (val != null)
+                        {
+                            content = val;//.ToString();
+                        }
+                    }
+                    else {
+                        content = null;
+                    }
+                    //message = statusCode == HttpStatusCode.OK ? Common.Common.Messages.REQUEST_COMPLETED_SUCCESSFULLY : statusCode.ToString();
                 }
 
                 apiResponse = new ApiResponse<object>
@@ -90,7 +112,7 @@ namespace UserSyncApi.Filter
                     StatusCode = (int)HttpStatusCode.InternalServerError,
                     Status = HttpStatusCode.InternalServerError.ToString(),
                     Message = context.Exception.Message,
-                    Error = Common.Common.Errors.ERR_INTERNAL_SERVER,
+                    Error = Common.Constants.Errors.ERR_INTERNAL_SERVER,
                     Data = null,
                     Success = false,
                     CorrelationId = correlationId

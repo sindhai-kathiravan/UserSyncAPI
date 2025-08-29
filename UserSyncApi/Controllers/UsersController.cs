@@ -139,13 +139,13 @@ namespace UserSyncApi.Controllers
                         }
                     }
                 }
-                return Content(HttpStatusCode.OK, Common.Common.Messages.USER_CREATED_SUCCESSFULLY);
+                return Content(HttpStatusCode.OK, new { Message = Common.Constants.Messages.USER_CREATED_SUCCESSFULLY });
             }
             catch (Exception ex)
             {
                 Logger.Log($"Error in CreateUser: {ex.Message}");
                 Logger.Log($"StackTrace in CreateUser: { ex.StackTrace.ToString()}");
-                return Content(HttpStatusCode.InternalServerError, Common.Common.Messages.AN_UNEXPECTED_ERROR_OCCURRED);
+                return Content(HttpStatusCode.InternalServerError, Common.Constants.Messages.AN_UNEXPECTED_ERROR_OCCURRED);
             }
         }
 
@@ -153,33 +153,125 @@ namespace UserSyncApi.Controllers
         [Route("api/users/get")]
         public IHttpActionResult GetUser(int UserId)
         {
+            User userObj = null;
             try
             {
-                var users = new List<dynamic>
+
+                using (SqlConnection conn = DbConnectionFactory.GetDefaultConnection())
+                {
+                    conn.Open();
+                    string query = @"
+                SELECT user_id, user_name, user_loginname, user_loggedonat, user_fullname, user_email,
+                       user_initials, user_password, user_department, user_loggedin, user_inmodule,
+                       g2version, lastlogin, os, clr, user_menus, logincount, libraries_readonly,
+                       group_company, screen1_res, screen2_res, screen3_res, screen4_res,
+                       po_auth_id, po_auth_all, order_alerts, po_auth_temp_user_id, maxordervalue,
+                       outofoffice, default_order_department, porole_id, deleted, alias_username_1,
+                       invoicebarcodeprinter, smtpserver, factory_id, piecemonitoringaccesslevel,
+                       exclassedit, timesheetsaccesslevel, initial_windows, fabscheduleaccesslevel,
+                       fablinescheduleaccesslevel, paintlinescheduleaccesslevel, contractsaccesslevel,
+                       g2updaterversion, updatelocation_id, allocationadmin, user_password_last_changed,
+                       date_created, createdbyuser_id, date_modified, modifiedbyuser_id,
+                       loggedinoncomputer, yloc, ylocdsc, locked, fattempt, remarks, releasedt,
+                       releaseby, inactive, inactiveremarks, inactivereleasedt, inactivereleaseby,
+                       password_attempts, password_updated_flag, unlock_date
+                FROM Users
+                WHERE deleted = 0 and user_id = @UserId";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@UserId", UserId);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            new { Id = 1, Name = "John Doe", Email = "john@example.com", Age = 30 },
-                            new { Id = 2, Name = "Jane Smith", Email = "jane@example.com", Age = 28 }
-                        };
-                if (UserId <= 0)
-                {
-                    return BadRequest($"{UserId} is {Common.Common.Messages.INVALID_USER_ID}"); // Filter wraps this
+                            if (reader.Read())
+                            {
+                                userObj = new User
+                                {
+                                    UserId = reader["user_id"] != DBNull.Value ? Convert.ToInt32(reader["user_id"]) : 0,
+                                    UserName = reader["user_name"] != DBNull.Value ? Convert.ToString(reader["user_name"]) : null,
+                                    UserLoginName = reader["user_loginname"] != DBNull.Value ? reader["user_loginname"].ToString() : null,
+                                    UserLoggedOnAt = reader["user_loggedonat"] != DBNull.Value ? Convert.ToString(reader["user_loggedonat"]) : null,
+                                    UserFullName = reader["user_fullname"] != DBNull.Value ? reader["user_fullname"].ToString() : null,
+                                    UserEmail = reader["user_email"] != DBNull.Value ? reader["user_email"].ToString() : null,
+                                    UserInitials = reader["user_initials"] != DBNull.Value ? reader["user_initials"].ToString() : null,
+                                    UserPassword = reader["user_password"] != DBNull.Value ? reader["user_password"].ToString() : null,
+                                    UserDepartment = reader["user_department"] != DBNull.Value ? Convert.ToInt32(reader["user_department"]) : 0,
+                                    UserLoggedIn = reader["user_loggedin"] != DBNull.Value ? Convert.ToBoolean(reader["user_loggedin"]) : false,
+                                    UserInModule = reader["user_inmodule"] != DBNull.Value ? Convert.ToInt32(reader["user_inmodule"]) : 0,
+                                    G2Version = reader["g2version"] != DBNull.Value ? reader["g2version"].ToString() : null,
+                                    LastLogin = reader["lastlogin"] != DBNull.Value ? Convert.ToDateTime(reader["lastlogin"]) : (DateTime?)null,
+                                    OS = reader["os"] != DBNull.Value ? reader["os"].ToString() : null,
+                                    CLR = reader["clr"] != DBNull.Value ? reader["clr"].ToString() : null,
+                                    UserMenus = reader["user_menus"] != DBNull.Value ? reader["user_menus"].ToString() : null,
+                                    LoginCount = reader["logincount"] != DBNull.Value ? Convert.ToInt32(reader["logincount"]) : 0,
+                                    LibrariesReadOnly = reader["libraries_readonly"] != DBNull.Value ? Convert.ToBoolean(reader["libraries_readonly"]) : false,
+                                    GroupCompany = reader["group_company"] != DBNull.Value ? Convert.ToInt32(reader["group_company"]) : 0,
+                                    Screen1Res = reader["screen1_res"] != DBNull.Value ? reader["screen1_res"].ToString() : null,
+                                    Screen2Res = reader["screen2_res"] != DBNull.Value ? reader["screen2_res"].ToString() : null,
+                                    Screen3Res = reader["screen3_res"] != DBNull.Value ? reader["screen3_res"].ToString() : null,
+                                    Screen4Res = reader["screen4_res"] != DBNull.Value ? reader["screen4_res"].ToString() : null,
+                                    POAuthId = reader["po_auth_id"] != DBNull.Value ? Convert.ToInt32(reader["po_auth_id"]) : 0,
+                                    POAuthAll = reader["po_auth_all"] != DBNull.Value ? Convert.ToBoolean(reader["po_auth_all"]) : false,
+                                    OrderAlerts = reader["order_alerts"] != DBNull.Value ? Convert.ToBoolean(reader["order_alerts"]) : false,
+                                    POAuthTempUserId = reader["po_auth_temp_user_id"] != DBNull.Value ? Convert.ToInt32(reader["po_auth_temp_user_id"]) : 0,
+                                    MaxOrderValue = reader["maxordervalue"] != DBNull.Value ? Convert.ToInt32(reader["maxordervalue"]) : 0,
+                                    OutOfOffice = reader["outofoffice"] != DBNull.Value ? Convert.ToBoolean(reader["outofoffice"]) : false,
+                                    DefaultOrderDepartment = reader["default_order_department"] != DBNull.Value ? Convert.ToInt32(reader["default_order_department"]) : 0,
+                                    PORoleId = reader["porole_id"] != DBNull.Value ? Convert.ToInt32(reader["porole_id"]) : 0,
+                                    Deleted = reader["deleted"] != DBNull.Value ? Convert.ToBoolean(reader["deleted"]) : false,
+                                    AliasUserName1 = reader["alias_username_1"] != DBNull.Value ? reader["alias_username_1"].ToString() : null,
+                                    InvoiceBarcodePrinter = reader["invoicebarcodeprinter"] != DBNull.Value ? reader["invoicebarcodeprinter"].ToString() : null,
+                                    SmtpServer = reader["smtpserver"] != DBNull.Value ? reader["smtpserver"].ToString() : null,
+                                    FactoryId = reader["factory_id"] != DBNull.Value ? Convert.ToInt32(reader["factory_id"]) : 0,
+                                    PieceMonitoringAccessLevel = reader["piecemonitoringaccesslevel"] != DBNull.Value ? Convert.ToInt32(reader["piecemonitoringaccesslevel"]) : 0,
+                                    ExClassEdit = reader["exclassedit"] != DBNull.Value ? Convert.ToInt32(reader["exclassedit"]) : 0,
+                                    TimesheetsAccessLevel = reader["timesheetsaccesslevel"] != DBNull.Value ? Convert.ToInt32(reader["timesheetsaccesslevel"]) : 0,
+                                    InitialWindows = reader["initial_windows"] != DBNull.Value ? reader["initial_windows"].ToString() : null,
+                                    FabScheduleAccessLevel = reader["fabscheduleaccesslevel"] != DBNull.Value ? Convert.ToInt32(reader["fabscheduleaccesslevel"]) : 0,
+                                    FabLineScheduleAccessLevel = reader["fablinescheduleaccesslevel"] != DBNull.Value ? Convert.ToInt32(reader["fablinescheduleaccesslevel"]) : 0,
+                                    PaintLineScheduleAccessLevel = reader["paintlinescheduleaccesslevel"] != DBNull.Value ? Convert.ToInt32(reader["paintlinescheduleaccesslevel"]) : 0,
+                                    ContractsAccessLevel = reader["contractsaccesslevel"] != DBNull.Value ? Convert.ToInt32(reader["contractsaccesslevel"]) : 0,
+                                    G2UpdaterVersion = reader["g2updaterversion"] != DBNull.Value ? reader["g2updaterversion"].ToString() : null,
+                                    UpdateLocationId = reader["updatelocation_id"] != DBNull.Value ? Convert.ToInt32(reader["updatelocation_id"]) : 0,
+                                    AllocationAdmin = reader["allocationadmin"] != DBNull.Value ? Convert.ToBoolean(reader["allocationadmin"]) : false,
+                                    UserPasswordLastChanged = reader["user_password_last_changed"] != DBNull.Value ? Convert.ToDateTime(reader["user_password_last_changed"]) : (DateTime?)null,
+                                    DateCreated = reader["date_created"] != DBNull.Value ? Convert.ToDateTime(reader["date_created"]) : (DateTime?)null,
+                                    CreatedByUserId = reader["createdbyuser_id"] != DBNull.Value ? Convert.ToInt32(reader["createdbyuser_id"]) : 0,
+                                    DateModified = reader["date_modified"] != DBNull.Value ? Convert.ToDateTime(reader["date_modified"]) : (DateTime?)null,
+                                    ModifiedByUserId = reader["modifiedbyuser_id"] != DBNull.Value ? Convert.ToInt32(reader["modifiedbyuser_id"]) : 0,
+                                    LoggedInOnComputer = reader["loggedinoncomputer"] != DBNull.Value ? reader["loggedinoncomputer"].ToString() : null,
+                                    YLoc = reader["yloc"] != DBNull.Value ? reader["yloc"].ToString() : null,
+                                    YLocDsc = reader["ylocdsc"] != DBNull.Value ? reader["ylocdsc"].ToString() : null,
+                                    Locked = reader["locked"] != DBNull.Value ? Convert.ToInt32(reader["locked"]) : 0,
+                                    FAttempt = reader["fattempt"] != DBNull.Value ? Convert.ToInt32(reader["fattempt"]) : 0,
+                                    Remarks = reader["remarks"] != DBNull.Value ? reader["remarks"].ToString() : null,
+                                    ReleaseDt = reader["releasedt"] != DBNull.Value ? Convert.ToDateTime(reader["releasedt"]) : (DateTime?)null,
+                                    ReleaseBy = reader["releaseby"] != DBNull.Value ? reader["releaseby"].ToString() : null,
+                                    Inactive = reader["inactive"] != DBNull.Value ? Convert.ToInt32(reader["inactive"]) : 0,
+                                    InactiveRemarks = reader["inactiveremarks"] != DBNull.Value ? reader["inactiveremarks"].ToString() : null,
+                                    InactiveReleaseDt = reader["inactivereleasedt"] != DBNull.Value ? Convert.ToDateTime(reader["inactivereleasedt"]) : (DateTime?)null,
+                                    InactiveReleaseBy = reader["inactivereleaseby"] != DBNull.Value ? reader["inactivereleaseby"].ToString() : null,
+                                    PasswordAttempts = reader["password_attempts"] != DBNull.Value ? Convert.ToString(reader["password_attempts"]) : null,
+                                    PasswordUpdatedFlag = reader["password_updated_flag"] != DBNull.Value ? Convert.ToString(reader["password_updated_flag"]) : null,
+                                    UnlockDate = reader["unlock_date"] != DBNull.Value ? Convert.ToDateTime(reader["unlock_date"]) : (DateTime?)null
+                                };
+                                return Content(HttpStatusCode.OK, new { Message = Common.Constants.Messages.USER_RETRIEVED_SUCCESSFULLY, Data = new { User = userObj } });
+                            }
+                            else
+                            {
+                                return Content(HttpStatusCode.NotFound, new { Message = $"User with Id {UserId} was not found."});
+                            }
+
+                        }
+                    }
                 }
-
-                var user = users.FirstOrDefault(u => u.Id == UserId);
-
-                if (user == null)
-                {
-                    return Content(HttpStatusCode.NotFound, new { Message = $"User with Id {UserId} was not found." });
-                }
-
-                return Ok(user);
-
             }
             catch (Exception ex)
             {
                 Logger.Log($"Error in GetUser: { ex.Message}");
                 Logger.Log($"StackTrace in GetUser: { ex.StackTrace.ToString()}");
-                return Content(HttpStatusCode.InternalServerError, new { Message = Common.Common.Messages.AN_UNEXPECTED_ERROR_OCCURRED });
+                return Content(HttpStatusCode.InternalServerError, new { Message = Common.Constants.Messages.AN_UNEXPECTED_ERROR_OCCURRED });
             }
 
         }
@@ -188,8 +280,119 @@ namespace UserSyncApi.Controllers
         [Route("api/users/getAll")]
         public IHttpActionResult GetAllUser()
         {
-            // sync logic here
-            return Ok("Users synchronized successfully");
+            try
+            {
+                List<User> users = new List<User>();
+                using (SqlConnection conn = DbConnectionFactory.GetDefaultConnection())
+                {
+                    conn.Open();
+                    string query = @"
+                            SELECT user_id, user_name, user_loginname, user_loggedonat, user_fullname, user_email,
+                                   user_initials, user_password, user_department, user_loggedin, user_inmodule,
+                                   g2version, lastlogin, os, clr, user_menus, logincount, libraries_readonly,
+                                   group_company, screen1_res, screen2_res, screen3_res, screen4_res,
+                                   po_auth_id, po_auth_all, order_alerts, po_auth_temp_user_id, maxordervalue,
+                                   outofoffice, default_order_department, porole_id, deleted, alias_username_1,
+                                   invoicebarcodeprinter, smtpserver, factory_id, piecemonitoringaccesslevel,
+                                   exclassedit, timesheetsaccesslevel, initial_windows, fabscheduleaccesslevel,
+                                   fablinescheduleaccesslevel, paintlinescheduleaccesslevel, contractsaccesslevel,
+                                   g2updaterversion, updatelocation_id, allocationadmin, user_password_last_changed,
+                                   date_created, createdbyuser_id, date_modified, modifiedbyuser_id,
+                                   loggedinoncomputer, yloc, ylocdsc, locked, fattempt, remarks, releasedt,
+                                   releaseby, inactive, inactiveremarks, inactivereleasedt, inactivereleaseby,
+                                   password_attempts, password_updated_flag, unlock_date
+                            FROM Users
+                            WHERE deleted = 0";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                users.Add(new User
+                                {
+                                    UserId = reader["user_id"] != DBNull.Value ? Convert.ToInt32(reader["user_id"]) : 0,
+                                    UserName = reader["user_name"] != DBNull.Value ? Convert.ToString(reader["user_name"]) : null,
+                                    UserLoginName = reader["user_loginname"] != DBNull.Value ? reader["user_loginname"].ToString() : null,
+                                    UserLoggedOnAt = reader["user_loggedonat"] != DBNull.Value ? Convert.ToString(reader["user_loggedonat"]) : null,
+                                    UserFullName = reader["user_fullname"] != DBNull.Value ? reader["user_fullname"].ToString() : null,
+                                    UserEmail = reader["user_email"] != DBNull.Value ? reader["user_email"].ToString() : null,
+                                    UserInitials = reader["user_initials"] != DBNull.Value ? reader["user_initials"].ToString() : null,
+                                    UserPassword = reader["user_password"] != DBNull.Value ? reader["user_password"].ToString() : null,
+                                    UserDepartment = reader["user_department"] != DBNull.Value ? Convert.ToInt32(reader["user_department"]) : 0,
+                                    UserLoggedIn = reader["user_loggedin"] != DBNull.Value ? Convert.ToBoolean(reader["user_loggedin"]) : false,
+                                    UserInModule = reader["user_inmodule"] != DBNull.Value ? Convert.ToInt32(reader["user_inmodule"]) : 0,
+                                    G2Version = reader["g2version"] != DBNull.Value ? reader["g2version"].ToString() : null,
+                                    LastLogin = reader["lastlogin"] != DBNull.Value ? Convert.ToDateTime(reader["lastlogin"]) : (DateTime?)null,
+                                    OS = reader["os"] != DBNull.Value ? reader["os"].ToString() : null,
+                                    CLR = reader["clr"] != DBNull.Value ? reader["clr"].ToString() : null,
+                                    UserMenus = reader["user_menus"] != DBNull.Value ? reader["user_menus"].ToString() : null,
+                                    LoginCount = reader["logincount"] != DBNull.Value ? Convert.ToInt32(reader["logincount"]) : 0,
+                                    LibrariesReadOnly = reader["libraries_readonly"] != DBNull.Value ? Convert.ToBoolean(reader["libraries_readonly"]) : false,
+                                    GroupCompany = reader["group_company"] != DBNull.Value ? Convert.ToInt32(reader["group_company"]) : 0,
+                                    Screen1Res = reader["screen1_res"] != DBNull.Value ? reader["screen1_res"].ToString() : null,
+                                    Screen2Res = reader["screen2_res"] != DBNull.Value ? reader["screen2_res"].ToString() : null,
+                                    Screen3Res = reader["screen3_res"] != DBNull.Value ? reader["screen3_res"].ToString() : null,
+                                    Screen4Res = reader["screen4_res"] != DBNull.Value ? reader["screen4_res"].ToString() : null,
+                                    POAuthId = reader["po_auth_id"] != DBNull.Value ? Convert.ToInt32(reader["po_auth_id"]) : 0,
+                                    POAuthAll = reader["po_auth_all"] != DBNull.Value ? Convert.ToBoolean(reader["po_auth_all"]) : false,
+                                    OrderAlerts = reader["order_alerts"] != DBNull.Value ? Convert.ToBoolean(reader["order_alerts"]) : false,
+                                    POAuthTempUserId = reader["po_auth_temp_user_id"] != DBNull.Value ? Convert.ToInt32(reader["po_auth_temp_user_id"]) : 0,
+                                    MaxOrderValue = reader["maxordervalue"] != DBNull.Value ? Convert.ToInt32(reader["maxordervalue"]) : 0,
+                                    OutOfOffice = reader["outofoffice"] != DBNull.Value ? Convert.ToBoolean(reader["outofoffice"]) : false,
+                                    DefaultOrderDepartment = reader["default_order_department"] != DBNull.Value ? Convert.ToInt32(reader["default_order_department"]) : 0,
+                                    PORoleId = reader["porole_id"] != DBNull.Value ? Convert.ToInt32(reader["porole_id"]) : 0,
+                                    Deleted = reader["deleted"] != DBNull.Value ? Convert.ToBoolean(reader["deleted"]) : false,
+                                    AliasUserName1 = reader["alias_username_1"] != DBNull.Value ? reader["alias_username_1"].ToString() : null,
+                                    InvoiceBarcodePrinter = reader["invoicebarcodeprinter"] != DBNull.Value ? reader["invoicebarcodeprinter"].ToString() : null,
+                                    SmtpServer = reader["smtpserver"] != DBNull.Value ? reader["smtpserver"].ToString() : null,
+                                    FactoryId = reader["factory_id"] != DBNull.Value ? Convert.ToInt32(reader["factory_id"]) : 0,
+                                    PieceMonitoringAccessLevel = reader["piecemonitoringaccesslevel"] != DBNull.Value ? Convert.ToInt32(reader["piecemonitoringaccesslevel"]) : 0,
+                                    ExClassEdit = reader["exclassedit"] != DBNull.Value ? Convert.ToInt32(reader["exclassedit"]) : 0,
+                                    TimesheetsAccessLevel = reader["timesheetsaccesslevel"] != DBNull.Value ? Convert.ToInt32(reader["timesheetsaccesslevel"]) : 0,
+                                    InitialWindows = reader["initial_windows"] != DBNull.Value ? reader["initial_windows"].ToString() : null,
+                                    FabScheduleAccessLevel = reader["fabscheduleaccesslevel"] != DBNull.Value ? Convert.ToInt32(reader["fabscheduleaccesslevel"]) : 0,
+                                    FabLineScheduleAccessLevel = reader["fablinescheduleaccesslevel"] != DBNull.Value ? Convert.ToInt32(reader["fablinescheduleaccesslevel"]) : 0,
+                                    PaintLineScheduleAccessLevel = reader["paintlinescheduleaccesslevel"] != DBNull.Value ? Convert.ToInt32(reader["paintlinescheduleaccesslevel"]) : 0,
+                                    ContractsAccessLevel = reader["contractsaccesslevel"] != DBNull.Value ? Convert.ToInt32(reader["contractsaccesslevel"]) : 0,
+                                    G2UpdaterVersion = reader["g2updaterversion"] != DBNull.Value ? reader["g2updaterversion"].ToString() : null,
+                                    UpdateLocationId = reader["updatelocation_id"] != DBNull.Value ? Convert.ToInt32(reader["updatelocation_id"]) : 0,
+                                    AllocationAdmin = reader["allocationadmin"] != DBNull.Value ? Convert.ToBoolean(reader["allocationadmin"]) : false,
+                                    UserPasswordLastChanged = reader["user_password_last_changed"] != DBNull.Value ? Convert.ToDateTime(reader["user_password_last_changed"]) : (DateTime?)null,
+                                    DateCreated = reader["date_created"] != DBNull.Value ? Convert.ToDateTime(reader["date_created"]) : (DateTime?)null,
+                                    CreatedByUserId = reader["createdbyuser_id"] != DBNull.Value ? Convert.ToInt32(reader["createdbyuser_id"]) : 0,
+                                    DateModified = reader["date_modified"] != DBNull.Value ? Convert.ToDateTime(reader["date_modified"]) : (DateTime?)null,
+                                    ModifiedByUserId = reader["modifiedbyuser_id"] != DBNull.Value ? Convert.ToInt32(reader["modifiedbyuser_id"]) : 0,
+                                    LoggedInOnComputer = reader["loggedinoncomputer"] != DBNull.Value ? reader["loggedinoncomputer"].ToString() : null,
+                                    YLoc = reader["yloc"] != DBNull.Value ? reader["yloc"].ToString() : null,
+                                    YLocDsc = reader["ylocdsc"] != DBNull.Value ? reader["ylocdsc"].ToString() : null,
+                                    Locked = reader["locked"] != DBNull.Value ? Convert.ToInt32(reader["locked"]) : 0,
+                                    FAttempt = reader["fattempt"] != DBNull.Value ? Convert.ToInt32(reader["fattempt"]) : 0,
+                                    Remarks = reader["remarks"] != DBNull.Value ? reader["remarks"].ToString() : null,
+                                    ReleaseDt = reader["releasedt"] != DBNull.Value ? Convert.ToDateTime(reader["releasedt"]) : (DateTime?)null,
+                                    ReleaseBy = reader["releaseby"] != DBNull.Value ? reader["releaseby"].ToString() : null,
+                                    Inactive = reader["inactive"] != DBNull.Value ? Convert.ToInt32(reader["inactive"]) : 0,
+                                    InactiveRemarks = reader["inactiveremarks"] != DBNull.Value ? reader["inactiveremarks"].ToString() : null,
+                                    InactiveReleaseDt = reader["inactivereleasedt"] != DBNull.Value ? Convert.ToDateTime(reader["inactivereleasedt"]) : (DateTime?)null,
+                                    InactiveReleaseBy = reader["inactivereleaseby"] != DBNull.Value ? reader["inactivereleaseby"].ToString() : null,
+                                    PasswordAttempts = reader["password_attempts"] != DBNull.Value ? Convert.ToString(reader["password_attempts"]) : null,
+                                    PasswordUpdatedFlag = reader["password_updated_flag"] != DBNull.Value ? Convert.ToString(reader["password_updated_flag"]) : null,
+                                    UnlockDate = reader["unlock_date"] != DBNull.Value ? Convert.ToDateTime(reader["unlock_date"]) : (DateTime?)null
+                                });
+                            }
+                        }
+                    }
+                }
+                string message = users.Count > 0 ? $"Fetched {users.Count} users successfully." : "No users found.";
+                return Content(HttpStatusCode.OK, new { Message = message, Data=new { UsersCount = users.Count, Users = users } });
+
+            }
+            catch (Exception ex)
+            {
+                Logger.Log($"Error in GetAllUser: { ex.Message}");
+                Logger.Log($"StackTrace in GetAllUser: { ex.StackTrace.ToString()}");
+                return Content(HttpStatusCode.InternalServerError, new { Message = Common.Constants.Messages.AN_UNEXPECTED_ERROR_OCCURRED });
+            }
         }
 
         [HttpPut]
@@ -345,25 +548,21 @@ namespace UserSyncApi.Controllers
                                 cmd.Parameters.AddWithValue("@PasswordAttempts", (object)request.PasswordAttempts ?? DBNull.Value);
                                 cmd.Parameters.AddWithValue("@PasswordUpdatedFlag", (object)request.PasswordUpdatedFlag ?? DBNull.Value);
                                 cmd.Parameters.AddWithValue("@UnlockDate", (object)request.UnlockDate ?? DBNull.Value);
-
                                 int rowsAffected = cmd.ExecuteNonQuery();
-                              
                             }
                         }
                     }
-
                     scope.Complete();
                 }
-                return Content(HttpStatusCode.OK, Common.Common.Messages.USER_UPDATED_SUCCESSFULLY);
+                return Content(HttpStatusCode.OK, new { Message = Common.Constants.Messages.USER_UPDATED_SUCCESSFULLY });
 
             }
             catch (Exception ex)
             {
                 Logger.Log($"Error in UpdateUser: {ex.Message}");
                 Logger.Log($"StackTrace in UpdateUser: { ex.StackTrace.ToString()}");
-                return Content(HttpStatusCode.InternalServerError, Common.Common.Messages.AN_UNEXPECTED_ERROR_OCCURRED);
+                return Content(HttpStatusCode.InternalServerError, Common.Constants.Messages.AN_UNEXPECTED_ERROR_OCCURRED);
             }
-            //return Ok("Users updated successfully");
         }
 
         [HttpDelete]
@@ -376,4 +575,4 @@ namespace UserSyncApi.Controllers
 
 
     }
-}   
+}

@@ -1,0 +1,2825 @@
+00:08:13 - ===== Incoming Request =====
+00:08:13 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get
+00:08:13 - Method: GET
+00:08:13 - URL: http://localhost:56548/api/users/get
+00:08:13 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: d5eb3acd-1714-48d0-a477-bc61178792e7
+X-Correlation-Id: ed0c21b5-99f3-4640-b5fa-cefacd1a541d
+00:08:13 - Body: 
+00:08:37 - ===== Incoming Request =====
+00:08:37 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get
+00:08:37 - Method: GET
+00:08:37 - URL: http://localhost:56548/api/users/get
+00:08:37 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 01da8387-7da6-41e2-a9f6-540d5db96ac3
+X-Correlation-Id: d96541ea-b6da-43d9-bb11-0d54ac8a4db8
+00:08:37 - Body: 
+00:08:45 - ===== Incoming Request =====
+00:08:45 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get
+00:08:45 - Method: GET
+00:08:45 - URL: http://localhost:56548/api/users/get
+00:08:45 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: ae64af1c-182e-409d-a004-bac1deff0f91
+X-Correlation-Id: 4ebffcab-a7cc-4797-9c79-c09a6334d1ac
+00:08:45 - Body: 
+00:08:56 - ===== Incoming Request =====
+00:08:56 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId
+00:08:56 - Method: GET
+00:08:56 - URL: http://localhost:56548/api/users/get?UserId
+00:08:56 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 22da4af7-f8de-4b07-ba56-ec590f74e885
+X-Correlation-Id: 28e12b82-c8ba-41b8-a756-f50640a2bd20
+00:08:56 - Query Parameters:
+00:08:56 - UserId = 
+00:08:56 - Body: 
+00:08:56 - Authentication succeeded.
+00:09:01 - Validation failed.
+00:09:01 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "Request body is null.",
+  "Data": null,
+  "CorrelationId": "28e12b82-c8ba-41b8-a756-f50640a2bd20",
+  "Error": "ERR_NULL_BODY"
+}
+00:09:22 - ===== Incoming Request =====
+00:09:22 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=
+00:09:22 - Method: GET
+00:09:22 - URL: http://localhost:56548/api/users/get?UserId=
+00:09:22 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: df52a6e3-0adb-40ac-800a-1fd327b25791
+X-Correlation-Id: 2498a66e-7deb-4540-8722-a0a319924518
+00:09:22 - Query Parameters:
+00:09:22 - UserId = 
+00:09:22 - Body: 
+00:09:22 - Authentication succeeded.
+00:09:25 - Validation failed.
+00:09:25 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "Request body is null.",
+  "Data": null,
+  "CorrelationId": "2498a66e-7deb-4540-8722-a0a319924518",
+  "Error": "ERR_NULL_BODY"
+}
+00:09:39 - ===== Incoming Request =====
+00:09:39 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+00:09:39 - Method: GET
+00:09:39 - URL: http://localhost:56548/api/users/get?UserId=1
+00:09:39 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: b2be8847-a606-4bb0-b2b7-75f5693c06c1
+X-Correlation-Id: b6169b40-349a-42eb-9c60-3c7fbc1b470c
+00:09:39 - Query Parameters:
+00:09:39 - UserId = 1
+00:09:39 - Body: 
+00:09:39 - Authentication succeeded.
+00:09:44 - Validation succeeded.
+00:09:44 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "Request completed successfully.",
+  "Data": {
+    "Id": 1,
+    "Name": "John Doe",
+    "Email": "john@example.com",
+    "Age": 30
+  },
+  "CorrelationId": "b6169b40-349a-42eb-9c60-3c7fbc1b470c",
+  "Error": null
+}
+00:10:49 - ===== Incoming Request =====
+00:10:49 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=-1
+00:10:49 - Method: GET
+00:10:49 - URL: http://localhost:56548/api/users/get?UserId=-1
+00:10:49 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: d586290c-61a0-4d19-af99-6b7fb186659c
+X-Correlation-Id: 8849bc2f-85d4-4ecb-876d-ced6523519d0
+00:10:49 - Query Parameters:
+00:10:49 - UserId = -1
+00:10:49 - Body: 
+00:10:49 - Authentication succeeded.
+00:10:53 - Validation succeeded.
+00:10:53 - Response: {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "-1 is Invalid user Id.",
+  "Data": {
+    "Message": "-1 is Invalid user Id."
+  },
+  "CorrelationId": "8849bc2f-85d4-4ecb-876d-ced6523519d0",
+  "Error": "ERR_BAD_REQUEST"
+}
+00:11:03 - ===== Incoming Request =====
+00:11:03 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=0
+00:11:03 - Method: GET
+00:11:03 - URL: http://localhost:56548/api/users/get?UserId=0
+00:11:03 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 44304815-1082-4fc5-a2f7-16f2e3774544
+X-Correlation-Id: 79606aa4-32cb-45e0-b69a-a5dc174c5c79
+00:11:03 - Query Parameters:
+00:11:03 - UserId = 0
+00:11:03 - Body: 
+00:11:03 - Authentication succeeded.
+00:11:06 - Validation succeeded.
+00:11:06 - Response: {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "0 is Invalid user Id.",
+  "Data": {
+    "Message": "0 is Invalid user Id."
+  },
+  "CorrelationId": "79606aa4-32cb-45e0-b69a-a5dc174c5c79",
+  "Error": "ERR_BAD_REQUEST"
+}
+00:11:15 - ===== Incoming Request =====
+00:11:15 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=iu
+00:11:15 - Method: GET
+00:11:15 - URL: http://localhost:56548/api/users/get?UserId=iu
+00:11:15 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: d2c9336f-059d-4ddd-ae0d-58eb26a57e3f
+X-Correlation-Id: 7b4d474c-2830-4f5e-959c-e8a46b52aa26
+00:11:15 - Query Parameters:
+00:11:15 - UserId = iu
+00:11:15 - Body: 
+00:11:15 - Authentication succeeded.
+00:11:20 - Validation failed.
+00:11:20 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "Request body is null.",
+  "Data": null,
+  "CorrelationId": "7b4d474c-2830-4f5e-959c-e8a46b52aa26",
+  "Error": "ERR_NULL_BODY"
+}
+00:11:37 - ===== Incoming Request =====
+00:11:37 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=i
+00:11:37 - Method: GET
+00:11:38 - URL: http://localhost:56548/api/users/get?UserId=i
+00:11:38 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: cf0adbce-35d1-4f04-bdce-9775e8cfc870
+X-Correlation-Id: 1ab941a8-7403-4458-8709-4952dfa5353a
+00:11:38 - Query Parameters:
+00:11:38 - UserId = i
+00:11:38 - Body: 
+00:11:38 - Authentication succeeded.
+00:11:55 - Validation failed.
+00:11:55 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "Request body is null.",
+  "Data": null,
+  "CorrelationId": "1ab941a8-7403-4458-8709-4952dfa5353a",
+  "Error": "ERR_NULL_BODY"
+}
+00:12:02 - ===== Incoming Request =====
+00:12:02 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=9
+00:12:02 - Method: GET
+00:12:02 - URL: http://localhost:56548/api/users/get?UserId=9
+00:12:02 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 562b1568-55dc-4641-a6d0-1772ddaa3817
+X-Correlation-Id: 0cb9a36d-b98b-4e87-9108-efc7db21901d
+00:12:02 - Query Parameters:
+00:12:02 - UserId = 9
+00:12:02 - Body: 
+00:12:02 - Authentication succeeded.
+00:12:06 - Validation succeeded.
+00:12:06 - Response: {
+  "Success": false,
+  "StatusCode": 404,
+  "Status": "NotFound",
+  "Message": "User with Id 9 was not found.",
+  "Data": {
+    "Message": "User with Id 9 was not found."
+  },
+  "CorrelationId": "0cb9a36d-b98b-4e87-9108-efc7db21901d",
+  "Error": "ERR_NOT_FOUND"
+}
+00:40:28 - ===== Incoming Request =====
+00:40:29 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=9
+00:40:29 - Method: GET
+00:40:29 - URL: http://localhost:56548/api/users/get?UserId=9
+00:40:29 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: f379197d-faf3-4dbd-a84b-3f6ab2082e6a
+X-Correlation-Id: 67b93401-6bd5-4309-a8dd-e85aa11718b4
+00:40:29 - Query Parameters:
+00:40:29 - UserId = 9
+00:40:29 - Body: 
+00:40:30 - Authentication succeeded.
+00:40:59 - Validation succeeded.
+00:41:07 - Response: {
+  "Success": false,
+  "StatusCode": 404,
+  "Status": "NotFound",
+  "Message": "User with Id 9 was not found.",
+  "Data": {
+    "Message": "User with Id 9 was not found."
+  },
+  "CorrelationId": "67b93401-6bd5-4309-a8dd-e85aa11718b4",
+  "Error": "ERR_NOT_FOUND"
+}
+00:41:29 - ===== Incoming Request =====
+00:41:29 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+00:41:29 - Method: GET
+00:41:29 - URL: http://localhost:56548/api/users/get?UserId=1
+00:41:29 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 2af335a0-287d-4061-ab31-8e558b92618f
+X-Correlation-Id: ddca870c-25ae-4bc2-9b21-4e3333a6bf3f
+00:41:29 - Query Parameters:
+00:41:29 - UserId = 1
+00:41:29 - Body: 
+00:41:29 - Authentication succeeded.
+00:41:34 - Validation succeeded.
+00:41:34 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "Request completed successfully.",
+  "Data": {
+    "SourceSystem": null,
+    "UserId": 1,
+    "UserName": "jdoe                ",
+    "UserLoginName": "jdoe_login",
+    "UserLoggedOnAt": "Terminal01                                                                                          ",
+    "UserFullName": "John Doe                      ",
+    "UserEmail": "jdoe@yahoo.com                                    ",
+    "UserInitials": "JD  ",
+    "UserPassword": "SecurePass123!",
+    "UserDepartment": 101,
+    "UserLoggedIn": true,
+    "UserInModule": 3,
+    "G2Version": "v1.0                ",
+    "LastLogin": "2025-12-20T10:30:00",
+    "OS": "Windows 10                                                                                          ",
+    "CLR": ".NET Framework 4.8                                ",
+    "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+    "LoginCount": 1,
+    "LibrariesReadOnly": false,
+    "GroupCompany": 5,
+    "Screen1Res": "1920x1080                     ",
+    "Screen2Res": "1920x1080                     ",
+    "Screen3Res": "1280x720                      ",
+    "Screen4Res": "1280x720                      ",
+    "POAuthId": 10,
+    "POAuthAll": false,
+    "OrderAlerts": true,
+    "POAuthTempUserId": 0,
+    "MaxOrderValue": 5000,
+    "OutOfOffice": false,
+    "DefaultOrderDepartment": 101,
+    "PORoleId": 7,
+    "Deleted": false,
+    "AliasUserName1": "JDALT     ",
+    "InvoiceBarcodePrinter": "Printer01",
+    "SmtpServer": "smtp.example.com",
+    "FactoryId": 2,
+    "PieceMonitoringAccessLevel": 3,
+    "ExClassEdit": 1,
+    "TimesheetsAccessLevel": 2,
+    "InitialWindows": "MainWin",
+    "FabScheduleAccessLevel": 3,
+    "FabLineScheduleAccessLevel": 2,
+    "PaintLineScheduleAccessLevel": 1,
+    "ContractsAccessLevel": 2,
+    "G2UpdaterVersion": "1.2.3",
+    "UpdateLocationId": 12,
+    "AllocationAdmin": true,
+    "UserPasswordLastChanged": "2025-08-10T00:00:00",
+    "DateCreated": "2025-08-01T00:00:00",
+    "CreatedByUserId": 99,
+    "DateModified": "2025-08-15T00:00:00",
+    "ModifiedByUserId": 100,
+    "LoggedInOnComputer": "COMP001",
+    "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+    "YLocDsc": "Main Storage Area",
+    "Locked": 0,
+    "FAttempt": 1,
+    "Remarks": "New user created",
+    "ReleaseDt": "2025-08-21T14:00:00",
+    "ReleaseBy": "admin",
+    "Inactive": 0,
+    "InactiveRemarks": null,
+    "InactiveReleaseDt": null,
+    "InactiveReleaseBy": null,
+    "PasswordAttempts": "0",
+    "PasswordUpdatedFlag": "Y",
+    "UnlockDate": "2025-08-25T09:00:00"
+  },
+  "CorrelationId": "ddca870c-25ae-4bc2-9b21-4e3333a6bf3f",
+  "Error": null
+}
+00:49:09 - ===== Incoming Request =====
+00:49:09 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/getall
+00:49:09 - Method: GET
+00:49:09 - URL: http://localhost:56548/api/users/getall
+00:49:09 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 04d57885-6f06-4322-a11b-c3ac35ea25b3
+X-Correlation-Id: cf336b87-1ac2-4d41-a87d-0a2221f58bf3
+00:49:09 - Body: 
+00:49:09 - Authentication succeeded.
+00:51:52 - Validation failed.
+00:51:53 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "Request body is null.",
+  "Data": null,
+  "CorrelationId": "cf336b87-1ac2-4d41-a87d-0a2221f58bf3",
+  "Error": "ERR_NULL_BODY"
+}
+01:21:17 - ===== Incoming Request =====
+01:21:17 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/getall
+01:21:17 - Method: GET
+01:21:17 - URL: http://localhost:56548/api/users/getall
+01:21:17 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 05ab4e6f-6c55-459d-ba73-21690367d831
+X-Correlation-Id: e63ad0bb-2770-4126-9bfd-229258713340
+01:21:17 - Body: 
+01:21:17 - Authentication succeeded.
+01:21:35 - Validation failed.
+01:21:35 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "Request body is null.",
+  "Data": null,
+  "CorrelationId": "e63ad0bb-2770-4126-9bfd-229258713340",
+  "Error": "ERR_NULL_BODY"
+}
+01:21:54 - ===== Incoming Request =====
+01:21:54 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/getall
+01:21:54 - Method: GET
+01:21:54 - URL: http://localhost:56548/api/users/getall
+01:21:54 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 7aa270e6-2eb5-4a80-89bf-a3846ede2f37
+X-Correlation-Id: 21c3b4ff-6ede-4316-89ef-a4138d26b05c
+01:21:54 - Body: 
+01:21:54 - Authentication succeeded.
+01:27:11 - ===== Incoming Request =====
+01:27:11 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/getall
+01:27:11 - Method: GET
+01:27:11 - URL: http://localhost:56548/api/users/getall
+01:27:11 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: da2e39f0-6af5-472b-af40-db8af0773514
+X-Correlation-Id: b51bb1b1-47af-4b60-9b94-bc89cbaa7e59
+01:27:11 - Body: 
+01:27:11 - Authentication succeeded.
+01:31:23 - ===== Incoming Request =====
+01:31:23 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/Create
+01:31:23 - Method: GET
+01:31:23 - URL: http://localhost:56548/api/users/Create
+01:31:23 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 49742b20-da42-411d-842d-6b8a2f55d416
+X-Correlation-Id: 7c21c242-27eb-4804-bd56-97a218358782
+01:31:23 - Body: 
+01:31:34 - ===== Incoming Request =====
+01:31:34 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/Create
+01:31:34 - Method: POST
+01:31:34 - URL: http://localhost:56548/api/users/Create
+01:31:34 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 26a39605-671c-4273-98da-f76c37641820
+X-Correlation-Id: ee5b0128-ae27-476c-a7c3-4727b1518c45
+01:31:34 - Body: 
+01:31:34 - Authentication succeeded.
+01:32:30 - Validation succeeded.
+01:32:40 - Error in CreateUser: Object reference not set to an instance of an object.
+01:32:41 - StackTrace in CreateUser:    at UserSyncApi.Controllers.UsersController.CreateUser(CreateUserRequest request) in C:\Sun\UserSyncApi\UserSyncApi\UserSyncApi\Controllers\UsersController.cs:line 26
+01:32:48 - Response: {
+  "Success": false,
+  "StatusCode": 500,
+  "Status": "InternalServerError",
+  "Message": "InternalServerError",
+  "Data": "An unexpected error occurred.",
+  "CorrelationId": "ee5b0128-ae27-476c-a7c3-4727b1518c45",
+  "Error": null
+}
+01:38:24 - ===== Incoming Request =====
+01:38:24 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/Create
+01:38:24 - Method: POST
+01:38:24 - URL: http://localhost:56548/api/users/Create
+01:38:24 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 7005eefb-e903-49e4-a2d0-59f862645bc0
+X-Correlation-Id: 999b01cc-0f14-45d0-8283-703cb124e6f9
+01:38:24 - Body: 
+01:38:24 - Authentication succeeded.
+01:38:54 - Validation failed.
+01:38:54 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "Request body is null.",
+  "Data": null,
+  "CorrelationId": "999b01cc-0f14-45d0-8283-703cb124e6f9",
+  "Error": "ERR_NULL_BODY"
+}
+01:47:03 - ===== Incoming Request =====
+01:47:03 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/Get?userid=1
+01:47:03 - Method: POST
+01:47:03 - URL: http://localhost:56548/api/users/Get?userid=1
+01:47:03 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 61f7868f-c3e5-4793-91af-2620c0defc89
+X-Correlation-Id: 6f4da37d-c53e-4677-9763-e0bf9398f148
+01:47:03 - Body: 
+01:47:12 - ===== Incoming Request =====
+01:47:12 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/Get?userid=1
+01:47:12 - Method: GET
+01:47:12 - URL: http://localhost:56548/api/users/Get?userid=1
+01:47:12 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: d2a023ab-db84-4d50-9683-4b33a7f9122f
+X-Correlation-Id: 37ac6b63-95e8-4001-b1e4-bf1f71bb7ea2
+01:47:12 - Query Parameters:
+01:47:12 - userid = 1
+01:47:12 - Body: 
+01:47:12 - Authentication succeeded.
+01:47:35 - Validation succeeded.
+01:47:36 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "Request completed successfully.",
+  "Data": {
+    "SourceSystem": null,
+    "UserId": 1,
+    "UserName": "jdoe                ",
+    "UserLoginName": "jdoe_login",
+    "UserLoggedOnAt": "Terminal01                                                                                          ",
+    "UserFullName": "John Doe                      ",
+    "UserEmail": "jdoe@yahoo.com                                    ",
+    "UserInitials": "JD  ",
+    "UserPassword": "SecurePass123!",
+    "UserDepartment": 101,
+    "UserLoggedIn": true,
+    "UserInModule": 3,
+    "G2Version": "v1.0                ",
+    "LastLogin": "2025-12-20T10:30:00",
+    "OS": "Windows 10                                                                                          ",
+    "CLR": ".NET Framework 4.8                                ",
+    "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+    "LoginCount": 1,
+    "LibrariesReadOnly": false,
+    "GroupCompany": 5,
+    "Screen1Res": "1920x1080                     ",
+    "Screen2Res": "1920x1080                     ",
+    "Screen3Res": "1280x720                      ",
+    "Screen4Res": "1280x720                      ",
+    "POAuthId": 10,
+    "POAuthAll": false,
+    "OrderAlerts": true,
+    "POAuthTempUserId": 0,
+    "MaxOrderValue": 5000,
+    "OutOfOffice": false,
+    "DefaultOrderDepartment": 101,
+    "PORoleId": 7,
+    "Deleted": false,
+    "AliasUserName1": "JDALT     ",
+    "InvoiceBarcodePrinter": "Printer01",
+    "SmtpServer": "smtp.example.com",
+    "FactoryId": 2,
+    "PieceMonitoringAccessLevel": 3,
+    "ExClassEdit": 1,
+    "TimesheetsAccessLevel": 2,
+    "InitialWindows": "MainWin",
+    "FabScheduleAccessLevel": 3,
+    "FabLineScheduleAccessLevel": 2,
+    "PaintLineScheduleAccessLevel": 1,
+    "ContractsAccessLevel": 2,
+    "G2UpdaterVersion": "1.2.3",
+    "UpdateLocationId": 12,
+    "AllocationAdmin": true,
+    "UserPasswordLastChanged": "2025-08-10T00:00:00",
+    "DateCreated": "2025-08-01T00:00:00",
+    "CreatedByUserId": 99,
+    "DateModified": "2025-08-15T00:00:00",
+    "ModifiedByUserId": 100,
+    "LoggedInOnComputer": "COMP001",
+    "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+    "YLocDsc": "Main Storage Area",
+    "Locked": 0,
+    "FAttempt": 1,
+    "Remarks": "New user created",
+    "ReleaseDt": "2025-08-21T14:00:00",
+    "ReleaseBy": "admin",
+    "Inactive": 0,
+    "InactiveRemarks": null,
+    "InactiveReleaseDt": null,
+    "InactiveReleaseBy": null,
+    "PasswordAttempts": "0",
+    "PasswordUpdatedFlag": "Y",
+    "UnlockDate": "2025-08-25T09:00:00"
+  },
+  "CorrelationId": "37ac6b63-95e8-4001-b1e4-bf1f71bb7ea2",
+  "Error": null
+}
+01:47:45 - ===== Incoming Request =====
+01:47:45 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/Get?userid
+01:47:45 - Method: GET
+01:47:45 - URL: http://localhost:56548/api/users/Get?userid
+01:47:45 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: a2d9e006-c8ea-436f-8795-d619499cf279
+X-Correlation-Id: 886b40c7-d9f7-43a5-868a-dd4ba9123571
+01:47:45 - Query Parameters:
+01:47:45 - userid = 
+01:47:45 - Body: 
+01:47:45 - Authentication succeeded.
+01:50:10 - ===== Incoming Request =====
+01:50:10 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/Get?userid
+01:50:10 - Method: GET
+01:50:10 - URL: http://localhost:56548/api/users/Get?userid
+01:50:10 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 0ceb23d7-2e0e-4e64-b28b-529d2f60358e
+X-Correlation-Id: 38e1d2a6-f010-4ac8-9134-971487e2ea46
+01:50:10 - Query Parameters:
+01:50:10 - userid = 
+01:50:10 - Body: 
+01:50:10 - Authentication succeeded.
+01:50:35 - Validation failed.
+01:50:35 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "Request body is null.",
+  "Data": null,
+  "CorrelationId": "38e1d2a6-f010-4ac8-9134-971487e2ea46",
+  "Error": "ERR_NULL_BODY"
+}
+01:50:45 - ===== Incoming Request =====
+01:50:45 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/Get?userid=1
+01:50:45 - Method: GET
+01:50:45 - URL: http://localhost:56548/api/users/Get?userid=1
+01:50:45 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 2ead68c4-1d70-49a5-a3f9-ceb9a2fbd27d
+X-Correlation-Id: 3688a3c8-02f5-4623-99e9-be7e2db28407
+01:50:45 - Query Parameters:
+01:50:45 - userid = 1
+01:50:45 - Body: 
+01:50:45 - Authentication succeeded.
+01:50:53 - Validation succeeded.
+01:51:05 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "Request completed successfully.",
+  "Data": {
+    "SourceSystem": null,
+    "UserId": 1,
+    "UserName": "jdoe                ",
+    "UserLoginName": "jdoe_login",
+    "UserLoggedOnAt": "Terminal01                                                                                          ",
+    "UserFullName": "John Doe                      ",
+    "UserEmail": "jdoe@yahoo.com                                    ",
+    "UserInitials": "JD  ",
+    "UserPassword": "SecurePass123!",
+    "UserDepartment": 101,
+    "UserLoggedIn": true,
+    "UserInModule": 3,
+    "G2Version": "v1.0                ",
+    "LastLogin": "2025-12-20T10:30:00",
+    "OS": "Windows 10                                                                                          ",
+    "CLR": ".NET Framework 4.8                                ",
+    "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+    "LoginCount": 1,
+    "LibrariesReadOnly": false,
+    "GroupCompany": 5,
+    "Screen1Res": "1920x1080                     ",
+    "Screen2Res": "1920x1080                     ",
+    "Screen3Res": "1280x720                      ",
+    "Screen4Res": "1280x720                      ",
+    "POAuthId": 10,
+    "POAuthAll": false,
+    "OrderAlerts": true,
+    "POAuthTempUserId": 0,
+    "MaxOrderValue": 5000,
+    "OutOfOffice": false,
+    "DefaultOrderDepartment": 101,
+    "PORoleId": 7,
+    "Deleted": false,
+    "AliasUserName1": "JDALT     ",
+    "InvoiceBarcodePrinter": "Printer01",
+    "SmtpServer": "smtp.example.com",
+    "FactoryId": 2,
+    "PieceMonitoringAccessLevel": 3,
+    "ExClassEdit": 1,
+    "TimesheetsAccessLevel": 2,
+    "InitialWindows": "MainWin",
+    "FabScheduleAccessLevel": 3,
+    "FabLineScheduleAccessLevel": 2,
+    "PaintLineScheduleAccessLevel": 1,
+    "ContractsAccessLevel": 2,
+    "G2UpdaterVersion": "1.2.3",
+    "UpdateLocationId": 12,
+    "AllocationAdmin": true,
+    "UserPasswordLastChanged": "2025-08-10T00:00:00",
+    "DateCreated": "2025-08-01T00:00:00",
+    "CreatedByUserId": 99,
+    "DateModified": "2025-08-15T00:00:00",
+    "ModifiedByUserId": 100,
+    "LoggedInOnComputer": "COMP001",
+    "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+    "YLocDsc": "Main Storage Area",
+    "Locked": 0,
+    "FAttempt": 1,
+    "Remarks": "New user created",
+    "ReleaseDt": "2025-08-21T14:00:00",
+    "ReleaseBy": "admin",
+    "Inactive": 0,
+    "InactiveRemarks": null,
+    "InactiveReleaseDt": null,
+    "InactiveReleaseBy": null,
+    "PasswordAttempts": "0",
+    "PasswordUpdatedFlag": "Y",
+    "UnlockDate": "2025-08-25T09:00:00"
+  },
+  "CorrelationId": "3688a3c8-02f5-4623-99e9-be7e2db28407",
+  "Error": null
+}
+01:51:55 - ===== Incoming Request =====
+01:51:55 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/getAll
+01:51:55 - Method: GET
+01:51:55 - URL: http://localhost:56548/api/users/getAll
+01:51:55 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 868ab593-99e4-4fd5-b471-e248477998cc
+X-Correlation-Id: b17aed0c-78f4-44ba-8325-0af0a9f20ccc
+01:51:55 - Body: 
+01:51:55 - Authentication succeeded.
+01:52:21 - Validation succeeded.
+01:53:11 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "Request completed successfully.",
+  "Data": "Users synchronized successfully",
+  "CorrelationId": "b17aed0c-78f4-44ba-8325-0af0a9f20ccc",
+  "Error": null
+}
+02:20:44 - ===== Incoming Request =====
+02:20:44 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/getAll
+02:20:44 - Method: GET
+02:20:44 - URL: http://localhost:56548/api/users/getAll
+02:20:44 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: cb3b063c-a50d-44df-8344-1a76d89d0334
+X-Correlation-Id: f4d977de-9183-41b4-ad5a-400ed4e25f87
+02:20:44 - Body: 
+02:20:45 - Authentication succeeded.
+02:21:22 - Validation succeeded.
+02:21:24 - Error in GetAllUser: Invalid column name 'IsDeleted'.
+02:21:24 - StackTrace in GetAllUser:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at UserSyncApi.Controllers.UsersController.GetAllUser() in C:\Sun\UserSyncApi\UserSyncApi\UserSyncApi\Controllers\UsersController.cs:line 309
+02:21:24 - Response: {
+  "Success": false,
+  "StatusCode": 500,
+  "Status": "InternalServerError",
+  "Message": "InternalServerError",
+  "Data": {
+    "Message": "An unexpected error occurred."
+  },
+  "CorrelationId": "f4d977de-9183-41b4-ad5a-400ed4e25f87",
+  "Error": null
+}
+02:26:35 - ===== Incoming Request =====
+02:26:35 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/getAll
+02:26:35 - Method: GET
+02:26:35 - URL: http://localhost:56548/api/users/getAll
+02:26:35 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: cd491e6b-ef2c-4998-afd3-54bfa576aa36
+X-Correlation-Id: a93e2a8a-172c-44c6-98cb-114d3f0209e4
+02:26:35 - Body: 
+02:26:35 - Authentication succeeded.
+02:27:09 - Validation succeeded.
+02:27:11 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "Request completed successfully.",
+  "Data": [
+    {
+      "SourceSystem": null,
+      "UserId": 1,
+      "UserName": "jdoe                ",
+      "UserLoginName": "jdoe_login",
+      "UserLoggedOnAt": "Terminal01                                                                                          ",
+      "UserFullName": "John Doe                      ",
+      "UserEmail": "jdoe@yahoo.com                                    ",
+      "UserInitials": "JD  ",
+      "UserPassword": "SecurePass123!",
+      "UserDepartment": 101,
+      "UserLoggedIn": true,
+      "UserInModule": 3,
+      "G2Version": "v1.0                ",
+      "LastLogin": "2025-12-20T10:30:00",
+      "OS": "Windows 10                                                                                          ",
+      "CLR": ".NET Framework 4.8                                ",
+      "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+      "LoginCount": 1,
+      "LibrariesReadOnly": false,
+      "GroupCompany": 5,
+      "Screen1Res": "1920x1080                     ",
+      "Screen2Res": "1920x1080                     ",
+      "Screen3Res": "1280x720                      ",
+      "Screen4Res": "1280x720                      ",
+      "POAuthId": 10,
+      "POAuthAll": false,
+      "OrderAlerts": true,
+      "POAuthTempUserId": 0,
+      "MaxOrderValue": 5000,
+      "OutOfOffice": false,
+      "DefaultOrderDepartment": 101,
+      "PORoleId": 7,
+      "Deleted": false,
+      "AliasUserName1": "JDALT     ",
+      "InvoiceBarcodePrinter": "Printer01",
+      "SmtpServer": "smtp.example.com",
+      "FactoryId": 2,
+      "PieceMonitoringAccessLevel": 3,
+      "ExClassEdit": 1,
+      "TimesheetsAccessLevel": 2,
+      "InitialWindows": "MainWin",
+      "FabScheduleAccessLevel": 3,
+      "FabLineScheduleAccessLevel": 2,
+      "PaintLineScheduleAccessLevel": 1,
+      "ContractsAccessLevel": 2,
+      "G2UpdaterVersion": "1.2.3",
+      "UpdateLocationId": 12,
+      "AllocationAdmin": true,
+      "UserPasswordLastChanged": "2025-08-10T00:00:00",
+      "DateCreated": "2025-08-01T00:00:00",
+      "CreatedByUserId": 99,
+      "DateModified": "2025-08-15T00:00:00",
+      "ModifiedByUserId": 100,
+      "LoggedInOnComputer": "COMP001",
+      "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+      "YLocDsc": "Main Storage Area",
+      "Locked": 0,
+      "FAttempt": 1,
+      "Remarks": "New user created",
+      "ReleaseDt": "2025-08-21T14:00:00",
+      "ReleaseBy": "admin",
+      "Inactive": 0,
+      "InactiveRemarks": null,
+      "InactiveReleaseDt": null,
+      "InactiveReleaseBy": null,
+      "PasswordAttempts": "0",
+      "PasswordUpdatedFlag": "Y",
+      "UnlockDate": "2025-08-25T09:00:00"
+    },
+    {
+      "SourceSystem": null,
+      "UserId": 2,
+      "UserName": "jdoe                ",
+      "UserLoginName": "jdoe_login",
+      "UserLoggedOnAt": "Terminal01                                                                                          ",
+      "UserFullName": "John Doe                      ",
+      "UserEmail": "jdoe@example.com                                  ",
+      "UserInitials": "JD  ",
+      "UserPassword": "SecurePass123!",
+      "UserDepartment": 101,
+      "UserLoggedIn": true,
+      "UserInModule": 3,
+      "G2Version": "v1.0                ",
+      "LastLogin": "2025-12-20T10:30:00",
+      "OS": "Windows 10                                                                                          ",
+      "CLR": ".NET Framework 4.8                                ",
+      "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+      "LoginCount": 1,
+      "LibrariesReadOnly": false,
+      "GroupCompany": 5,
+      "Screen1Res": "1920x1080                     ",
+      "Screen2Res": "1920x1080                     ",
+      "Screen3Res": "1280x720                      ",
+      "Screen4Res": "1280x720                      ",
+      "POAuthId": 10,
+      "POAuthAll": false,
+      "OrderAlerts": true,
+      "POAuthTempUserId": 0,
+      "MaxOrderValue": 5000,
+      "OutOfOffice": false,
+      "DefaultOrderDepartment": 101,
+      "PORoleId": 7,
+      "Deleted": false,
+      "AliasUserName1": "JDALT     ",
+      "InvoiceBarcodePrinter": "Printer01",
+      "SmtpServer": "smtp.example.com",
+      "FactoryId": 2,
+      "PieceMonitoringAccessLevel": 3,
+      "ExClassEdit": 1,
+      "TimesheetsAccessLevel": 2,
+      "InitialWindows": "MainWin",
+      "FabScheduleAccessLevel": 3,
+      "FabLineScheduleAccessLevel": 2,
+      "PaintLineScheduleAccessLevel": 1,
+      "ContractsAccessLevel": 2,
+      "G2UpdaterVersion": "1.2.3",
+      "UpdateLocationId": 12,
+      "AllocationAdmin": true,
+      "UserPasswordLastChanged": "2025-08-10T00:00:00",
+      "DateCreated": "2025-08-01T00:00:00",
+      "CreatedByUserId": 99,
+      "DateModified": "2025-08-15T00:00:00",
+      "ModifiedByUserId": 100,
+      "LoggedInOnComputer": "COMP001",
+      "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+      "YLocDsc": "Main Storage Area",
+      "Locked": 0,
+      "FAttempt": 1,
+      "Remarks": "New user created",
+      "ReleaseDt": "2025-08-21T14:00:00",
+      "ReleaseBy": "admin",
+      "Inactive": 0,
+      "InactiveRemarks": null,
+      "InactiveReleaseDt": null,
+      "InactiveReleaseBy": null,
+      "PasswordAttempts": "0",
+      "PasswordUpdatedFlag": "Y",
+      "UnlockDate": "2025-08-25T09:00:00"
+    },
+    {
+      "SourceSystem": null,
+      "UserId": 3,
+      "UserName": "jdoe                ",
+      "UserLoginName": "jdoe_login",
+      "UserLoggedOnAt": "Terminal01                                                                                          ",
+      "UserFullName": "John Doe                      ",
+      "UserEmail": "jdoe@example.com                                  ",
+      "UserInitials": "JD  ",
+      "UserPassword": "SecurePass123!",
+      "UserDepartment": 101,
+      "UserLoggedIn": true,
+      "UserInModule": 3,
+      "G2Version": "v1.0                ",
+      "LastLogin": "2025-12-20T10:30:00",
+      "OS": "Windows 10                                                                                          ",
+      "CLR": ".NET Framework 4.8                                ",
+      "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+      "LoginCount": 1,
+      "LibrariesReadOnly": false,
+      "GroupCompany": 5,
+      "Screen1Res": "1920x1080                     ",
+      "Screen2Res": "1920x1080                     ",
+      "Screen3Res": "1280x720                      ",
+      "Screen4Res": "1280x720                      ",
+      "POAuthId": 10,
+      "POAuthAll": false,
+      "OrderAlerts": true,
+      "POAuthTempUserId": 0,
+      "MaxOrderValue": 5000,
+      "OutOfOffice": false,
+      "DefaultOrderDepartment": 101,
+      "PORoleId": 7,
+      "Deleted": false,
+      "AliasUserName1": "JDALT     ",
+      "InvoiceBarcodePrinter": "Printer01",
+      "SmtpServer": "smtp.example.com",
+      "FactoryId": 2,
+      "PieceMonitoringAccessLevel": 3,
+      "ExClassEdit": 1,
+      "TimesheetsAccessLevel": 2,
+      "InitialWindows": "MainWin",
+      "FabScheduleAccessLevel": 3,
+      "FabLineScheduleAccessLevel": 2,
+      "PaintLineScheduleAccessLevel": 1,
+      "ContractsAccessLevel": 2,
+      "G2UpdaterVersion": "1.2.3",
+      "UpdateLocationId": 12,
+      "AllocationAdmin": true,
+      "UserPasswordLastChanged": "2025-08-10T00:00:00",
+      "DateCreated": "2025-08-01T00:00:00",
+      "CreatedByUserId": 99,
+      "DateModified": "2025-08-15T00:00:00",
+      "ModifiedByUserId": 100,
+      "LoggedInOnComputer": "COMP001",
+      "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+      "YLocDsc": "Main Storage Area",
+      "Locked": 0,
+      "FAttempt": 1,
+      "Remarks": "New user created",
+      "ReleaseDt": "2025-08-21T14:00:00",
+      "ReleaseBy": "admin",
+      "Inactive": 0,
+      "InactiveRemarks": null,
+      "InactiveReleaseDt": null,
+      "InactiveReleaseBy": null,
+      "PasswordAttempts": "0",
+      "PasswordUpdatedFlag": "Y",
+      "UnlockDate": "2025-08-25T09:00:00"
+    },
+    {
+      "SourceSystem": null,
+      "UserId": 4,
+      "UserName": "jdoe                ",
+      "UserLoginName": "jdoe_login",
+      "UserLoggedOnAt": "Terminal01                                                                                          ",
+      "UserFullName": "John Doe                      ",
+      "UserEmail": "jdoe@example.com                                  ",
+      "UserInitials": "JD  ",
+      "UserPassword": "SecurePass123!",
+      "UserDepartment": 101,
+      "UserLoggedIn": true,
+      "UserInModule": 3,
+      "G2Version": "v1.0                ",
+      "LastLogin": "2025-12-20T10:30:00",
+      "OS": "Windows 10                                                                                          ",
+      "CLR": ".NET Framework 4.8                                ",
+      "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+      "LoginCount": 1,
+      "LibrariesReadOnly": false,
+      "GroupCompany": 5,
+      "Screen1Res": "1920x1080                     ",
+      "Screen2Res": "1920x1080                     ",
+      "Screen3Res": "1280x720                      ",
+      "Screen4Res": "1280x720                      ",
+      "POAuthId": 10,
+      "POAuthAll": false,
+      "OrderAlerts": true,
+      "POAuthTempUserId": 0,
+      "MaxOrderValue": 5000,
+      "OutOfOffice": false,
+      "DefaultOrderDepartment": 101,
+      "PORoleId": 7,
+      "Deleted": false,
+      "AliasUserName1": "JDALT     ",
+      "InvoiceBarcodePrinter": "Printer01",
+      "SmtpServer": "smtp.example.com",
+      "FactoryId": 2,
+      "PieceMonitoringAccessLevel": 3,
+      "ExClassEdit": 1,
+      "TimesheetsAccessLevel": 2,
+      "InitialWindows": "MainWin",
+      "FabScheduleAccessLevel": 3,
+      "FabLineScheduleAccessLevel": 2,
+      "PaintLineScheduleAccessLevel": 1,
+      "ContractsAccessLevel": 2,
+      "G2UpdaterVersion": "1.2.3",
+      "UpdateLocationId": 12,
+      "AllocationAdmin": true,
+      "UserPasswordLastChanged": "2025-08-10T00:00:00",
+      "DateCreated": "2025-08-01T00:00:00",
+      "CreatedByUserId": 99,
+      "DateModified": "2025-08-15T00:00:00",
+      "ModifiedByUserId": 100,
+      "LoggedInOnComputer": "COMP001",
+      "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+      "YLocDsc": "Main Storage Area",
+      "Locked": 0,
+      "FAttempt": 1,
+      "Remarks": "New user created",
+      "ReleaseDt": "2025-08-21T14:00:00",
+      "ReleaseBy": "admin",
+      "Inactive": 0,
+      "InactiveRemarks": null,
+      "InactiveReleaseDt": null,
+      "InactiveReleaseBy": null,
+      "PasswordAttempts": "0",
+      "PasswordUpdatedFlag": "Y",
+      "UnlockDate": "2025-08-25T09:00:00"
+    }
+  ],
+  "CorrelationId": "a93e2a8a-172c-44c6-98cb-114d3f0209e4",
+  "Error": null
+}
+02:28:19 - ===== Incoming Request =====
+02:28:19 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+02:28:19 - Method: GET
+02:28:19 - URL: http://localhost:56548/api/users/get?UserId=1
+02:28:19 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 404cea2e-045f-44ef-95af-72912fa5b668
+X-Correlation-Id: 3aeb240f-9c4a-4e93-9614-b6128f21d0ba
+02:28:19 - Query Parameters:
+02:28:19 - UserId = 1
+02:28:19 - Body: 
+02:28:19 - Authentication succeeded.
+02:28:30 - Validation succeeded.
+02:28:30 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "Request completed successfully.",
+  "Data": {
+    "SourceSystem": null,
+    "UserId": 1,
+    "UserName": "jdoe                ",
+    "UserLoginName": "jdoe_login",
+    "UserLoggedOnAt": "Terminal01                                                                                          ",
+    "UserFullName": "John Doe                      ",
+    "UserEmail": "jdoe@yahoo.com                                    ",
+    "UserInitials": "JD  ",
+    "UserPassword": "SecurePass123!",
+    "UserDepartment": 101,
+    "UserLoggedIn": true,
+    "UserInModule": 3,
+    "G2Version": "v1.0                ",
+    "LastLogin": "2025-12-20T10:30:00",
+    "OS": "Windows 10                                                                                          ",
+    "CLR": ".NET Framework 4.8                                ",
+    "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+    "LoginCount": 1,
+    "LibrariesReadOnly": false,
+    "GroupCompany": 5,
+    "Screen1Res": "1920x1080                     ",
+    "Screen2Res": "1920x1080                     ",
+    "Screen3Res": "1280x720                      ",
+    "Screen4Res": "1280x720                      ",
+    "POAuthId": 10,
+    "POAuthAll": false,
+    "OrderAlerts": true,
+    "POAuthTempUserId": 0,
+    "MaxOrderValue": 5000,
+    "OutOfOffice": false,
+    "DefaultOrderDepartment": 101,
+    "PORoleId": 7,
+    "Deleted": false,
+    "AliasUserName1": "JDALT     ",
+    "InvoiceBarcodePrinter": "Printer01",
+    "SmtpServer": "smtp.example.com",
+    "FactoryId": 2,
+    "PieceMonitoringAccessLevel": 3,
+    "ExClassEdit": 1,
+    "TimesheetsAccessLevel": 2,
+    "InitialWindows": "MainWin",
+    "FabScheduleAccessLevel": 3,
+    "FabLineScheduleAccessLevel": 2,
+    "PaintLineScheduleAccessLevel": 1,
+    "ContractsAccessLevel": 2,
+    "G2UpdaterVersion": "1.2.3",
+    "UpdateLocationId": 12,
+    "AllocationAdmin": true,
+    "UserPasswordLastChanged": "2025-08-10T00:00:00",
+    "DateCreated": "2025-08-01T00:00:00",
+    "CreatedByUserId": 99,
+    "DateModified": "2025-08-15T00:00:00",
+    "ModifiedByUserId": 100,
+    "LoggedInOnComputer": "COMP001",
+    "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+    "YLocDsc": "Main Storage Area",
+    "Locked": 0,
+    "FAttempt": 1,
+    "Remarks": "New user created",
+    "ReleaseDt": "2025-08-21T14:00:00",
+    "ReleaseBy": "admin",
+    "Inactive": 0,
+    "InactiveRemarks": null,
+    "InactiveReleaseDt": null,
+    "InactiveReleaseBy": null,
+    "PasswordAttempts": "0",
+    "PasswordUpdatedFlag": "Y",
+    "UnlockDate": "2025-08-25T09:00:00"
+  },
+  "CorrelationId": "3aeb240f-9c4a-4e93-9614-b6128f21d0ba",
+  "Error": null
+}
+02:42:07 - ===== Incoming Request =====
+02:42:07 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/create
+02:42:07 - Method: POST
+02:42:07 - URL: http://localhost:56548/api/users/create
+02:42:07 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 67294109-5243-41f0-bf4e-de1d23e45019
+X-Correlation-Id: 035bec3c-d307-4d28-aa45-b81fe21551f9
+02:42:07 - Body: {
+  "TargetDatabases": [ "Database0", "Database2" ],
+  "userId": 0,
+  "userName": "jdoe",
+  "userLoginName": "jdoe_login",
+  "userLoggedOnAt": "Terminal01",
+  "userFullName": "John Doe",
+  "userEmail": "jdoe@example.com",
+  "userInitials": "JD",
+  "userPassword": "SecurePass123!",
+  "userDepartment": "101",
+  "userLoggedIn": true,
+  "userInModule": 3,
+  "g2Version": "v1.0",
+  "lastLogin": "2025-12-20T10:30:00",
+  "os": "Windows 10",
+  "clr": ".NET Framework 4.8",
+  "userMenus": "Dashboard,Orders,Reports",
+  "loginCount": 1,
+  "librariesReadonly": false,
+  "groupCompany": 5,
+  "screen1Res": "1920x1080",
+  "screen2Res": "1920x1080",
+  "screen3Res": "1280x720",
+  "screen4Res": "1280x720",
+  "poAuthId": 10,
+  "poAuthAll": false,
+  "orderAlerts": true,
+  "poAuthTempUserId": 0,
+  "maxOrderValue": 5000,
+  "outOfOffice": false,
+  "defaultOrderDepartment": 101,
+  "poRoleId": 7,
+  "deleted": false,
+  "aliasUserName1": "JDALT",
+  "invoiceBarcodePrinter": "Printer01",
+  "smtpServer": "smtp.example.com",
+  "factoryId": 2,
+  "pieceMonitoringAccessLevel": 3,
+  "exClassEdit": 1,
+  "timesheetsAccessLevel": 2,
+  "initialWindows": "MainWin",
+  "fabScheduleAccessLevel": 3,
+  "fabLineScheduleAccessLevel": 2,
+  "paintLineScheduleAccessLevel": 1,
+  "contractsAccessLevel": 2,
+  "g2UpdaterVersion": "1.2.3",
+  "updateLocationId": 12,
+  "allocationAdmin": true,
+  "userPasswordLastChanged": "2025-08-10",
+  "dateCreated": "2025-08-01",
+  "createdByUserId": 99,
+  "dateModified": "2025-08-15",
+  "modifiedByUserId": 100,
+  "loggedInOnComputer": "COMP001",
+  "yLoc": "Warehouse A",
+  "yLocDsc": "Main Storage Area",
+  "locked": 0,
+  "fAttempt": 1,
+  "remarks": "New user created",
+  "releaseDt": "2025-08-21T14:00:00",
+  "releaseBy": "admin",
+  "inactive": 0,
+  "inactiveRemarks": null,
+  "inactiveReleaseDt": null,
+  "inactiveReleaseBy": null,
+  "passwordAttempts": "0",
+  "passwordUpdatedFlag": "Y",
+  "unlockDate": "2025-08-25T09:00:00"
+}
+
+02:42:07 - Authentication succeeded.
+02:42:16 - Validation failed.
+02:42:16 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "The request is invalid.",
+  "Data": {
+    "Message": "The request is invalid.",
+    "ModelState": {
+      "request.SourceSystem": [
+        "The SourceSystem field is required."
+      ]
+    }
+  },
+  "CorrelationId": "035bec3c-d307-4d28-aa45-b81fe21551f9",
+  "Error": "ERR_VALIDATION_FAILUER"
+}
+02:42:43 - ===== Incoming Request =====
+02:42:43 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/create
+02:42:43 - Method: POST
+02:42:43 - URL: http://localhost:56548/api/users/create
+02:42:43 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 95bf5edd-803f-4c8a-9bd1-a8bed44f7e2f
+X-Correlation-Id: af81d5cb-3ef8-468c-ba94-5c36ed36a91c
+02:42:43 - Body: {
+    "SourceSystem":"SourceSystem",
+  "TargetDatabases": [ "Database1", "Database2" ],
+  "userId": 0,
+  "userName": "jdoe",
+  "userLoginName": "jdoe_login",
+  "userLoggedOnAt": "Terminal01",
+  "userFullName": "John Doe",
+  "userEmail": "jdoe@example.com",
+  "userInitials": "JD",
+  "userPassword": "SecurePass123!",
+  "userDepartment": "101",
+  "userLoggedIn": true,
+  "userInModule": 3,
+  "g2Version": "v1.0",
+  "lastLogin": "2025-12-20T10:30:00",
+  "os": "Windows 10",
+  "clr": ".NET Framework 4.8",
+  "userMenus": "Dashboard,Orders,Reports",
+  "loginCount": 1,
+  "librariesReadonly": false,
+  "groupCompany": 5,
+  "screen1Res": "1920x1080",
+  "screen2Res": "1920x1080",
+  "screen3Res": "1280x720",
+  "screen4Res": "1280x720",
+  "poAuthId": 10,
+  "poAuthAll": false,
+  "orderAlerts": true,
+  "poAuthTempUserId": 0,
+  "maxOrderValue": 5000,
+  "outOfOffice": false,
+  "defaultOrderDepartment": 101,
+  "poRoleId": 7,
+  "deleted": false,
+  "aliasUserName1": "JDALT",
+  "invoiceBarcodePrinter": "Printer01",
+  "smtpServer": "smtp.example.com",
+  "factoryId": 2,
+  "pieceMonitoringAccessLevel": 3,
+  "exClassEdit": 1,
+  "timesheetsAccessLevel": 2,
+  "initialWindows": "MainWin",
+  "fabScheduleAccessLevel": 3,
+  "fabLineScheduleAccessLevel": 2,
+  "paintLineScheduleAccessLevel": 1,
+  "contractsAccessLevel": 2,
+  "g2UpdaterVersion": "1.2.3",
+  "updateLocationId": 12,
+  "allocationAdmin": true,
+  "userPasswordLastChanged": "2025-08-10",
+  "dateCreated": "2025-08-01",
+  "createdByUserId": 99,
+  "dateModified": "2025-08-15",
+  "modifiedByUserId": 100,
+  "loggedInOnComputer": "COMP001",
+  "yLoc": "Warehouse A",
+  "yLocDsc": "Main Storage Area",
+  "locked": 0,
+  "fAttempt": 1,
+  "remarks": "New user created",
+  "releaseDt": "2025-08-21T14:00:00",
+  "releaseBy": "admin",
+  "inactive": 0,
+  "inactiveRemarks": null,
+  "inactiveReleaseDt": null,
+  "inactiveReleaseBy": null,
+  "passwordAttempts": "0",
+  "passwordUpdatedFlag": "Y",
+  "unlockDate": "2025-08-25T09:00:00"
+}
+
+02:42:43 - Authentication succeeded.
+02:42:49 - Validation failed.
+02:42:49 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "Invalid Source System.",
+  "Data": "The source system 'SourceSystem' does not exist in the system list.",
+  "CorrelationId": "af81d5cb-3ef8-468c-ba94-5c36ed36a91c",
+  "Error": "ERR_VALIDATION_FAILUER"
+}
+02:43:05 - ===== Incoming Request =====
+02:43:05 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/create
+02:43:05 - Method: POST
+02:43:05 - URL: http://localhost:56548/api/users/create
+02:43:05 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: cff6ed1b-9c7c-4856-bfd2-782dbf975a92
+X-Correlation-Id: 1bd927aa-0275-4089-ab6c-2cfa21065285
+02:43:05 - Body: {
+    "SourceSystem":"Database1",
+  "TargetDatabases": [ "Database1", "Database2" ],
+  "userId": 0,
+  "userName": "jdoe",
+  "userLoginName": "jdoe_login",
+  "userLoggedOnAt": "Terminal01",
+  "userFullName": "John Doe",
+  "userEmail": "jdoe@example.com",
+  "userInitials": "JD",
+  "userPassword": "SecurePass123!",
+  "userDepartment": "101",
+  "userLoggedIn": true,
+  "userInModule": 3,
+  "g2Version": "v1.0",
+  "lastLogin": "2025-12-20T10:30:00",
+  "os": "Windows 10",
+  "clr": ".NET Framework 4.8",
+  "userMenus": "Dashboard,Orders,Reports",
+  "loginCount": 1,
+  "librariesReadonly": false,
+  "groupCompany": 5,
+  "screen1Res": "1920x1080",
+  "screen2Res": "1920x1080",
+  "screen3Res": "1280x720",
+  "screen4Res": "1280x720",
+  "poAuthId": 10,
+  "poAuthAll": false,
+  "orderAlerts": true,
+  "poAuthTempUserId": 0,
+  "maxOrderValue": 5000,
+  "outOfOffice": false,
+  "defaultOrderDepartment": 101,
+  "poRoleId": 7,
+  "deleted": false,
+  "aliasUserName1": "JDALT",
+  "invoiceBarcodePrinter": "Printer01",
+  "smtpServer": "smtp.example.com",
+  "factoryId": 2,
+  "pieceMonitoringAccessLevel": 3,
+  "exClassEdit": 1,
+  "timesheetsAccessLevel": 2,
+  "initialWindows": "MainWin",
+  "fabScheduleAccessLevel": 3,
+  "fabLineScheduleAccessLevel": 2,
+  "paintLineScheduleAccessLevel": 1,
+  "contractsAccessLevel": 2,
+  "g2UpdaterVersion": "1.2.3",
+  "updateLocationId": 12,
+  "allocationAdmin": true,
+  "userPasswordLastChanged": "2025-08-10",
+  "dateCreated": "2025-08-01",
+  "createdByUserId": 99,
+  "dateModified": "2025-08-15",
+  "modifiedByUserId": 100,
+  "loggedInOnComputer": "COMP001",
+  "yLoc": "Warehouse A",
+  "yLocDsc": "Main Storage Area",
+  "locked": 0,
+  "fAttempt": 1,
+  "remarks": "New user created",
+  "releaseDt": "2025-08-21T14:00:00",
+  "releaseBy": "admin",
+  "inactive": 0,
+  "inactiveRemarks": null,
+  "inactiveReleaseDt": null,
+  "inactiveReleaseBy": null,
+  "passwordAttempts": "0",
+  "passwordUpdatedFlag": "Y",
+  "unlockDate": "2025-08-25T09:00:00"
+}
+
+02:43:05 - Authentication succeeded.
+02:43:13 - Validation succeeded.
+02:43:28 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "Request completed successfully.",
+  "Data": "User created successfully.",
+  "CorrelationId": "1bd927aa-0275-4089-ab6c-2cfa21065285",
+  "Error": null
+}
+02:43:58 - ===== Incoming Request =====
+02:43:58 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/create
+02:43:58 - Method: POST
+02:43:58 - URL: http://localhost:56548/api/users/create
+02:43:58 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: fafc35ed-2d23-4f3e-96d6-087a8dcd9d57
+X-Correlation-Id: 383f957f-0c4b-4510-b422-3f5cd6d83555
+02:43:58 - Body: {
+    "SourceSystem":"Database1",
+  "TargetDatabases": [ "Database1", "Database2" ],
+  "userId": 0,
+  "userName": "jdoe",
+  "userLoginName": "jdoe_login",
+  "userLoggedOnAt": "Terminal01",
+  "userFullName": "John Doe",
+  "userEmail": "jdoe@example.com",
+  "userInitials": "JD",
+  "userPassword": "SecurePass123!",
+  "userDepartment": "101",
+  "userLoggedIn": true,
+  "userInModule": 3,
+  "g2Version": "v1.0",
+  "lastLogin": "2025-12-20T10:30:00",
+  "os": "Windows 10",
+  "clr": ".NET Framework 4.8",
+  "userMenus": "Dashboard,Orders,Reports",
+  "loginCount": 1,
+  "librariesReadonly": false,
+  "groupCompany": 5,
+  "screen1Res": "1920x1080",
+  "screen2Res": "1920x1080",
+  "screen3Res": "1280x720",
+  "screen4Res": "1280x720",
+  "poAuthId": 10,
+  "poAuthAll": false,
+  "orderAlerts": true,
+  "poAuthTempUserId": 0,
+  "maxOrderValue": 5000,
+  "outOfOffice": false,
+  "defaultOrderDepartment": 101,
+  "poRoleId": 7,
+  "deleted": false,
+  "aliasUserName1": "JDALT",
+  "invoiceBarcodePrinter": "Printer01",
+  "smtpServer": "smtp.example.com",
+  "factoryId": 2,
+  "pieceMonitoringAccessLevel": 3,
+  "exClassEdit": 1,
+  "timesheetsAccessLevel": 2,
+  "initialWindows": "MainWin",
+  "fabScheduleAccessLevel": 3,
+  "fabLineScheduleAccessLevel": 2,
+  "paintLineScheduleAccessLevel": 1,
+  "contractsAccessLevel": 2,
+  "g2UpdaterVersion": "1.2.3",
+  "updateLocationId": 12,
+  "allocationAdmin": true,
+  "userPasswordLastChanged": "2025-08-10",
+  "dateCreated": "2025-08-01",
+  "createdByUserId": 99,
+  "dateModified": "2025-08-15",
+  "modifiedByUserId": 100,
+  "loggedInOnComputer": "COMP001",
+  "yLoc": "Warehouse A",
+  "yLocDsc": "Main Storage Area",
+  "locked": 0,
+  "fAttempt": 1,
+  "remarks": "New user created",
+  "releaseDt": "2025-08-21T14:00:00",
+  "releaseBy": "admin",
+  "inactive": 0,
+  "inactiveRemarks": null,
+  "inactiveReleaseDt": null,
+  "inactiveReleaseBy": null,
+  "passwordAttempts": "0",
+  "passwordUpdatedFlag": "Y",
+  "unlockDate": "2025-08-25T09:00:00"
+}
+
+02:43:58 - Authentication succeeded.
+02:44:07 - Validation succeeded.
+02:54:34 - ===== Incoming Request =====
+02:54:36 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+02:54:36 - Method: GET
+02:54:36 - URL: http://localhost:56548/api/users/get?UserId=1
+02:54:36 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 38becf99-07f8-4449-ad7e-7b315a7d4794
+X-Correlation-Id: 960bfaf9-33b2-46f5-a1ed-f4cf636d76a3
+02:54:36 - Query Parameters:
+02:54:36 - UserId = 1
+02:54:36 - Body: 
+02:54:37 - Authentication succeeded.
+02:54:49 - Validation succeeded.
+02:55:30 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "Request completed successfully.",
+  "Data": {
+    "Message": "User retrieved successfully.",
+    "User": {
+      "SourceSystem": null,
+      "UserId": 1,
+      "UserName": "jdoe                ",
+      "UserLoginName": "jdoe_login",
+      "UserLoggedOnAt": "Terminal01                                                                                          ",
+      "UserFullName": "John Doe                      ",
+      "UserEmail": "jdoe@yahoo.com                                    ",
+      "UserInitials": "JD  ",
+      "UserPassword": "SecurePass123!",
+      "UserDepartment": 101,
+      "UserLoggedIn": true,
+      "UserInModule": 3,
+      "G2Version": "v1.0                ",
+      "LastLogin": "2025-12-20T10:30:00",
+      "OS": "Windows 10                                                                                          ",
+      "CLR": ".NET Framework 4.8                                ",
+      "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+      "LoginCount": 1,
+      "LibrariesReadOnly": false,
+      "GroupCompany": 5,
+      "Screen1Res": "1920x1080                     ",
+      "Screen2Res": "1920x1080                     ",
+      "Screen3Res": "1280x720                      ",
+      "Screen4Res": "1280x720                      ",
+      "POAuthId": 10,
+      "POAuthAll": false,
+      "OrderAlerts": true,
+      "POAuthTempUserId": 0,
+      "MaxOrderValue": 5000,
+      "OutOfOffice": false,
+      "DefaultOrderDepartment": 101,
+      "PORoleId": 7,
+      "Deleted": false,
+      "AliasUserName1": "JDALT     ",
+      "InvoiceBarcodePrinter": "Printer01",
+      "SmtpServer": "smtp.example.com",
+      "FactoryId": 2,
+      "PieceMonitoringAccessLevel": 3,
+      "ExClassEdit": 1,
+      "TimesheetsAccessLevel": 2,
+      "InitialWindows": "MainWin",
+      "FabScheduleAccessLevel": 3,
+      "FabLineScheduleAccessLevel": 2,
+      "PaintLineScheduleAccessLevel": 1,
+      "ContractsAccessLevel": 2,
+      "G2UpdaterVersion": "1.2.3",
+      "UpdateLocationId": 12,
+      "AllocationAdmin": true,
+      "UserPasswordLastChanged": "2025-08-10T00:00:00",
+      "DateCreated": "2025-08-01T00:00:00",
+      "CreatedByUserId": 99,
+      "DateModified": "2025-08-15T00:00:00",
+      "ModifiedByUserId": 100,
+      "LoggedInOnComputer": "COMP001",
+      "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+      "YLocDsc": "Main Storage Area",
+      "Locked": 0,
+      "FAttempt": 1,
+      "Remarks": "New user created",
+      "ReleaseDt": "2025-08-21T14:00:00",
+      "ReleaseBy": "admin",
+      "Inactive": 0,
+      "InactiveRemarks": null,
+      "InactiveReleaseDt": null,
+      "InactiveReleaseBy": null,
+      "PasswordAttempts": "0",
+      "PasswordUpdatedFlag": "Y",
+      "UnlockDate": "2025-08-25T09:00:00"
+    }
+  },
+  "CorrelationId": "960bfaf9-33b2-46f5-a1ed-f4cf636d76a3",
+  "Error": null
+}
+03:00:06 - ===== Incoming Request =====
+03:00:06 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+03:00:06 - Method: GET
+03:00:06 - URL: http://localhost:56548/api/users/get?UserId=1
+03:00:06 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 164d41aa-8e66-4117-81c7-81100fdc52cc
+X-Correlation-Id: d21e323a-087b-4b0c-a654-7acb8134e06d
+03:00:06 - Query Parameters:
+03:00:06 - UserId = 1
+03:00:06 - Body: 
+03:00:06 - Authentication succeeded.
+03:00:20 - Validation succeeded.
+03:21:41 - ===== Incoming Request =====
+03:21:41 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+03:21:41 - Method: GET
+03:21:41 - URL: http://localhost:56548/api/users/get?UserId=1
+03:21:41 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 6dd87bdf-b594-48b7-92c3-e232d5cad86e
+X-Correlation-Id: 7f0d7b41-dfb9-485c-8495-2dd515ebe7b9
+03:21:41 - Query Parameters:
+03:21:41 - UserId = 1
+03:21:41 - Body: 
+03:21:41 - Authentication succeeded.
+03:22:09 - Validation succeeded.
+03:22:39 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "Request completed successfully.",
+  "Data": {
+    "Message": "User retrieved successfully.",
+    "Source": "GetUser",
+    "Data": {
+      "SourceSystem": null,
+      "UserId": 1,
+      "UserName": "jdoe                ",
+      "UserLoginName": "jdoe_login",
+      "UserLoggedOnAt": "Terminal01                                                                                          ",
+      "UserFullName": "John Doe                      ",
+      "UserEmail": "jdoe@yahoo.com                                    ",
+      "UserInitials": "JD  ",
+      "UserPassword": "SecurePass123!",
+      "UserDepartment": 101,
+      "UserLoggedIn": true,
+      "UserInModule": 3,
+      "G2Version": "v1.0                ",
+      "LastLogin": "2025-12-20T10:30:00",
+      "OS": "Windows 10                                                                                          ",
+      "CLR": ".NET Framework 4.8                                ",
+      "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+      "LoginCount": 1,
+      "LibrariesReadOnly": false,
+      "GroupCompany": 5,
+      "Screen1Res": "1920x1080                     ",
+      "Screen2Res": "1920x1080                     ",
+      "Screen3Res": "1280x720                      ",
+      "Screen4Res": "1280x720                      ",
+      "POAuthId": 10,
+      "POAuthAll": false,
+      "OrderAlerts": true,
+      "POAuthTempUserId": 0,
+      "MaxOrderValue": 5000,
+      "OutOfOffice": false,
+      "DefaultOrderDepartment": 101,
+      "PORoleId": 7,
+      "Deleted": false,
+      "AliasUserName1": "JDALT     ",
+      "InvoiceBarcodePrinter": "Printer01",
+      "SmtpServer": "smtp.example.com",
+      "FactoryId": 2,
+      "PieceMonitoringAccessLevel": 3,
+      "ExClassEdit": 1,
+      "TimesheetsAccessLevel": 2,
+      "InitialWindows": "MainWin",
+      "FabScheduleAccessLevel": 3,
+      "FabLineScheduleAccessLevel": 2,
+      "PaintLineScheduleAccessLevel": 1,
+      "ContractsAccessLevel": 2,
+      "G2UpdaterVersion": "1.2.3",
+      "UpdateLocationId": 12,
+      "AllocationAdmin": true,
+      "UserPasswordLastChanged": "2025-08-10T00:00:00",
+      "DateCreated": "2025-08-01T00:00:00",
+      "CreatedByUserId": 99,
+      "DateModified": "2025-08-15T00:00:00",
+      "ModifiedByUserId": 100,
+      "LoggedInOnComputer": "COMP001",
+      "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+      "YLocDsc": "Main Storage Area",
+      "Locked": 0,
+      "FAttempt": 1,
+      "Remarks": "New user created",
+      "ReleaseDt": "2025-08-21T14:00:00",
+      "ReleaseBy": "admin",
+      "Inactive": 0,
+      "InactiveRemarks": null,
+      "InactiveReleaseDt": null,
+      "InactiveReleaseBy": null,
+      "PasswordAttempts": "0",
+      "PasswordUpdatedFlag": "Y",
+      "UnlockDate": "2025-08-25T09:00:00"
+    }
+  },
+  "CorrelationId": "7f0d7b41-dfb9-485c-8495-2dd515ebe7b9",
+  "Error": null
+}
+03:29:33 - ===== Incoming Request =====
+03:29:33 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+03:29:33 - Method: GET
+03:29:33 - URL: http://localhost:56548/api/users/get?UserId=1
+03:29:33 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 9c76a24a-84f9-4ad9-9fd5-ea5e2196d4fd
+X-Correlation-Id: 34d40606-aa5b-4180-acd2-783a716bd21e
+03:29:33 - Query Parameters:
+03:29:33 - UserId = 1
+03:29:33 - Body: 
+03:29:34 - Authentication succeeded.
+03:29:48 - Validation succeeded.
+03:29:53 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "User retrieved successfully.",
+  "Data": {
+    "Name": "Data",
+    "AssemblyName": "UserSyncApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "ClassName": "<>f__AnonymousType4`3[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[UserSyncApi.Models.User, UserSyncApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Signature": "UserSyncApi.Models.User Data",
+    "Signature2": "UserSyncApi.Models.User Data",
+    "MemberType": 16,
+    "GenericArguments": null
+  },
+  "CorrelationId": "34d40606-aa5b-4180-acd2-783a716bd21e",
+  "Error": null
+}
+03:30:19 - ===== Incoming Request =====
+03:30:19 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+03:30:19 - Method: GET
+03:30:19 - URL: http://localhost:56548/api/users/get?UserId=1
+03:30:19 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: e4e2ad6b-9b1b-4624-8d56-af1bdfd74bcf
+X-Correlation-Id: c1867625-1718-4d72-b952-34e98f0442ba
+03:30:19 - Query Parameters:
+03:30:19 - UserId = 1
+03:30:19 - Body: 
+03:30:19 - Authentication succeeded.
+03:30:30 - Validation succeeded.
+03:33:41 - ===== Incoming Request =====
+03:33:41 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+03:33:42 - Method: GET
+03:33:42 - URL: http://localhost:56548/api/users/get?UserId=1
+03:33:42 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 63d113eb-67dc-494c-818f-584d13d382d4
+X-Correlation-Id: 075835fa-10f5-40dd-b376-a1a712c291ab
+03:33:42 - Query Parameters:
+03:33:42 - UserId = 1
+03:33:42 - Body: 
+03:33:42 - Authentication succeeded.
+03:33:54 - Validation succeeded.
+03:36:37 - ===== Incoming Request =====
+03:36:37 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+03:36:37 - Method: GET
+03:36:37 - URL: http://localhost:56548/api/users/get?UserId=1
+03:36:37 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: b796d8a9-8834-4158-9d90-878fbe3a7de3
+X-Correlation-Id: a351380b-df89-4940-aeb9-caba4045a964
+03:36:37 - Query Parameters:
+03:36:37 - UserId = 1
+03:36:37 - Body: 
+03:36:37 - Authentication succeeded.
+03:37:15 - Validation succeeded.
+03:37:19 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "User retrieved successfully.",
+  "Data": {
+    "SourceSystem": null,
+    "UserId": 1,
+    "UserName": "jdoe                ",
+    "UserLoginName": "jdoe_login",
+    "UserLoggedOnAt": "Terminal01                                                                                          ",
+    "UserFullName": "John Doe                      ",
+    "UserEmail": "jdoe@yahoo.com                                    ",
+    "UserInitials": "JD  ",
+    "UserPassword": "SecurePass123!",
+    "UserDepartment": 101,
+    "UserLoggedIn": true,
+    "UserInModule": 3,
+    "G2Version": "v1.0                ",
+    "LastLogin": "2025-12-20T10:30:00",
+    "OS": "Windows 10                                                                                          ",
+    "CLR": ".NET Framework 4.8                                ",
+    "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+    "LoginCount": 1,
+    "LibrariesReadOnly": false,
+    "GroupCompany": 5,
+    "Screen1Res": "1920x1080                     ",
+    "Screen2Res": "1920x1080                     ",
+    "Screen3Res": "1280x720                      ",
+    "Screen4Res": "1280x720                      ",
+    "POAuthId": 10,
+    "POAuthAll": false,
+    "OrderAlerts": true,
+    "POAuthTempUserId": 0,
+    "MaxOrderValue": 5000,
+    "OutOfOffice": false,
+    "DefaultOrderDepartment": 101,
+    "PORoleId": 7,
+    "Deleted": false,
+    "AliasUserName1": "JDALT     ",
+    "InvoiceBarcodePrinter": "Printer01",
+    "SmtpServer": "smtp.example.com",
+    "FactoryId": 2,
+    "PieceMonitoringAccessLevel": 3,
+    "ExClassEdit": 1,
+    "TimesheetsAccessLevel": 2,
+    "InitialWindows": "MainWin",
+    "FabScheduleAccessLevel": 3,
+    "FabLineScheduleAccessLevel": 2,
+    "PaintLineScheduleAccessLevel": 1,
+    "ContractsAccessLevel": 2,
+    "G2UpdaterVersion": "1.2.3",
+    "UpdateLocationId": 12,
+    "AllocationAdmin": true,
+    "UserPasswordLastChanged": "2025-08-10T00:00:00",
+    "DateCreated": "2025-08-01T00:00:00",
+    "CreatedByUserId": 99,
+    "DateModified": "2025-08-15T00:00:00",
+    "ModifiedByUserId": 100,
+    "LoggedInOnComputer": "COMP001",
+    "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+    "YLocDsc": "Main Storage Area",
+    "Locked": 0,
+    "FAttempt": 1,
+    "Remarks": "New user created",
+    "ReleaseDt": "2025-08-21T14:00:00",
+    "ReleaseBy": "admin",
+    "Inactive": 0,
+    "InactiveRemarks": null,
+    "InactiveReleaseDt": null,
+    "InactiveReleaseBy": null,
+    "PasswordAttempts": "0",
+    "PasswordUpdatedFlag": "Y",
+    "UnlockDate": "2025-08-25T09:00:00"
+  },
+  "CorrelationId": "a351380b-df89-4940-aeb9-caba4045a964",
+  "Error": null
+}
+03:43:33 - ===== Incoming Request =====
+03:43:33 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+03:43:33 - Method: GET
+03:43:33 - URL: http://localhost:56548/api/users/get?UserId=1
+03:43:33 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 6d94b7c4-fe68-4593-b65c-0f2d6c725cbf
+X-Correlation-Id: 0fe699ff-ebbb-4ee3-ab95-0f61b159fd4c
+03:43:33 - Query Parameters:
+03:43:33 - UserId = 1
+03:43:33 - Body: 
+03:43:34 - Authentication succeeded.
+03:44:08 - Validation succeeded.
+03:44:16 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "User retrieved successfully.",
+  "Data": {
+    "SourceSystem": null,
+    "UserId": 1,
+    "UserName": "jdoe                ",
+    "UserLoginName": "jdoe_login",
+    "UserLoggedOnAt": "Terminal01                                                                                          ",
+    "UserFullName": "John Doe                      ",
+    "UserEmail": "jdoe@yahoo.com                                    ",
+    "UserInitials": "JD  ",
+    "UserPassword": "SecurePass123!",
+    "UserDepartment": 101,
+    "UserLoggedIn": true,
+    "UserInModule": 3,
+    "G2Version": "v1.0                ",
+    "LastLogin": "2025-12-20T10:30:00",
+    "OS": "Windows 10                                                                                          ",
+    "CLR": ".NET Framework 4.8                                ",
+    "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+    "LoginCount": 1,
+    "LibrariesReadOnly": false,
+    "GroupCompany": 5,
+    "Screen1Res": "1920x1080                     ",
+    "Screen2Res": "1920x1080                     ",
+    "Screen3Res": "1280x720                      ",
+    "Screen4Res": "1280x720                      ",
+    "POAuthId": 10,
+    "POAuthAll": false,
+    "OrderAlerts": true,
+    "POAuthTempUserId": 0,
+    "MaxOrderValue": 5000,
+    "OutOfOffice": false,
+    "DefaultOrderDepartment": 101,
+    "PORoleId": 7,
+    "Deleted": false,
+    "AliasUserName1": "JDALT     ",
+    "InvoiceBarcodePrinter": "Printer01",
+    "SmtpServer": "smtp.example.com",
+    "FactoryId": 2,
+    "PieceMonitoringAccessLevel": 3,
+    "ExClassEdit": 1,
+    "TimesheetsAccessLevel": 2,
+    "InitialWindows": "MainWin",
+    "FabScheduleAccessLevel": 3,
+    "FabLineScheduleAccessLevel": 2,
+    "PaintLineScheduleAccessLevel": 1,
+    "ContractsAccessLevel": 2,
+    "G2UpdaterVersion": "1.2.3",
+    "UpdateLocationId": 12,
+    "AllocationAdmin": true,
+    "UserPasswordLastChanged": "2025-08-10T00:00:00",
+    "DateCreated": "2025-08-01T00:00:00",
+    "CreatedByUserId": 99,
+    "DateModified": "2025-08-15T00:00:00",
+    "ModifiedByUserId": 100,
+    "LoggedInOnComputer": "COMP001",
+    "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+    "YLocDsc": "Main Storage Area",
+    "Locked": 0,
+    "FAttempt": 1,
+    "Remarks": "New user created",
+    "ReleaseDt": "2025-08-21T14:00:00",
+    "ReleaseBy": "admin",
+    "Inactive": 0,
+    "InactiveRemarks": null,
+    "InactiveReleaseDt": null,
+    "InactiveReleaseBy": null,
+    "PasswordAttempts": "0",
+    "PasswordUpdatedFlag": "Y",
+    "UnlockDate": "2025-08-25T09:00:00"
+  },
+  "CorrelationId": "0fe699ff-ebbb-4ee3-ab95-0f61b159fd4c",
+  "Error": null
+}
+03:45:25 - ===== Incoming Request =====
+03:45:25 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+03:45:25 - Method: GET
+03:45:25 - URL: http://localhost:56548/api/users/get?UserId=1
+03:45:25 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 494ed734-98e3-44c9-8564-8092d81ad45b
+X-Correlation-Id: 5a24b9a9-cbde-4182-8ac5-ad041c1972b6
+03:45:25 - Query Parameters:
+03:45:25 - UserId = 1
+03:45:25 - Body: 
+03:45:25 - Authentication succeeded.
+03:45:33 - Validation succeeded.
+03:50:19 - ===== Incoming Request =====
+03:50:19 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+03:50:19 - Method: GET
+03:50:19 - URL: http://localhost:56548/api/users/get?UserId=1
+03:50:19 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: ae45ebc4-db88-4aa4-a5a3-f9d281dc8789
+X-Correlation-Id: 4655c1d4-cc8f-4910-a012-b60d8439fab9
+03:50:19 - Query Parameters:
+03:50:19 - UserId = 1
+03:50:19 - Body: 
+03:50:20 - Authentication succeeded.
+03:50:33 - Validation succeeded.
+03:50:47 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "User retrieved successfully.",
+  "Data": {
+    "SourceSystem": null,
+    "UserId": 1,
+    "UserName": "jdoe                ",
+    "UserLoginName": "jdoe_login",
+    "UserLoggedOnAt": "Terminal01                                                                                          ",
+    "UserFullName": "John Doe                      ",
+    "UserEmail": "jdoe@yahoo.com                                    ",
+    "UserInitials": "JD  ",
+    "UserPassword": "SecurePass123!",
+    "UserDepartment": 101,
+    "UserLoggedIn": true,
+    "UserInModule": 3,
+    "G2Version": "v1.0                ",
+    "LastLogin": "2025-12-20T10:30:00",
+    "OS": "Windows 10                                                                                          ",
+    "CLR": ".NET Framework 4.8                                ",
+    "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+    "LoginCount": 1,
+    "LibrariesReadOnly": false,
+    "GroupCompany": 5,
+    "Screen1Res": "1920x1080                     ",
+    "Screen2Res": "1920x1080                     ",
+    "Screen3Res": "1280x720                      ",
+    "Screen4Res": "1280x720                      ",
+    "POAuthId": 10,
+    "POAuthAll": false,
+    "OrderAlerts": true,
+    "POAuthTempUserId": 0,
+    "MaxOrderValue": 5000,
+    "OutOfOffice": false,
+    "DefaultOrderDepartment": 101,
+    "PORoleId": 7,
+    "Deleted": false,
+    "AliasUserName1": "JDALT     ",
+    "InvoiceBarcodePrinter": "Printer01",
+    "SmtpServer": "smtp.example.com",
+    "FactoryId": 2,
+    "PieceMonitoringAccessLevel": 3,
+    "ExClassEdit": 1,
+    "TimesheetsAccessLevel": 2,
+    "InitialWindows": "MainWin",
+    "FabScheduleAccessLevel": 3,
+    "FabLineScheduleAccessLevel": 2,
+    "PaintLineScheduleAccessLevel": 1,
+    "ContractsAccessLevel": 2,
+    "G2UpdaterVersion": "1.2.3",
+    "UpdateLocationId": 12,
+    "AllocationAdmin": true,
+    "UserPasswordLastChanged": "2025-08-10T00:00:00",
+    "DateCreated": "2025-08-01T00:00:00",
+    "CreatedByUserId": 99,
+    "DateModified": "2025-08-15T00:00:00",
+    "ModifiedByUserId": 100,
+    "LoggedInOnComputer": "COMP001",
+    "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+    "YLocDsc": "Main Storage Area",
+    "Locked": 0,
+    "FAttempt": 1,
+    "Remarks": "New user created",
+    "ReleaseDt": "2025-08-21T14:00:00",
+    "ReleaseBy": "admin",
+    "Inactive": 0,
+    "InactiveRemarks": null,
+    "InactiveReleaseDt": null,
+    "InactiveReleaseBy": null,
+    "PasswordAttempts": "0",
+    "PasswordUpdatedFlag": "Y",
+    "UnlockDate": "2025-08-25T09:00:00"
+  },
+  "CorrelationId": "4655c1d4-cc8f-4910-a012-b60d8439fab9",
+  "Error": null
+}
+03:55:37 - ===== Incoming Request =====
+03:55:37 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+03:55:37 - Method: GET
+03:55:37 - URL: http://localhost:56548/api/users/get?UserId=1
+03:55:37 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 098371d7-43d8-4b83-ad19-576eed829ed8
+X-Correlation-Id: d6b7b837-36f3-46cf-949f-62a27acaa84c
+03:55:37 - Query Parameters:
+03:55:37 - UserId = 1
+03:55:37 - Body: 
+03:55:38 - Authentication succeeded.
+03:56:05 - Validation succeeded.
+03:56:12 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "User retrieved successfully.",
+  "Data": {
+    "Message": "User retrieved successfully.",
+    "Source": "GetUser",
+    "Data": {
+      "User": {
+        "SourceSystem": null,
+        "UserId": 1,
+        "UserName": "jdoe                ",
+        "UserLoginName": "jdoe_login",
+        "UserLoggedOnAt": "Terminal01                                                                                          ",
+        "UserFullName": "John Doe                      ",
+        "UserEmail": "jdoe@yahoo.com                                    ",
+        "UserInitials": "JD  ",
+        "UserPassword": "SecurePass123!",
+        "UserDepartment": 101,
+        "UserLoggedIn": true,
+        "UserInModule": 3,
+        "G2Version": "v1.0                ",
+        "LastLogin": "2025-12-20T10:30:00",
+        "OS": "Windows 10                                                                                          ",
+        "CLR": ".NET Framework 4.8                                ",
+        "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+        "LoginCount": 1,
+        "LibrariesReadOnly": false,
+        "GroupCompany": 5,
+        "Screen1Res": "1920x1080                     ",
+        "Screen2Res": "1920x1080                     ",
+        "Screen3Res": "1280x720                      ",
+        "Screen4Res": "1280x720                      ",
+        "POAuthId": 10,
+        "POAuthAll": false,
+        "OrderAlerts": true,
+        "POAuthTempUserId": 0,
+        "MaxOrderValue": 5000,
+        "OutOfOffice": false,
+        "DefaultOrderDepartment": 101,
+        "PORoleId": 7,
+        "Deleted": false,
+        "AliasUserName1": "JDALT     ",
+        "InvoiceBarcodePrinter": "Printer01",
+        "SmtpServer": "smtp.example.com",
+        "FactoryId": 2,
+        "PieceMonitoringAccessLevel": 3,
+        "ExClassEdit": 1,
+        "TimesheetsAccessLevel": 2,
+        "InitialWindows": "MainWin",
+        "FabScheduleAccessLevel": 3,
+        "FabLineScheduleAccessLevel": 2,
+        "PaintLineScheduleAccessLevel": 1,
+        "ContractsAccessLevel": 2,
+        "G2UpdaterVersion": "1.2.3",
+        "UpdateLocationId": 12,
+        "AllocationAdmin": true,
+        "UserPasswordLastChanged": "2025-08-10T00:00:00",
+        "DateCreated": "2025-08-01T00:00:00",
+        "CreatedByUserId": 99,
+        "DateModified": "2025-08-15T00:00:00",
+        "ModifiedByUserId": 100,
+        "LoggedInOnComputer": "COMP001",
+        "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+        "YLocDsc": "Main Storage Area",
+        "Locked": 0,
+        "FAttempt": 1,
+        "Remarks": "New user created",
+        "ReleaseDt": "2025-08-21T14:00:00",
+        "ReleaseBy": "admin",
+        "Inactive": 0,
+        "InactiveRemarks": null,
+        "InactiveReleaseDt": null,
+        "InactiveReleaseBy": null,
+        "PasswordAttempts": "0",
+        "PasswordUpdatedFlag": "Y",
+        "UnlockDate": "2025-08-25T09:00:00"
+      }
+    }
+  },
+  "CorrelationId": "d6b7b837-36f3-46cf-949f-62a27acaa84c",
+  "Error": null
+}
+03:58:10 - ===== Incoming Request =====
+03:58:10 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+03:58:10 - Method: GET
+03:58:10 - URL: http://localhost:56548/api/users/get?UserId=1
+03:58:10 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 23bfc569-52db-4164-98a1-e562817e325f
+X-Correlation-Id: dedaa3c1-3598-41ae-bc21-9e6d311fc4fa
+03:58:10 - Query Parameters:
+03:58:10 - UserId = 1
+03:58:10 - Body: 
+03:58:10 - Authentication succeeded.
+03:58:18 - Validation succeeded.
+04:01:13 - ===== Incoming Request =====
+04:01:13 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+04:01:13 - Method: GET
+04:01:13 - URL: http://localhost:56548/api/users/get?UserId=1
+04:01:13 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 3795c9be-cceb-40f3-8408-ed4162efb91b
+X-Correlation-Id: 836f2439-2680-44a6-96bc-00c4f30f03d7
+04:01:13 - Query Parameters:
+04:01:13 - UserId = 1
+04:01:13 - Body: 
+04:01:14 - Authentication succeeded.
+04:01:14 - Validation succeeded.
+04:01:16 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "User retrieved successfully.",
+  "Data": {
+    "User": {
+      "SourceSystem": null,
+      "UserId": 1,
+      "UserName": "jdoe                ",
+      "UserLoginName": "jdoe_login",
+      "UserLoggedOnAt": "Terminal01                                                                                          ",
+      "UserFullName": "John Doe                      ",
+      "UserEmail": "jdoe@yahoo.com                                    ",
+      "UserInitials": "JD  ",
+      "UserPassword": "SecurePass123!",
+      "UserDepartment": 101,
+      "UserLoggedIn": true,
+      "UserInModule": 3,
+      "G2Version": "v1.0                ",
+      "LastLogin": "2025-12-20T10:30:00",
+      "OS": "Windows 10                                                                                          ",
+      "CLR": ".NET Framework 4.8                                ",
+      "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+      "LoginCount": 1,
+      "LibrariesReadOnly": false,
+      "GroupCompany": 5,
+      "Screen1Res": "1920x1080                     ",
+      "Screen2Res": "1920x1080                     ",
+      "Screen3Res": "1280x720                      ",
+      "Screen4Res": "1280x720                      ",
+      "POAuthId": 10,
+      "POAuthAll": false,
+      "OrderAlerts": true,
+      "POAuthTempUserId": 0,
+      "MaxOrderValue": 5000,
+      "OutOfOffice": false,
+      "DefaultOrderDepartment": 101,
+      "PORoleId": 7,
+      "Deleted": false,
+      "AliasUserName1": "JDALT     ",
+      "InvoiceBarcodePrinter": "Printer01",
+      "SmtpServer": "smtp.example.com",
+      "FactoryId": 2,
+      "PieceMonitoringAccessLevel": 3,
+      "ExClassEdit": 1,
+      "TimesheetsAccessLevel": 2,
+      "InitialWindows": "MainWin",
+      "FabScheduleAccessLevel": 3,
+      "FabLineScheduleAccessLevel": 2,
+      "PaintLineScheduleAccessLevel": 1,
+      "ContractsAccessLevel": 2,
+      "G2UpdaterVersion": "1.2.3",
+      "UpdateLocationId": 12,
+      "AllocationAdmin": true,
+      "UserPasswordLastChanged": "2025-08-10T00:00:00",
+      "DateCreated": "2025-08-01T00:00:00",
+      "CreatedByUserId": 99,
+      "DateModified": "2025-08-15T00:00:00",
+      "ModifiedByUserId": 100,
+      "LoggedInOnComputer": "COMP001",
+      "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+      "YLocDsc": "Main Storage Area",
+      "Locked": 0,
+      "FAttempt": 1,
+      "Remarks": "New user created",
+      "ReleaseDt": "2025-08-21T14:00:00",
+      "ReleaseBy": "admin",
+      "Inactive": 0,
+      "InactiveRemarks": null,
+      "InactiveReleaseDt": null,
+      "InactiveReleaseBy": null,
+      "PasswordAttempts": "0",
+      "PasswordUpdatedFlag": "Y",
+      "UnlockDate": "2025-08-25T09:00:00"
+    }
+  },
+  "CorrelationId": "836f2439-2680-44a6-96bc-00c4f30f03d7",
+  "Error": null
+}
+04:01:50 - ===== Incoming Request =====
+04:01:50 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/create
+04:01:50 - Method: POST
+04:01:50 - URL: http://localhost:56548/api/users/create
+04:01:50 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 550f9825-ff40-4422-a56b-2d297f18bb5d
+X-Correlation-Id: ff21c45b-1d20-49e1-b07c-af4c54af06fe
+04:01:50 - Body: {
+    "SourceSystem":"Database1",
+  "TargetDatabases": [ "Database1", "Database2" ],
+  "userId": 0,
+  "userName": "jdoe",
+  "userLoginName": "jdoe_login",
+  "userLoggedOnAt": "Terminal01",
+  "userFullName": "John Doe",
+  "userEmail": "jdoe@example.com",
+  "userInitials": "JD",
+  "userPassword": "SecurePass123!",
+  "userDepartment": "101",
+  "userLoggedIn": true,
+  "userInModule": 3,
+  "g2Version": "v1.0",
+  "lastLogin": "2025-12-20T10:30:00",
+  "os": "Windows 10",
+  "clr": ".NET Framework 4.8",
+  "userMenus": "Dashboard,Orders,Reports",
+  "loginCount": 1,
+  "librariesReadonly": false,
+  "groupCompany": 5,
+  "screen1Res": "1920x1080",
+  "screen2Res": "1920x1080",
+  "screen3Res": "1280x720",
+  "screen4Res": "1280x720",
+  "poAuthId": 10,
+  "poAuthAll": false,
+  "orderAlerts": true,
+  "poAuthTempUserId": 0,
+  "maxOrderValue": 5000,
+  "outOfOffice": false,
+  "defaultOrderDepartment": 101,
+  "poRoleId": 7,
+  "deleted": false,
+  "aliasUserName1": "JDALT",
+  "invoiceBarcodePrinter": "Printer01",
+  "smtpServer": "smtp.example.com",
+  "factoryId": 2,
+  "pieceMonitoringAccessLevel": 3,
+  "exClassEdit": 1,
+  "timesheetsAccessLevel": 2,
+  "initialWindows": "MainWin",
+  "fabScheduleAccessLevel": 3,
+  "fabLineScheduleAccessLevel": 2,
+  "paintLineScheduleAccessLevel": 1,
+  "contractsAccessLevel": 2,
+  "g2UpdaterVersion": "1.2.3",
+  "updateLocationId": 12,
+  "allocationAdmin": true,
+  "userPasswordLastChanged": "2025-08-10",
+  "dateCreated": "2025-08-01",
+  "createdByUserId": 99,
+  "dateModified": "2025-08-15",
+  "modifiedByUserId": 100,
+  "loggedInOnComputer": "COMP001",
+  "yLoc": "Warehouse A",
+  "yLocDsc": "Main Storage Area",
+  "locked": 0,
+  "fAttempt": 1,
+  "remarks": "New user created",
+  "releaseDt": "2025-08-21T14:00:00",
+  "releaseBy": "admin",
+  "inactive": 0,
+  "inactiveRemarks": null,
+  "inactiveReleaseDt": null,
+  "inactiveReleaseBy": null,
+  "passwordAttempts": "0",
+  "passwordUpdatedFlag": "Y",
+  "unlockDate": "2025-08-25T09:00:00"
+}
+
+04:01:50 - Authentication succeeded.
+04:01:51 - Validation succeeded.
+04:01:53 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "User created successfully.",
+  "Data": {
+    "Message": "User created successfully.",
+    "Source": "CreateUser"
+  },
+  "CorrelationId": "ff21c45b-1d20-49e1-b07c-af4c54af06fe",
+  "Error": null
+}
+04:07:34 - ===== Incoming Request =====
+04:07:34 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/getAll
+04:07:34 - Method: GET
+04:07:34 - URL: http://localhost:56548/api/users/getAll
+04:07:34 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 8ae189de-6ccc-4c7e-9a84-93886223c578
+X-Correlation-Id: 5cc010bf-cd2c-4f91-95b3-0deceb51ea97
+04:07:34 - Body: 
+04:07:34 - Authentication succeeded.
+04:07:34 - Validation succeeded.
+04:07:36 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "Fetched 4 users successfully.",
+  "Data": {
+    "UsersCount": 4,
+    "Users": [
+      {
+        "SourceSystem": null,
+        "UserId": 1,
+        "UserName": "jdoe                ",
+        "UserLoginName": "jdoe_login",
+        "UserLoggedOnAt": "Terminal01                                                                                          ",
+        "UserFullName": "John Doe                      ",
+        "UserEmail": "jdoe@yahoo.com                                    ",
+        "UserInitials": "JD  ",
+        "UserPassword": "SecurePass123!",
+        "UserDepartment": 101,
+        "UserLoggedIn": true,
+        "UserInModule": 3,
+        "G2Version": "v1.0                ",
+        "LastLogin": "2025-12-20T10:30:00",
+        "OS": "Windows 10                                                                                          ",
+        "CLR": ".NET Framework 4.8                                ",
+        "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+        "LoginCount": 1,
+        "LibrariesReadOnly": false,
+        "GroupCompany": 5,
+        "Screen1Res": "1920x1080                     ",
+        "Screen2Res": "1920x1080                     ",
+        "Screen3Res": "1280x720                      ",
+        "Screen4Res": "1280x720                      ",
+        "POAuthId": 10,
+        "POAuthAll": false,
+        "OrderAlerts": true,
+        "POAuthTempUserId": 0,
+        "MaxOrderValue": 5000,
+        "OutOfOffice": false,
+        "DefaultOrderDepartment": 101,
+        "PORoleId": 7,
+        "Deleted": false,
+        "AliasUserName1": "JDALT     ",
+        "InvoiceBarcodePrinter": "Printer01",
+        "SmtpServer": "smtp.example.com",
+        "FactoryId": 2,
+        "PieceMonitoringAccessLevel": 3,
+        "ExClassEdit": 1,
+        "TimesheetsAccessLevel": 2,
+        "InitialWindows": "MainWin",
+        "FabScheduleAccessLevel": 3,
+        "FabLineScheduleAccessLevel": 2,
+        "PaintLineScheduleAccessLevel": 1,
+        "ContractsAccessLevel": 2,
+        "G2UpdaterVersion": "1.2.3",
+        "UpdateLocationId": 12,
+        "AllocationAdmin": true,
+        "UserPasswordLastChanged": "2025-08-10T00:00:00",
+        "DateCreated": "2025-08-01T00:00:00",
+        "CreatedByUserId": 99,
+        "DateModified": "2025-08-15T00:00:00",
+        "ModifiedByUserId": 100,
+        "LoggedInOnComputer": "COMP001",
+        "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+        "YLocDsc": "Main Storage Area",
+        "Locked": 0,
+        "FAttempt": 1,
+        "Remarks": "New user created",
+        "ReleaseDt": "2025-08-21T14:00:00",
+        "ReleaseBy": "admin",
+        "Inactive": 0,
+        "InactiveRemarks": null,
+        "InactiveReleaseDt": null,
+        "InactiveReleaseBy": null,
+        "PasswordAttempts": "0",
+        "PasswordUpdatedFlag": "Y",
+        "UnlockDate": "2025-08-25T09:00:00"
+      },
+      {
+        "SourceSystem": null,
+        "UserId": 2,
+        "UserName": "jdoe                ",
+        "UserLoginName": "jdoe_login",
+        "UserLoggedOnAt": "Terminal01                                                                                          ",
+        "UserFullName": "John Doe                      ",
+        "UserEmail": "jdoe@example.com                                  ",
+        "UserInitials": "JD  ",
+        "UserPassword": "SecurePass123!",
+        "UserDepartment": 101,
+        "UserLoggedIn": true,
+        "UserInModule": 3,
+        "G2Version": "v1.0                ",
+        "LastLogin": "2025-12-20T10:30:00",
+        "OS": "Windows 10                                                                                          ",
+        "CLR": ".NET Framework 4.8                                ",
+        "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+        "LoginCount": 1,
+        "LibrariesReadOnly": false,
+        "GroupCompany": 5,
+        "Screen1Res": "1920x1080                     ",
+        "Screen2Res": "1920x1080                     ",
+        "Screen3Res": "1280x720                      ",
+        "Screen4Res": "1280x720                      ",
+        "POAuthId": 10,
+        "POAuthAll": false,
+        "OrderAlerts": true,
+        "POAuthTempUserId": 0,
+        "MaxOrderValue": 5000,
+        "OutOfOffice": false,
+        "DefaultOrderDepartment": 101,
+        "PORoleId": 7,
+        "Deleted": false,
+        "AliasUserName1": "JDALT     ",
+        "InvoiceBarcodePrinter": "Printer01",
+        "SmtpServer": "smtp.example.com",
+        "FactoryId": 2,
+        "PieceMonitoringAccessLevel": 3,
+        "ExClassEdit": 1,
+        "TimesheetsAccessLevel": 2,
+        "InitialWindows": "MainWin",
+        "FabScheduleAccessLevel": 3,
+        "FabLineScheduleAccessLevel": 2,
+        "PaintLineScheduleAccessLevel": 1,
+        "ContractsAccessLevel": 2,
+        "G2UpdaterVersion": "1.2.3",
+        "UpdateLocationId": 12,
+        "AllocationAdmin": true,
+        "UserPasswordLastChanged": "2025-08-10T00:00:00",
+        "DateCreated": "2025-08-01T00:00:00",
+        "CreatedByUserId": 99,
+        "DateModified": "2025-08-15T00:00:00",
+        "ModifiedByUserId": 100,
+        "LoggedInOnComputer": "COMP001",
+        "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+        "YLocDsc": "Main Storage Area",
+        "Locked": 0,
+        "FAttempt": 1,
+        "Remarks": "New user created",
+        "ReleaseDt": "2025-08-21T14:00:00",
+        "ReleaseBy": "admin",
+        "Inactive": 0,
+        "InactiveRemarks": null,
+        "InactiveReleaseDt": null,
+        "InactiveReleaseBy": null,
+        "PasswordAttempts": "0",
+        "PasswordUpdatedFlag": "Y",
+        "UnlockDate": "2025-08-25T09:00:00"
+      },
+      {
+        "SourceSystem": null,
+        "UserId": 3,
+        "UserName": "jdoe                ",
+        "UserLoginName": "jdoe_login",
+        "UserLoggedOnAt": "Terminal01                                                                                          ",
+        "UserFullName": "John Doe                      ",
+        "UserEmail": "jdoe@example.com                                  ",
+        "UserInitials": "JD  ",
+        "UserPassword": "SecurePass123!",
+        "UserDepartment": 101,
+        "UserLoggedIn": true,
+        "UserInModule": 3,
+        "G2Version": "v1.0                ",
+        "LastLogin": "2025-12-20T10:30:00",
+        "OS": "Windows 10                                                                                          ",
+        "CLR": ".NET Framework 4.8                                ",
+        "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+        "LoginCount": 1,
+        "LibrariesReadOnly": false,
+        "GroupCompany": 5,
+        "Screen1Res": "1920x1080                     ",
+        "Screen2Res": "1920x1080                     ",
+        "Screen3Res": "1280x720                      ",
+        "Screen4Res": "1280x720                      ",
+        "POAuthId": 10,
+        "POAuthAll": false,
+        "OrderAlerts": true,
+        "POAuthTempUserId": 0,
+        "MaxOrderValue": 5000,
+        "OutOfOffice": false,
+        "DefaultOrderDepartment": 101,
+        "PORoleId": 7,
+        "Deleted": false,
+        "AliasUserName1": "JDALT     ",
+        "InvoiceBarcodePrinter": "Printer01",
+        "SmtpServer": "smtp.example.com",
+        "FactoryId": 2,
+        "PieceMonitoringAccessLevel": 3,
+        "ExClassEdit": 1,
+        "TimesheetsAccessLevel": 2,
+        "InitialWindows": "MainWin",
+        "FabScheduleAccessLevel": 3,
+        "FabLineScheduleAccessLevel": 2,
+        "PaintLineScheduleAccessLevel": 1,
+        "ContractsAccessLevel": 2,
+        "G2UpdaterVersion": "1.2.3",
+        "UpdateLocationId": 12,
+        "AllocationAdmin": true,
+        "UserPasswordLastChanged": "2025-08-10T00:00:00",
+        "DateCreated": "2025-08-01T00:00:00",
+        "CreatedByUserId": 99,
+        "DateModified": "2025-08-15T00:00:00",
+        "ModifiedByUserId": 100,
+        "LoggedInOnComputer": "COMP001",
+        "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+        "YLocDsc": "Main Storage Area",
+        "Locked": 0,
+        "FAttempt": 1,
+        "Remarks": "New user created",
+        "ReleaseDt": "2025-08-21T14:00:00",
+        "ReleaseBy": "admin",
+        "Inactive": 0,
+        "InactiveRemarks": null,
+        "InactiveReleaseDt": null,
+        "InactiveReleaseBy": null,
+        "PasswordAttempts": "0",
+        "PasswordUpdatedFlag": "Y",
+        "UnlockDate": "2025-08-25T09:00:00"
+      },
+      {
+        "SourceSystem": null,
+        "UserId": 4,
+        "UserName": "jdoe                ",
+        "UserLoginName": "jdoe_login",
+        "UserLoggedOnAt": "Terminal01                                                                                          ",
+        "UserFullName": "John Doe                      ",
+        "UserEmail": "jdoe@example.com                                  ",
+        "UserInitials": "JD  ",
+        "UserPassword": "SecurePass123!",
+        "UserDepartment": 101,
+        "UserLoggedIn": true,
+        "UserInModule": 3,
+        "G2Version": "v1.0                ",
+        "LastLogin": "2025-12-20T10:30:00",
+        "OS": "Windows 10                                                                                          ",
+        "CLR": ".NET Framework 4.8                                ",
+        "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+        "LoginCount": 1,
+        "LibrariesReadOnly": false,
+        "GroupCompany": 5,
+        "Screen1Res": "1920x1080                     ",
+        "Screen2Res": "1920x1080                     ",
+        "Screen3Res": "1280x720                      ",
+        "Screen4Res": "1280x720                      ",
+        "POAuthId": 10,
+        "POAuthAll": false,
+        "OrderAlerts": true,
+        "POAuthTempUserId": 0,
+        "MaxOrderValue": 5000,
+        "OutOfOffice": false,
+        "DefaultOrderDepartment": 101,
+        "PORoleId": 7,
+        "Deleted": false,
+        "AliasUserName1": "JDALT     ",
+        "InvoiceBarcodePrinter": "Printer01",
+        "SmtpServer": "smtp.example.com",
+        "FactoryId": 2,
+        "PieceMonitoringAccessLevel": 3,
+        "ExClassEdit": 1,
+        "TimesheetsAccessLevel": 2,
+        "InitialWindows": "MainWin",
+        "FabScheduleAccessLevel": 3,
+        "FabLineScheduleAccessLevel": 2,
+        "PaintLineScheduleAccessLevel": 1,
+        "ContractsAccessLevel": 2,
+        "G2UpdaterVersion": "1.2.3",
+        "UpdateLocationId": 12,
+        "AllocationAdmin": true,
+        "UserPasswordLastChanged": "2025-08-10T00:00:00",
+        "DateCreated": "2025-08-01T00:00:00",
+        "CreatedByUserId": 99,
+        "DateModified": "2025-08-15T00:00:00",
+        "ModifiedByUserId": 100,
+        "LoggedInOnComputer": "COMP001",
+        "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+        "YLocDsc": "Main Storage Area",
+        "Locked": 0,
+        "FAttempt": 1,
+        "Remarks": "New user created",
+        "ReleaseDt": "2025-08-21T14:00:00",
+        "ReleaseBy": "admin",
+        "Inactive": 0,
+        "InactiveRemarks": null,
+        "InactiveReleaseDt": null,
+        "InactiveReleaseBy": null,
+        "PasswordAttempts": "0",
+        "PasswordUpdatedFlag": "Y",
+        "UnlockDate": "2025-08-25T09:00:00"
+      }
+    ]
+  },
+  "CorrelationId": "5cc010bf-cd2c-4f91-95b3-0deceb51ea97",
+  "Error": null
+}
+04:08:20 - ===== Incoming Request =====
+04:08:20 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/getAll
+04:08:20 - Method: GET
+04:08:20 - URL: http://localhost:56548/api/users/getAll
+04:08:20 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjMx
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 088709d5-74c0-4a4a-88fb-f2617fd9fce7
+X-Correlation-Id: da68f979-3cfe-4119-8642-9651c0ba5566
+04:08:20 - Body: 
+04:08:20 - Authorization has been denied.

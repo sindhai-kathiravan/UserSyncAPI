@@ -19,5 +19,11 @@ namespace UserSyncApi.Helpers
 
             return new SqlConnection(connStr);
         }
+
+        public static SqlConnection GetDefaultConnection()
+        {
+            return new SqlConnection(ConfigurationManager.AppSettings["Database1"]);
+        }
+
     }
 }
