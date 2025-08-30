@@ -1,0 +1,8 @@
+﻿{
+  "UserId": 1,
+  "TargetDatabases": [
+    "Database1"
+  ],
+  "ModifiedByUserId": 1,
+  "SourceSystem": "Database1"
+}

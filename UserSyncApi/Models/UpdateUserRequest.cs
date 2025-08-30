@@ -158,11 +158,11 @@ namespace UserSyncApi.Models
 
         public DateTime? UserPasswordLastChanged { get; set; } // date, nullable
 
-        public DateTime? DateCreated { get; set; } // date, nullable
+        //public DateTime? DateCreated { get; set; } // date, nullable
 
         public int? CreatedByUserId { get; set; }
 
-        public DateTime? DateModified { get; set; }
+        //public DateTime? DateModified { get; set; }
 
         public int? ModifiedByUserId { get; set; }
 

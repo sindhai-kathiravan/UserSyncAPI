@@ -2823,3 +2823,1167 @@ Postman-Token: 088709d5-74c0-4a4a-88fb-f2617fd9fce7
 X-Correlation-Id: da68f979-3cfe-4119-8642-9651c0ba5566
 04:08:20 - Body: 
 04:08:20 - Authorization has been denied.
+18:12:59 - ===== Incoming Request =====
+18:12:59 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete?UserId=12
+18:12:59 - Method: DELETE
+18:12:59 - URL: http://localhost:56548/api/users/delete?UserId=12
+18:12:59 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjMx
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: b3b51ac1-d037-4a28-b5c9-f26520c619fb
+X-Correlation-Id: af563982-5725-4f80-bf81-f16087f576c5
+18:12:59 - Query Parameters:
+18:12:59 - UserId = 12
+18:12:59 - Body: ["DB1", "DB2", "DB3"]
+18:12:59 - Authorization has been denied.
+18:13:29 - ===== Incoming Request =====
+18:13:29 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete?UserId=12
+18:13:29 - Method: DELETE
+18:13:29 - URL: http://localhost:56548/api/users/delete?UserId=12
+18:13:29 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: ae98395f-4aa6-42a7-8f37-937474c58136
+X-Correlation-Id: 40978a25-2cdc-41ef-807e-316c0524e9c7
+18:13:29 - Query Parameters:
+18:13:29 - UserId = 12
+18:13:29 - Body: ["DB1", "DB2", "DB3"]
+18:13:29 - Authentication succeeded.
+18:13:54 - ===== Incoming Request =====
+18:13:54 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete?UserId=12
+18:13:54 - Method: DELETE
+18:13:54 - URL: http://localhost:56548/api/users/delete?UserId=12
+18:13:54 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 8f125714-aac8-47de-bde4-99ed12667d8c
+X-Correlation-Id: fcaa2327-65cd-4bc8-8684-0a0bdfa56092
+18:13:54 - Query Parameters:
+18:13:54 - UserId = 12
+18:13:54 - Body: ["DB1", "DB2", "DB3"]
+18:13:54 - Authentication succeeded.
+18:13:54 - Validation succeeded.
+18:14:01 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": null,
+  "Data": null,
+  "CorrelationId": "fcaa2327-65cd-4bc8-8684-0a0bdfa56092",
+  "Error": null
+}
+18:14:20 - ===== Incoming Request =====
+18:14:20 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete?UserId=12
+18:14:20 - Method: DELETE
+18:14:20 - URL: http://localhost:56548/api/users/delete?UserId=12
+18:14:20 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 47c72477-fbf7-4526-895d-c10c6ff98df6
+X-Correlation-Id: 17043d26-217b-4d3d-bcfd-6ec22f0bffae
+18:14:20 - Query Parameters:
+18:14:20 - UserId = 12
+18:14:20 - Body: ["DB1", "DB2", "DB3"]
+18:14:20 - Authentication succeeded.
+18:14:20 - Validation succeeded.
+18:16:40 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": null,
+  "Data": null,
+  "CorrelationId": "17043d26-217b-4d3d-bcfd-6ec22f0bffae",
+  "Error": null
+}
+18:16:56 - ===== Incoming Request =====
+18:16:56 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete?UserId=12
+18:16:56 - Method: DELETE
+18:16:56 - URL: http://localhost:56548/api/users/delete?UserId=12
+18:16:56 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 4901836d-3700-4c6a-95b8-ba57bc1dbee6
+X-Correlation-Id: abc0d38b-37d8-458e-b0c7-f7bfc79572f2
+18:16:56 - Query Parameters:
+18:16:56 - UserId = 12
+18:16:56 - Body: ["DB1", "DB2", "DB3"]
+18:16:56 - Authentication succeeded.
+18:59:07 - ===== Incoming Request =====
+18:59:07 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete
+18:59:07 - Method: DELETE
+18:59:07 - URL: http://localhost:56548/api/users/delete
+18:59:07 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: ce244143-3865-469c-8b31-efe31d29221f
+X-Correlation-Id: 17ac2535-6712-4256-bef5-998bdc2f466c
+18:59:07 - Body: {
+  "UserId": 12345,
+  "TargetDatabases": [
+    "DB1",
+    "DB2"
+  ],
+  "ModifiedBy": "admin_user",
+  "SourceSystem": "ERP"
+}
+18:59:07 - Authentication succeeded.
+18:59:32 - Validation failed.
+18:59:32 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "Invalid Source System.",
+  "Data": "The source system 'ERP' does not exist in the system list.",
+  "CorrelationId": "17ac2535-6712-4256-bef5-998bdc2f466c",
+  "Error": "ERR_VALIDATION_FAILUER"
+}
+18:59:58 - ===== Incoming Request =====
+18:59:58 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete
+18:59:58 - Method: DELETE
+18:59:58 - URL: http://localhost:56548/api/users/delete
+18:59:58 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: ca3838f0-0ed3-4424-aacf-e04991bff1a1
+X-Correlation-Id: d8441e87-0fd2-46e2-a3fd-85c1bc1b9903
+18:59:58 - Body: {
+  "UserId": 12345,
+  "TargetDatabases": [
+    "DB1",
+    "DB2"
+  ],
+  "ModifiedBy": "admin_user",
+  "SourceSystem": "Database1"
+}
+18:59:58 - Authentication succeeded.
+18:59:59 - Validation failed.
+18:59:59 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "Invalid database key found.",
+  "Data": {
+    "Errors": [
+      "Invalid database key: DB1",
+      "Invalid database key: DB2"
+    ]
+  },
+  "CorrelationId": "d8441e87-0fd2-46e2-a3fd-85c1bc1b9903",
+  "Error": "ERR_VALIDATION_FAILUER"
+}
+19:00:14 - ===== Incoming Request =====
+19:00:14 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete
+19:00:14 - Method: DELETE
+19:00:14 - URL: http://localhost:56548/api/users/delete
+19:00:14 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: e535d502-c1b1-469a-8d8e-e7eb65c94f34
+X-Correlation-Id: b94cf289-9e40-401e-90ba-d46d77b39da2
+19:00:14 - Body: {
+  "UserId": 12345,
+  "TargetDatabases": [
+    "Database1",
+    "DB2"
+  ],
+  "ModifiedBy": "admin_user",
+  "SourceSystem": "Database1"
+}
+19:00:14 - Authentication succeeded.
+19:00:16 - Validation failed.
+19:00:16 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "Invalid database key found.",
+  "Data": {
+    "Errors": [
+      "Invalid database key: DB2"
+    ]
+  },
+  "CorrelationId": "b94cf289-9e40-401e-90ba-d46d77b39da2",
+  "Error": "ERR_VALIDATION_FAILUER"
+}
+19:00:28 - ===== Incoming Request =====
+19:00:28 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete
+19:00:28 - Method: DELETE
+19:00:28 - URL: http://localhost:56548/api/users/delete
+19:00:28 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 73ef6bd6-5243-455b-834a-5558cc1925aa
+X-Correlation-Id: 4d6c07b1-9beb-4cf2-b722-2e709cde5c61
+19:00:28 - Body: {
+  "UserId": 12345,
+  "TargetDatabases": [
+    "Database1"
+  ],
+  "ModifiedBy": "admin_user",
+  "SourceSystem": "Database1"
+}
+19:00:28 - Authentication succeeded.
+19:02:33 - ===== Incoming Request =====
+19:02:33 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete
+19:02:33 - Method: DELETE
+19:02:33 - URL: http://localhost:56548/api/users/delete
+19:02:33 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 982e32d5-cb5a-466f-a786-23b8286305ec
+X-Correlation-Id: c5397a58-ca8b-458c-99de-6432257014c0
+19:02:33 - Body: {
+  "UserId": 12345,
+  "TargetDatabases": [
+    "Database1"
+  ],
+  "ModifiedBy": "admin_user",
+  "SourceSystem": "Database1"
+}
+19:02:33 - Authentication succeeded.
+19:04:03 - ===== Incoming Request =====
+19:04:03 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete
+19:04:03 - Method: DELETE
+19:04:03 - URL: http://localhost:56548/api/users/delete
+19:04:03 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 74115f14-4ba0-4543-8617-d0e558448ef8
+X-Correlation-Id: ee158e7b-2ab8-46c6-ada2-a588142a79af
+19:04:03 - Body: {
+  "UserId": 12345,
+  "TargetDatabases": [
+    "Database1"
+  ],
+  "ModifiedBy": "admin_user",
+  "SourceSystem": "Database1"
+}
+19:04:03 - Authentication succeeded.
+19:04:08 - Validation failed.
+19:04:08 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "UserId does not exist.",
+  "Data": {
+    "Errors": [
+      "The user id 12345 does not exist in the database 'Database1'."
+    ]
+  },
+  "CorrelationId": "ee158e7b-2ab8-46c6-ada2-a588142a79af",
+  "Error": "ERR_VALIDATION_FAILUER"
+}
+19:04:34 - ===== Incoming Request =====
+19:04:34 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete
+19:04:34 - Method: DELETE
+19:04:34 - URL: http://localhost:56548/api/users/delete
+19:04:34 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: df0731c2-6cb3-4ee0-be7d-b84ade5ac9d0
+X-Correlation-Id: 7b30f521-5235-40e1-b245-adf7721d1fa1
+19:04:34 - Body: {
+  "UserId": 1,
+  "TargetDatabases": [
+    "Database1"
+  ],
+  "ModifiedBy": "admin_user",
+  "SourceSystem": "Database1"
+}
+19:04:34 - Authentication succeeded.
+19:04:36 - Validation succeeded.
+19:06:10 - ===== Incoming Request =====
+19:06:10 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete
+19:06:10 - Method: DELETE
+19:06:10 - URL: http://localhost:56548/api/users/delete
+19:06:10 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: f275e862-219b-4183-96c7-d72c3762040a
+X-Correlation-Id: 73c4090e-4ae5-4247-8d56-8d5c34120f93
+19:06:10 - Body: {
+  "UserId": 1,
+  "TargetDatabases": [
+    "Database1"
+  ],
+  "ModifiedBy": "admin_user",
+  "SourceSystem": "Database1"
+}
+19:06:10 - Authentication succeeded.
+19:06:12 - Validation succeeded.
+19:08:33 - ===== Incoming Request =====
+19:08:33 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete
+19:08:33 - Method: DELETE
+19:08:33 - URL: http://localhost:56548/api/users/delete
+19:08:33 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 74832619-65c1-4da9-a7c6-c79c73148d3a
+X-Correlation-Id: c5e0d9c1-ffb7-4f90-9543-a5368cb6f6e0
+19:08:33 - Body: {
+  "UserId": 1,
+  "TargetDatabases": [
+    "Database1"
+  ],
+  "ModifiedBy": "admin_user",
+  "SourceSystem": "Database1"
+}
+19:08:33 - Authentication succeeded.
+19:08:38 - Validation succeeded.
+19:18:13 - ===== Incoming Request =====
+19:18:13 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete
+19:18:13 - Method: DELETE
+19:18:13 - URL: http://localhost:56548/api/users/delete
+19:18:13 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 0331fd0c-7a11-478b-9ede-f9ddd17edf54
+X-Correlation-Id: 2a6002c8-b402-4486-807b-c1b015b4dc05
+19:18:13 - Body: {
+  "UserId": 1,
+  "TargetDatabases": [
+    
+  ],
+  "ModifiedBy": 1,
+  "SourceSystem": "Database1"
+}
+19:18:13 - Authentication succeeded.
+19:18:21 - Validation failed.
+19:18:21 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "The request is invalid.",
+  "Data": {
+    "Message": "The request is invalid.",
+    "ModelState": {
+      "request.ModifiedByUserId": [
+        "The ModifiedByUserId field is required."
+      ]
+    }
+  },
+  "CorrelationId": "2a6002c8-b402-4486-807b-c1b015b4dc05",
+  "Error": "ERR_VALIDATION_FAILUER"
+}
+19:18:44 - ===== Incoming Request =====
+19:18:44 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete
+19:18:44 - Method: DELETE
+19:18:44 - URL: http://localhost:56548/api/users/delete
+19:18:44 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: aa310005-3f76-4047-84ff-be6e1e69ef06
+X-Correlation-Id: 36ff58cf-57b1-42d1-a7cc-ae34462fdc82
+19:18:44 - Body: {
+  "UserId": 1,
+  "TargetDatabases": [
+    
+  ],
+  "ModifiedByUserId": 1,
+  "SourceSystem": "Database1"
+}
+19:18:44 - Authentication succeeded.
+19:18:44 - Validation failed.
+19:18:44 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "At least one target database must be specified.",
+  "Data": null,
+  "CorrelationId": "36ff58cf-57b1-42d1-a7cc-ae34462fdc82",
+  "Error": "ERR_VALIDATION_FAILUER"
+}
+19:19:09 - ===== Incoming Request =====
+19:19:09 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete
+19:19:09 - Method: DELETE
+19:19:09 - URL: http://localhost:56548/api/users/delete
+19:19:09 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: c4f3c5e6-41c8-441f-8ec8-60a7fbb19bf8
+X-Correlation-Id: 5a77688d-eaa1-4e82-af2f-f8e8119dc843
+19:19:09 - Body: {
+  "UserId": 1,
+ 
+  "ModifiedByUserId": 1,
+  "SourceSystem": "Database1"
+}
+19:19:09 - Authentication succeeded.
+19:19:09 - Validation failed.
+19:19:09 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "The request is invalid.",
+  "Data": {
+    "Message": "The request is invalid.",
+    "ModelState": {
+      "request.TargetDatabases": [
+        "The TargetDatabases field is required."
+      ]
+    }
+  },
+  "CorrelationId": "5a77688d-eaa1-4e82-af2f-f8e8119dc843",
+  "Error": "ERR_VALIDATION_FAILUER"
+}
+19:19:20 - ===== Incoming Request =====
+19:19:20 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete
+19:19:20 - Method: DELETE
+19:19:20 - URL: http://localhost:56548/api/users/delete
+19:19:20 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 75d79334-484e-4b2c-8050-f128132f0b68
+X-Correlation-Id: 58841e31-fe1f-4f24-b066-c7a1a7ee3d96
+19:19:20 - Body: {
+  "UserId": 1,
+  "TargetDatabases": [
+    "Database10"
+  ],
+  "ModifiedByUserId": 1,
+  "SourceSystem": "Database1"
+}
+19:19:20 - Authentication succeeded.
+19:19:20 - Validation failed.
+19:19:20 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "Invalid database key found.",
+  "Data": {
+    "Errors": [
+      "Invalid database key: Database10"
+    ]
+  },
+  "CorrelationId": "58841e31-fe1f-4f24-b066-c7a1a7ee3d96",
+  "Error": "ERR_VALIDATION_FAILUER"
+}
+19:19:26 - ===== Incoming Request =====
+19:19:26 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete
+19:19:26 - Method: DELETE
+19:19:26 - URL: http://localhost:56548/api/users/delete
+19:19:26 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 877b1231-5bc5-4ce3-a2ea-2f59334c905b
+X-Correlation-Id: f41649b8-8e2e-4fbf-9ba9-b5361995d0c7
+19:19:26 - Body: {
+  "UserId": 1,
+  "TargetDatabases": [
+    "Database1"
+  ],
+  "ModifiedByUserId": 1,
+  "SourceSystem": "Database1"
+}
+19:19:26 - Authentication succeeded.
+19:19:26 - Validation succeeded.
+19:19:29 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "USER deleted successfully.",
+  "Data": null,
+  "CorrelationId": "f41649b8-8e2e-4fbf-9ba9-b5361995d0c7",
+  "Error": null
+}
+20:14:58 - ===== Incoming Request =====
+20:14:58 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/delete
+20:14:58 - Method: DELETE
+20:14:58 - URL: http://localhost:56548/api/users/delete
+20:14:58 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjMx
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 87d23c4d-67eb-4b9e-9300-d5b0095751e0
+X-Correlation-Id: 33b32f27-2628-4280-be57-b3ac7469c808
+20:14:58 - Body: {
+  "UserId": 1,
+  "TargetDatabases": [
+    "Database1"
+  ],
+  "ModifiedByUserId": 1,
+  "SourceSystem": "Database1"
+}
+20:14:58 - Authorization has been denied.
+20:18:24 - ===== Incoming Request =====
+20:18:24 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/login
+20:18:24 - Method: DELETE
+20:18:24 - URL: http://localhost:56548/api/users/login
+20:18:24 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: c2bc3fac-bdb8-4fc1-af6a-7415530aa77b
+X-Correlation-Id: c1ad2e49-6b49-436d-a6e2-eb2edd1be457
+20:18:24 - Body: {
+  "Password":"SecurePass123!",
+  "Username": "jdoe",
+  "SourceSystem": "Database1"
+}
+20:18:34 - ===== Incoming Request =====
+20:18:34 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:18:34 - Method: DELETE
+20:18:34 - URL: http://localhost:56548/login
+20:18:34 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 7c49a2c5-493c-4c66-903b-973b80a99b7f
+X-Correlation-Id: 45891af2-74b5-41fa-9913-c739f4bb446f
+20:18:34 - Body: {
+  "Password":"SecurePass123!",
+  "Username": "jdoe",
+  "SourceSystem": "Database1"
+}
+20:18:41 - ===== Incoming Request =====
+20:18:41 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:18:41 - Method: POST
+20:18:41 - URL: http://localhost:56548/login
+20:18:41 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 5bef2f5d-fde6-4ec4-97a1-1ffcaa9e3131
+X-Correlation-Id: b0c410e0-ed8f-4063-b337-8b08d11a4f49
+20:18:41 - Body: {
+  "Password":"SecurePass123!",
+  "Username": "jdoe",
+  "SourceSystem": "Database1"
+}
+20:18:41 - Validation succeeded.
+20:20:57 - ===== Incoming Request =====
+20:20:57 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:20:57 - Method: POST
+20:20:57 - URL: http://localhost:56548/login
+20:20:57 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 92133582-c3ee-4a54-9d42-7eaa926be6be
+X-Correlation-Id: df85aee8-7a80-4154-ab5e-56c8f323c9d4
+20:20:57 - Body: {
+  "Password":"SecurePass123!",
+  "Username": "jdoe",
+  "SourceSystem": "Database1"
+}
+20:20:57 - Validation succeeded.
+20:24:32 - Response: {
+  "Success": false,
+  "StatusCode": 401,
+  "Status": "Unauthorized",
+  "Message": "Authorization has been denied for this request.",
+  "Data": {
+    "Message": "Invalid username or password.",
+    "Error": "ERR_LOGIN_FAILED"
+  },
+  "CorrelationId": "df85aee8-7a80-4154-ab5e-56c8f323c9d4",
+  "Error": "ERR_UNAUTHORIZED"
+}
+20:25:25 - ===== Incoming Request =====
+20:25:25 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:25:25 - Method: POST
+20:25:25 - URL: http://localhost:56548/login
+20:25:25 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 615d74da-74b8-4701-b4f1-3d4e6505a136
+X-Correlation-Id: 73d3d232-6839-4912-82a5-ee9894553e91
+20:25:25 - Body: {
+  "Password":"SecurePass123!",
+  "Username": "jdoe_login",
+  "SourceSystem": "Database1"
+}
+20:25:25 - Validation succeeded.
+20:25:44 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "User Authentication successful.",
+  "Data": null,
+  "CorrelationId": "73d3d232-6839-4912-82a5-ee9894553e91",
+  "Error": null
+}
+20:29:31 - ===== Incoming Request =====
+20:29:31 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:29:31 - Method: POST
+20:29:31 - URL: http://localhost:56548/login
+20:29:31 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 0ef1b166-92f4-4dac-800f-1aeb4eac719d
+X-Correlation-Id: 6b2422d4-4d83-4081-b41f-d752ac8f19bd
+20:29:31 - Body: {
+  "Password":"SecurePass123!",
+  "Username": "jdoe_login",
+  "SourceSystem": "Database1"
+}
+20:29:32 - Validation succeeded.
+20:29:38 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "User Authentication successful.",
+  "Data": null,
+  "CorrelationId": "6b2422d4-4d83-4081-b41f-d752ac8f19bd",
+  "Error": null
+}
+20:29:51 - ===== Incoming Request =====
+20:29:51 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:29:51 - Method: POST
+20:29:51 - URL: http://localhost:56548/login
+20:29:51 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 555bfb25-6f6e-483e-9963-ba6cde0134b4
+X-Correlation-Id: 451e439c-025e-4476-b1d3-80178783572a
+20:29:51 - Body: {
+  "Password":"SecurePass123!",
+  "Username": "jdoe_login1",
+  "SourceSystem": "Database1"
+}
+20:29:51 - Validation succeeded.
+20:29:56 - Response: {
+  "Success": false,
+  "StatusCode": 401,
+  "Status": "Unauthorized",
+  "Message": "Invalid username or password.",
+  "Data": {
+    "Message": "Invalid username or password.",
+    "Error": "ERR_LOGIN_FAILED"
+  },
+  "CorrelationId": "451e439c-025e-4476-b1d3-80178783572a",
+  "Error": "ERR_LOGIN_FAILED"
+}
+20:31:41 - ===== Incoming Request =====
+20:31:41 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:31:41 - Method: POST
+20:31:41 - URL: http://localhost:56548/login
+20:31:41 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: ba5629fa-d510-4e97-a16a-a6437bf0a009
+X-Correlation-Id: dcb52892-08da-4330-ab43-dcc5d3e081ac
+20:31:41 - Body: {
+  "Password":"SecurePass123!",
+  "Username": "jdoe_login1",
+  "SourceSystem": "Database1"
+}
+20:31:42 - Validation succeeded.
+20:31:48 - Response: {
+  "Success": false,
+  "StatusCode": 401,
+  "Status": "Unauthorized",
+  "Message": "Invalid username or password.",
+  "Data": null,
+  "CorrelationId": "dcb52892-08da-4330-ab43-dcc5d3e081ac",
+  "Error": "ERR_LOGIN_FAILED"
+}
+20:32:08 - ===== Incoming Request =====
+20:32:08 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:32:08 - Method: POST
+20:32:08 - URL: http://localhost:56548/login
+20:32:08 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: d54e88bc-349a-420d-ac6c-f59b64ac2e33
+X-Correlation-Id: b735ebad-05fe-42a7-a5a8-35d07174646a
+20:32:08 - Body: {
+  "Password":"SecurePass123!",
+  
+  "SourceSystem": "Database1"
+}
+20:32:08 - Validation failed.
+20:32:08 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "The request is invalid.",
+  "Data": {
+    "Message": "The request is invalid.",
+    "ModelState": {
+      "request.Username": [
+        "The Username field is required."
+      ]
+    }
+  },
+  "CorrelationId": "b735ebad-05fe-42a7-a5a8-35d07174646a",
+  "Error": "ERR_VALIDATION_FAILUER"
+}
+20:32:26 - ===== Incoming Request =====
+20:32:26 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:32:26 - Method: POST
+20:32:26 - URL: http://localhost:56548/login
+20:32:26 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 8cfd0ea5-2fc2-4b8d-93eb-c046c5c027d1
+X-Correlation-Id: dcd24213-af82-413d-a475-5c2c091e2927
+20:32:26 - Body: {
+  "SourceSystem": "Database1"
+}
+20:32:26 - Validation failed.
+20:32:26 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "The request is invalid.",
+  "Data": {
+    "Message": "The request is invalid.",
+    "ModelState": {
+      "request.Username": [
+        "The Username field is required."
+      ],
+      "request.Password": [
+        "The Password field is required."
+      ]
+    }
+  },
+  "CorrelationId": "dcd24213-af82-413d-a475-5c2c091e2927",
+  "Error": "ERR_VALIDATION_FAILUER"
+}
+20:32:44 - ===== Incoming Request =====
+20:32:44 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:32:44 - Method: POST
+20:32:44 - URL: http://localhost:56548/login
+20:32:44 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 89959470-7657-4851-9605-2f2828bcf654
+X-Correlation-Id: dfbd1fd7-2ecf-4a05-97d7-9f8e00920ebf
+20:32:44 - Body: {
+  
+}
+20:32:44 - Validation failed.
+20:32:44 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "The request is invalid.",
+  "Data": {
+    "Message": "The request is invalid.",
+    "ModelState": {
+      "request.SourceSystem": [
+        "The SourceSystem field is required."
+      ],
+      "request.Username": [
+        "The Username field is required."
+      ],
+      "request.Password": [
+        "The Password field is required."
+      ]
+    }
+  },
+  "CorrelationId": "dfbd1fd7-2ecf-4a05-97d7-9f8e00920ebf",
+  "Error": "ERR_VALIDATION_FAILUER"
+}
+20:32:58 - ===== Incoming Request =====
+20:32:58 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:32:58 - Method: POST
+20:32:58 - URL: http://localhost:56548/login
+20:32:58 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 79532ec8-a8fe-493f-9708-167f92f27735
+X-Correlation-Id: 575ea301-95a4-4c44-b67a-ca92acbc035b
+20:32:58 - Body: 
+20:32:58 - Validation failed.
+20:32:58 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "Request body is null.",
+  "Data": null,
+  "CorrelationId": "575ea301-95a4-4c44-b67a-ca92acbc035b",
+  "Error": "ERR_NULL_BODY"
+}
+20:33:07 - ===== Incoming Request =====
+20:33:07 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:33:07 - Method: POST
+20:33:07 - URL: http://localhost:56548/login
+20:33:07 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 2c4d486d-ad55-464a-b6bb-32dd02db4731
+X-Correlation-Id: d421be21-f1fb-4c30-9ea8-c3a9cf69cacd
+20:33:07 - Body: {
+  "Password":"SecurePass123!",
+  "Username": "jdoe_login",
+  "SourceSystem": "Database11"
+}
+20:33:07 - Validation succeeded.
+20:33:09 - Error in Login: No connection string found for key: Database11
+20:33:09 - StackTrace in Login:    at UserSyncApi.Helpers.DbConnectionFactory.GetConnection(String key) in C:\Sun\UserSyncApi\UserSyncApi\UserSyncApi\Helpers\DbConnectionFactory.cs:line 17
+   at UserSyncApi.Controllers.AuthenticationController.<Login>d__0.MoveNext() in C:\Sun\UserSyncApi\UserSyncApi\UserSyncApi\Controllers\AuthenticationController.cs:line 23
+20:33:09 - Response: {
+  "Success": false,
+  "StatusCode": 500,
+  "Status": "InternalServerError",
+  "Message": null,
+  "Data": null,
+  "CorrelationId": "d421be21-f1fb-4c30-9ea8-c3a9cf69cacd",
+  "Error": null
+}
+20:34:34 - ===== Incoming Request =====
+20:34:34 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:34:34 - Method: POST
+20:34:34 - URL: http://localhost:56548/login
+20:34:34 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: dbe25c97-1a7c-4ac4-a29c-d2477e8729d4
+X-Correlation-Id: dd8de6ab-4a9b-434b-963c-335915863400
+20:34:34 - Body: {
+  "Password":"SecurePass123!",
+  "Username": "jdoe_login",
+  "SourceSystem": ""
+}
+20:34:34 - Validation failed.
+20:34:34 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "The request is invalid.",
+  "Data": {
+    "Message": "The request is invalid.",
+    "ModelState": {
+      "request.SourceSystem": [
+        "The SourceSystem field is required."
+      ]
+    }
+  },
+  "CorrelationId": "dd8de6ab-4a9b-434b-963c-335915863400",
+  "Error": "ERR_VALIDATION_FAILUER"
+}
+20:34:49 - ===== Incoming Request =====
+20:34:49 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:34:49 - Method: POST
+20:34:49 - URL: http://localhost:56548/login
+20:34:49 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 415eecac-9890-4616-bdde-127fece6ecc6
+X-Correlation-Id: 47980c4e-d771-4f43-bb15-4cb253924cd9
+20:34:49 - Body: {
+  "Password":"SecurePass123!",
+  "Username": "jdoe_login",
+  "SourceSystem": "Database1"
+}
+20:34:49 - Validation succeeded.
+20:34:50 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "User Authentication successful.",
+  "Data": null,
+  "CorrelationId": "47980c4e-d771-4f43-bb15-4cb253924cd9",
+  "Error": null
+}
+20:43:02 - ===== Incoming Request =====
+20:43:02 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:43:02 - Method: POST
+20:43:02 - URL: http://localhost:56548/login
+20:43:02 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 271e980c-aa77-4d41-846c-d7f8ee820a21
+X-Correlation-Id: a3d7ceb1-8c56-4bf5-b428-97d29e949219
+20:43:02 - Body: {
+  "Password":"SecurePass123!",
+  "Username": "jdoe_login",
+  "SourceSystem": "Database10"
+}
+20:43:03 - Validation succeeded.
+20:43:03 - Error in Login: No connection string found for key: Database10
+20:43:03 - StackTrace in Login:    at UserSyncApi.Helpers.DbConnectionFactory.GetConnection(String key) in C:\Sun\UserSyncApi\UserSyncApi\UserSyncApi\Helpers\DbConnectionFactory.cs:line 17
+   at UserSyncApi.Controllers.AuthenticationController.<Login>d__0.MoveNext() in C:\Sun\UserSyncApi\UserSyncApi\UserSyncApi\Controllers\AuthenticationController.cs:line 23
+20:43:03 - Response: {
+  "Success": false,
+  "StatusCode": 500,
+  "Status": "InternalServerError",
+  "Message": null,
+  "Data": null,
+  "CorrelationId": "a3d7ceb1-8c56-4bf5-b428-97d29e949219",
+  "Error": null
+}
+20:44:30 - ===== Incoming Request =====
+20:44:30 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:44:30 - Method: POST
+20:44:30 - URL: http://localhost:56548/login
+20:44:30 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 56e4c6a5-1f33-4032-8fad-1bc2e75f4231
+X-Correlation-Id: 26a87ffa-c950-47a9-a1f9-2bcaede38d83
+20:44:30 - Body: {
+  "Password":"SecurePass123!",
+  "Username": "jdoe_login",
+  "SourceSystem": "Database10"
+}
+20:44:33 - Validation failed.
+20:44:33 - {
+  "Success": false,
+  "StatusCode": 400,
+  "Status": "BadRequest",
+  "Message": "Invalid Source System.",
+  "Data": "The source system 'Database10' does not exist in the system list.",
+  "CorrelationId": "26a87ffa-c950-47a9-a1f9-2bcaede38d83",
+  "Error": "ERR_VALIDATION_FAILUER"
+}
+20:44:50 - ===== Incoming Request =====
+20:44:50 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/login
+20:44:50 - Method: POST
+20:44:50 - URL: http://localhost:56548/login
+20:44:50 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 32cdf373-dd08-46af-88c1-30497278dc22
+X-Correlation-Id: db03617f-dad0-4989-840a-d133c4a00b6e
+20:44:50 - Body: {
+  "Password":"SecurePass123!",
+  "Username": "jdoe_login",
+  "SourceSystem": "Database1"
+}
+20:44:52 - Validation succeeded.
+20:44:52 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "User Authentication successful.",
+  "Data": null,
+  "CorrelationId": "db03617f-dad0-4989-840a-d133c4a00b6e",
+  "Error": null
+}
+21:18:13 - ===== Incoming Request =====
+21:18:13 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=1
+21:18:13 - Method: GET
+21:18:13 - URL: http://localhost:56548/api/users/get?UserId=1
+21:18:13 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 53e96877-d77b-408d-a3e2-a33dd0aaa8b6
+X-Correlation-Id: 1308484c-6deb-4fac-b1bf-18fd95c5ba9a
+21:18:13 - Query Parameters:
+21:18:13 - UserId = 1
+21:18:13 - Body: 
+21:18:13 - Authentication succeeded.
+21:18:19 - Validation succeeded.
+21:18:20 - Response: {
+  "Success": false,
+  "StatusCode": 404,
+  "Status": "NotFound",
+  "Message": "User with Id 1 was not found.",
+  "Data": {
+    "Message": "User with Id 1 was not found.",
+    "Error": "ERR_NOT_FOUND"
+  },
+  "CorrelationId": "1308484c-6deb-4fac-b1bf-18fd95c5ba9a",
+  "Error": "ERR_NOT_FOUND"
+}
+21:18:35 - ===== Incoming Request =====
+21:18:35 - [Request Log] IP=::1, Origin=, Referer=, URL=http://localhost:56548/api/users/get?UserId=2
+21:18:35 - Method: GET
+21:18:35 - URL: http://localhost:56548/api/users/get?UserId=2
+21:18:35 - Headers: Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip,deflate,br
+Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+Host: localhost:56548
+User-Agent: PostmanRuntime/7.45.0
+Postman-Token: 91967320-6567-44ba-a4d2-5ef8d00e0b5e
+X-Correlation-Id: 007833ec-e273-4c34-9c8b-0ea0dac4c1f9
+21:18:35 - Query Parameters:
+21:18:35 - UserId = 2
+21:18:35 - Body: 
+21:18:35 - Authentication succeeded.
+21:18:37 - Validation succeeded.
+21:18:37 - Response: {
+  "Success": true,
+  "StatusCode": 200,
+  "Status": "OK",
+  "Message": "User retrieved successfully.",
+  "Data": {
+    "User": {
+      "SourceSystem": null,
+      "UserId": 2,
+      "UserName": "jdoe                ",
+      "UserLoginName": "jdoe_login",
+      "UserLoggedOnAt": "Terminal01                                                                                          ",
+      "UserFullName": "John Doe                      ",
+      "UserEmail": "jdoe@example.com                                  ",
+      "UserInitials": "JD  ",
+      "UserPassword": "SecurePass123!",
+      "UserDepartment": 101,
+      "UserLoggedIn": true,
+      "UserInModule": 3,
+      "G2Version": "v1.0                ",
+      "LastLogin": "2025-08-30T20:44:52.96",
+      "OS": "Windows 10                                                                                          ",
+      "CLR": ".NET Framework 4.8                                ",
+      "UserMenus": "Dashboard,Orders,Reports                                                                                                                                                                                                                                                                                                                                                                                        ",
+      "LoginCount": 1,
+      "LibrariesReadOnly": false,
+      "GroupCompany": 5,
+      "Screen1Res": "1920x1080                     ",
+      "Screen2Res": "1920x1080                     ",
+      "Screen3Res": "1280x720                      ",
+      "Screen4Res": "1280x720                      ",
+      "POAuthId": 10,
+      "POAuthAll": false,
+      "OrderAlerts": true,
+      "POAuthTempUserId": 0,
+      "MaxOrderValue": 5000,
+      "OutOfOffice": false,
+      "DefaultOrderDepartment": 101,
+      "PORoleId": 7,
+      "Deleted": false,
+      "AliasUserName1": "JDALT     ",
+      "InvoiceBarcodePrinter": "Printer01",
+      "SmtpServer": "smtp.example.com",
+      "FactoryId": 2,
+      "PieceMonitoringAccessLevel": 3,
+      "ExClassEdit": 1,
+      "TimesheetsAccessLevel": 2,
+      "InitialWindows": "MainWin",
+      "FabScheduleAccessLevel": 3,
+      "FabLineScheduleAccessLevel": 2,
+      "PaintLineScheduleAccessLevel": 1,
+      "ContractsAccessLevel": 2,
+      "G2UpdaterVersion": "1.2.3",
+      "UpdateLocationId": 12,
+      "AllocationAdmin": true,
+      "UserPasswordLastChanged": "2025-08-10T00:00:00",
+      "DateCreated": "2025-08-01T00:00:00",
+      "CreatedByUserId": 99,
+      "DateModified": "2025-08-15T00:00:00",
+      "ModifiedByUserId": 100,
+      "LoggedInOnComputer": "COMP001",
+      "YLoc": "Warehouse A                                                                                                                                                                                                                                                                                                                                                                                                     ",
+      "YLocDsc": "Main Storage Area",
+      "Locked": 0,
+      "FAttempt": 1,
+      "Remarks": "New user created",
+      "ReleaseDt": "2025-08-21T14:00:00",
+      "ReleaseBy": "admin",
+      "Inactive": 0,
+      "InactiveRemarks": null,
+      "InactiveReleaseDt": null,
+      "InactiveReleaseBy": null,
+      "PasswordAttempts": "0",
+      "PasswordUpdatedFlag": "Y",
+      "UnlockDate": "2025-08-25T09:00:00"
+    }
+  },
+  "CorrelationId": "007833ec-e273-4c34-9c8b-0ea0dac4c1f9",
+  "Error": null
+}

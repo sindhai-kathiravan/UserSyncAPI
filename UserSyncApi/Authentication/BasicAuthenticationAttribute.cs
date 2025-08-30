@@ -33,12 +33,12 @@ namespace UserSyncApi.Authentication
             Logger.Log("Authorization has been denied.");
             var response = new ApiResponse<object>
             {
+                Success = false,
                 StatusCode = (int)HttpStatusCode.Unauthorized,
                 Status = HttpStatusCode.Unauthorized.ToString(),
-                Message = Common.Constants.Messages.AUTHENTICATION_FAILED,
+                Message = Common.Constants.Messages.INVALID_API_CREDENTIALS,
                 Error = Common.Constants.Errors.ERR_UNAUTHORIZED,
                 Data = null,
-                Success = false,
                 CorrelationId = Guid.NewGuid()
             };
             actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.Unauthorized, response);

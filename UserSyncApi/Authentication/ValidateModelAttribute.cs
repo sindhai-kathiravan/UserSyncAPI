@@ -70,11 +70,13 @@ namespace UserSyncApi.Authentication
             {
                 var createUserRequest = model as CreateUserRequest;
                 var updateUserRequest = model as UpdateUserRequest;
+                var deleteUserRequest = model as DeleteUserRequest;
 
-
-                if (createUserRequest != null || updateUserRequest != null)
+                if (createUserRequest != null || updateUserRequest != null || deleteUserRequest != null)
                 {
-                    if (((createUserRequest != null) && ((createUserRequest.TargetDatabases == null) || (!createUserRequest.TargetDatabases.Any()))) || ((updateUserRequest != null) && ((updateUserRequest.TargetDatabases == null || !updateUserRequest.TargetDatabases.Any()))))
+                    if (((createUserRequest != null) && ((createUserRequest.TargetDatabases == null) || (!createUserRequest.TargetDatabases.Any())))
+                        || ((updateUserRequest != null) && ((updateUserRequest.TargetDatabases == null || !updateUserRequest.TargetDatabases.Any())))
+                        || ((deleteUserRequest != null) && ((deleteUserRequest.TargetDatabases == null || !deleteUserRequest.TargetDatabases.Any()))))
                     {
                         var response = new ApiResponse<object>
                         {
@@ -90,7 +92,10 @@ namespace UserSyncApi.Authentication
                         PrintResponse(actionContext.Response);
                         return;
                     }
-                    string sourceSystem = createUserRequest?.SourceSystem ?? updateUserRequest?.SourceSystem;
+                    string sourceSystem = createUserRequest?.SourceSystem
+                                       ?? updateUserRequest?.SourceSystem
+                                       ?? deleteUserRequest?.SourceSystem;
+
                     var sourceSystemKey = ConfigurationManager.AppSettings[sourceSystem];
                     if (sourceSystemKey == null)
                     {
@@ -109,7 +114,9 @@ namespace UserSyncApi.Authentication
                         return;
                     }
 
-                    List<string> targetDatabases = createUserRequest?.TargetDatabases ?? updateUserRequest?.TargetDatabases;
+                    List<string> targetDatabases = createUserRequest?.TargetDatabases
+                                                ?? updateUserRequest?.TargetDatabases
+                                                ?? deleteUserRequest?.TargetDatabases;
 
                     string[] validKeys = ConfigurationManager.AppSettings.AllKeys;
                     var invalidKeys = targetDatabases.Where(k => !validKeys.Contains(k)).ToList();
@@ -137,9 +144,11 @@ namespace UserSyncApi.Authentication
                         return;
                     }
 
-                    if (updateUserRequest != null)
+                    if (updateUserRequest != null || deleteUserRequest != null)
                     {
-                        if (updateUserRequest.UserId <= 0)
+                        int? userId = updateUserRequest?.UserId
+                                  ?? deleteUserRequest?.UserId;
+                        if (userId <= 0)
                         {
                             var response = new ApiResponse<object>
                             {
@@ -156,13 +165,12 @@ namespace UserSyncApi.Authentication
                             return;
                         }
 
-                        // Validate if UserId exists in the DB
-                        var missingDbs = CheckUserExistsInAllDatabases(updateUserRequest.UserId, updateUserRequest.TargetDatabases);
+                        var missingDbs = CheckUserExistsInAllDatabases(userId, targetDatabases);
                         if (missingDbs.Any())
                         {
                             var errorObj = new
                             {
-                                Errors = missingDbs.Select(db => $"The user id {updateUserRequest.UserId} does not exist in the database '{db}'.")
+                                Errors = missingDbs.Select(db => $"The user id {userId} does not exist in the database '{db}'.")
                             };
                             string json = JsonConvert.SerializeObject(errorObj);
 
@@ -182,7 +190,8 @@ namespace UserSyncApi.Authentication
                         }
                     }
                 }
-                else {
+                else
+                {
                     if ((method == Common.Constants.Methods.GET) || (method == Common.Constants.Methods.DELETE))
                     {
                         if (!actionContext.ActionDescriptor.ActionName.Equals(Common.Constants.ActionNames.GetAllUser, StringComparison.OrdinalIgnoreCase))
@@ -208,11 +217,33 @@ namespace UserSyncApi.Authentication
                         }
                     }
                 }
+                if (actionContext.ActionDescriptor.ActionName.Equals(Common.Constants.ActionNames.Login, StringComparison.OrdinalIgnoreCase))
+                {
+                    var loginRequest = model as LoginRequest;
+
+                    var sourceSystemKey = ConfigurationManager.AppSettings[loginRequest.SourceSystem];
+                    if (sourceSystemKey == null)
+                    {
+                        var response = new ApiResponse<object>
+                        {
+                            StatusCode = (int)HttpStatusCode.BadRequest,
+                            Status = HttpStatusCode.BadRequest.ToString(),
+                            Message = Common.Constants.Messages.INVALID_SOURCE_SYSTEM,
+                            Error = Common.Constants.Errors.ERR_VALIDATION_FAILUED,
+                            Data = string.Format(Common.Constants.Messages.THE_SOURCE_SYSTEM_XXXX_DOES_NOT_EXIST_IN_THE_SYSTEM_LIST, loginRequest.SourceSystem),
+                            Success = false,
+                            CorrelationId = string.IsNullOrEmpty(correlationId) ? Guid.NewGuid() : Guid.Parse(correlationId),
+                        };
+                        actionContext.Response = actionContext.Request.CreateResponse(HttpStatusCode.BadRequest, response);
+                        PrintResponse(actionContext.Response);
+                        return;
+                    }
+                }
                 Logger.Log("Validation succeeded.");
                 return;
             }
         }
-        private List<string> CheckUserExistsInAllDatabases(int userId, List<string> targetDatabases)
+        private List<string> CheckUserExistsInAllDatabases(int? userId, List<string> targetDatabases)
         {
             var missingDbKeys = new List<string>();
 

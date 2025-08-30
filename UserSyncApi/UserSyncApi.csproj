@@ -109,6 +109,7 @@
     </Compile>
     <Compile Include="Handler\LoggingHandler.cs" />
     <Compile Include="Helpers\DbConnectionFactory.cs" />
+    <Compile Include="Models\DeleteUserRequest.cs" />
     <Compile Include="Models\LoginRequest.cs" />
     <Compile Include="Models\CreateUserRequest.cs" />
     <Compile Include="Helpers\ValidatorHelper.cs" />
@@ -119,6 +120,10 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Others\CreateUserRequest.json" />
+    <Content Include="Others\LoginRequest.json" />
+    <Content Include="Others\UpdateUserRequest.json" />
+    <Content Include="Others\DeleteUserRequest.json" />
+    <Content Include="Others\User.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

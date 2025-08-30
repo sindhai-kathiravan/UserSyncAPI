@@ -64,8 +64,25 @@ namespace UserSyncApi.Filter
                 }
                 else if (statusCode == HttpStatusCode.Unauthorized)
                 {
-                    message =Common.Constants.Messages.AUTHORIZATION_HAS_BEEN_DENIED_FOR_THIS_REQUEST;
-                    error = Common.Constants.Errors.ERR_UNAUTHORIZED;
+                    var msgProp = content.GetType().GetProperty("Message");
+                    if (msgProp != null)
+                    {
+                        var val = msgProp.GetValue(content, null);
+                        if (val != null)
+                        {
+                            message = val.ToString();
+                        }
+                    }
+                    var msgErr = content.GetType().GetProperty("Error");
+                    if (msgErr != null)
+                    {
+                        var val = msgErr.GetValue(content, null);
+                        if (val != null)
+                        {
+                            error = val.ToString();
+                        }
+                    }
+                    content = null;
                 }
                 else
                 {

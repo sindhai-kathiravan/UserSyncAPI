@@ -58,7 +58,7 @@ namespace UserSyncApi.Controllers
                     @ExClassEdit, @TimesheetsAccessLevel, @InitialWindows, @FabScheduleAccessLevel,
                     @FabLineScheduleAccessLevel, @PaintLineScheduleAccessLevel, @ContractsAccessLevel,
                     @G2UpdaterVersion, @UpdateLocationId, @AllocationAdmin, @UserPasswordLastChanged,
-                    @DateCreated, @CreatedByUserId, @DateModified, @ModifiedByUserId,
+                    GETDATE(), @CreatedByUserId, GETDATE(), @ModifiedByUserId,
                     @LoggedInOnComputer, @Yloc, @YlocDsc, @Locked, @FAttempt, @Remarks, @ReleaseDt,
                     @ReleaseBy, @Inactive, @InactiveRemarks, @InactiveReleaseDt, @InactiveReleaseBy,
                     @PasswordAttempts, @PasswordUpdatedFlag, @UnlockDate
@@ -114,9 +114,9 @@ namespace UserSyncApi.Controllers
                                 cmd.Parameters.AddWithValue("@UpdateLocationId", request.UpdateLocationId);
                                 cmd.Parameters.AddWithValue("@AllocationAdmin", request.AllocationAdmin);
                                 cmd.Parameters.AddWithValue("@UserPasswordLastChanged", (object)request.UserPasswordLastChanged ?? DBNull.Value);
-                                cmd.Parameters.AddWithValue("@DateCreated", (object)request.DateCreated ?? DBNull.Value);
+                                //cmd.Parameters.AddWithValue("@DateCreated", (object)request.DateCreated ?? DBNull.Value);
                                 cmd.Parameters.AddWithValue("@CreatedByUserId", (object)request.CreatedByUserId ?? DBNull.Value);
-                                cmd.Parameters.AddWithValue("@DateModified", (object)request.DateModified ?? DBNull.Value);
+                                //cmd.Parameters.AddWithValue("@DateModified", (object)request.DateModified ?? DBNull.Value);
                                 cmd.Parameters.AddWithValue("@ModifiedByUserId", (object)request.ModifiedByUserId ?? DBNull.Value);
                                 cmd.Parameters.AddWithValue("@LoggedInOnComputer", request.LoggedInOnComputer);
                                 cmd.Parameters.AddWithValue("@Yloc", (object)request.YLoc ?? DBNull.Value);
@@ -260,7 +260,7 @@ namespace UserSyncApi.Controllers
                             }
                             else
                             {
-                                return Content(HttpStatusCode.NotFound, new { Message = $"User with Id {UserId} was not found."});
+                                return Content(HttpStatusCode.NotFound, new { Message = $"User with Id {UserId} was not found.", Error = Common.Constants.Errors.ERR_NOT_FOUND });
                             }
 
                         }
@@ -384,7 +384,7 @@ namespace UserSyncApi.Controllers
                     }
                 }
                 string message = users.Count > 0 ? $"Fetched {users.Count} users successfully." : "No users found.";
-                return Content(HttpStatusCode.OK, new { Message = message, Data=new { UsersCount = users.Count, Users = users } });
+                return Content(HttpStatusCode.OK, new { Message = message, Data = new { UsersCount = users.Count, Users = users } });
 
             }
             catch (Exception ex)
@@ -457,9 +457,9 @@ namespace UserSyncApi.Controllers
                                             updatelocation_id=@UpdateLocationId,
                                             allocationadmin=@AllocationAdmin,
                                             user_password_last_changed=@UserPasswordLastChanged,
-                                            date_created=@DateCreated,
+                                            --date_created=@DateCreated,
                                             createdbyuser_id=@CreatedByUserId,
-                                            date_modified=@DateModified,
+                                            date_modified=GETDATE(),
                                             modifiedbyuser_id=@ModifiedByUserId,
                                             loggedinoncomputer=@LoggedInOnComputer,
                                             yloc=@YLoc,
@@ -529,9 +529,9 @@ namespace UserSyncApi.Controllers
                                 cmd.Parameters.AddWithValue("@UpdateLocationId", request.UpdateLocationId);
                                 cmd.Parameters.AddWithValue("@AllocationAdmin", request.AllocationAdmin);
                                 cmd.Parameters.AddWithValue("@UserPasswordLastChanged", (object)request.UserPasswordLastChanged ?? DBNull.Value);
-                                cmd.Parameters.AddWithValue("@DateCreated", (object)request.DateCreated ?? DBNull.Value);
+                                //cmd.Parameters.AddWithValue("@DateCreated", (object)request.DateCreated ?? DBNull.Value);
                                 cmd.Parameters.AddWithValue("@CreatedByUserId", (object)request.CreatedByUserId ?? DBNull.Value);
-                                cmd.Parameters.AddWithValue("@DateModified", (object)request.DateModified ?? DBNull.Value);
+                                //cmd.Parameters.AddWithValue("@DateModified", (object)request.DateModified ?? DBNull.Value);
                                 cmd.Parameters.AddWithValue("@ModifiedByUserId", (object)request.ModifiedByUserId ?? DBNull.Value);
                                 cmd.Parameters.AddWithValue("@LoggedInOnComputer", request.LoggedInOnComputer);
                                 cmd.Parameters.AddWithValue("@YLoc", (object)request.YLoc ?? DBNull.Value);
@@ -567,10 +567,37 @@ namespace UserSyncApi.Controllers
 
         [HttpDelete]
         [Route("api/users/delete")]
-        public IHttpActionResult DeleteUser()
+        public IHttpActionResult DeleteUser([FromBody] DeleteUserRequest request)
         {
-            // sync logic here
-            return Ok("Users updated successfully");
+            try
+            {
+                using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+                {
+                    foreach (var dbKey in request.TargetDatabases)
+                    {
+                        using (var connection = DbConnectionFactory.GetConnection(dbKey))
+                        {
+                            connection.Open();
+                            using (var command = new SqlCommand("UPDATE Users SET deleted = 1, modifiedbyuser_id = @ModifiedBy, date_modified = GETDATE() WHERE user_id = @UserId", connection))
+                            {
+                                command.Parameters.AddWithValue("@UserId", request.UserId);
+                                command.Parameters.AddWithValue("@ModifiedBy", request.ModifiedByUserId);
+
+                                int rows = command.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                    scope.Complete();
+                }
+                return Content(HttpStatusCode.OK, new { Message = Common.Constants.Messages.USER_DELETED_SUCCESSFULLY });
+            }
+            catch (Exception ex)
+            {
+
+                Logger.Log($"Error in DeleteUser: {ex.Message}");
+                Logger.Log($"StackTrace in DeleteUser: { ex.StackTrace.ToString()}");
+                return Content(HttpStatusCode.InternalServerError, Common.Constants.Messages.AN_UNEXPECTED_ERROR_OCCURRED);
+            }
         }
 
 
